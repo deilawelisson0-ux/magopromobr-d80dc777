@@ -59,6 +59,10 @@ const Index = () => {
             src={magoBanner}
             alt="Grupo de promoções no WhatsApp"
             className="w-full h-auto"
+            width={940}
+            height={1671}
+            loading="lazy"
+            decoding="async"
           />
         </div>
 
