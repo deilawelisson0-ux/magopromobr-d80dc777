@@ -1,5 +1,5 @@
-import magoAvatar from "@/assets/mago-avatar.jpeg";
-import magoBanner from "@/assets/mago-banner.png";
+import magoAvatar from "@/assets/mago-avatar.webp";
+import magoBanner from "@/assets/mago-banner.webp";
 import { Star, Users, Zap, Shield, ChevronRight } from "lucide-react";
 
 const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
@@ -20,6 +20,9 @@ const Index = () => {
                 src={magoAvatar}
                 alt="Mago das Promoções"
                 className="w-full h-full object-cover"
+                width={112}
+                height={112}
+                fetchPriority="high"
               />
             </div>
             <span className="absolute -bottom-1 -right-1 text-2xl animate-sparkle">✨</span>
@@ -56,6 +59,10 @@ const Index = () => {
             src={magoBanner}
             alt="Grupo de promoções no WhatsApp"
             className="w-full h-auto"
+            width={940}
+            height={1671}
+            loading="lazy"
+            decoding="async"
           />
         </div>
 
