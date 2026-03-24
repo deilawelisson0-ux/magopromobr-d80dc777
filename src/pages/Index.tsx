@@ -1,5 +1,5 @@
-import magoAvatar from "@/assets/mago-avatar.jpeg";
-import magoBanner from "@/assets/mago-banner.png";
+import magoAvatar from "@/assets/mago-avatar.webp";
+import magoBanner from "@/assets/mago-banner.webp";
 import { Star, Users, Zap, Shield, ChevronRight } from "lucide-react";
 
 const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
