@@ -2,7 +2,7 @@ import magoAvatar from "@/assets/mago-avatar.jpeg";
 import magoBanner from "@/assets/mago-banner.png";
 import { Star, Users, Zap, Shield, ChevronRight } from "lucide-react";
 
-const WHATSAPP_LINK = "#"; // Substituir pelo link real
+const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
 const INSTAGRAM_LINK = "https://instagram.com/magopromobr";
 
 const Index = () => {
