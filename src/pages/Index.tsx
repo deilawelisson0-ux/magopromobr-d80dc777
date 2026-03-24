@@ -20,6 +20,9 @@ const Index = () => {
                 src={magoAvatar}
                 alt="Mago das Promoções"
                 className="w-full h-full object-cover"
+                width={112}
+                height={112}
+                fetchPriority="high"
               />
             </div>
             <span className="absolute -bottom-1 -right-1 text-2xl animate-sparkle">✨</span>
