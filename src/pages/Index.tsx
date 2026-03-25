@@ -201,6 +201,13 @@ const Index = () => {
           </p>
         </div>
 
+        {/* ===== 10. CTA FINAL ===== */}
+        <div className="w-full space-y-2">
+          <CTAButton text="🚀 ENTRAR E COMEÇAR A ECONOMIZAR AGORA" />
+          <p className="text-center text-sm font-bold text-primary">
+            🔥 Já somos +1000 membros
+          </p>
+        </div>
 
         {/* ===== INSTAGRAM ===== */}
         <a
@@ -217,21 +224,11 @@ const Index = () => {
         </a>
 
         {/* ===== RODAPÉ ===== */}
-        <footer className="text-center text-xs text-muted-foreground py-4 pb-20">
+        <footer className="text-center text-xs text-muted-foreground py-4">
           <p>Grupo gratuito • Entre e aproveite</p>
           <p className="mt-1 opacity-60">© 2026 Mago das Promoções</p>
         </footer>
       </div>
-
-      {/* ===== BOTÃO FLUTUANTE FIXO ===== */}
-      <a
-        href={WHATSAPP_LINK}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-4 left-4 right-4 max-w-md mx-auto z-50 shimmer block text-center font-extrabold text-lg py-4 rounded-2xl bg-cta-green text-cta-green-foreground animate-pulse-glow shadow-2xl shadow-cta-green/40 hover:scale-[1.02] transition-transform"
-      >
-        🚀 ENTRAR E ECONOMIZAR
-      </a>
     </div>
   );
 };
