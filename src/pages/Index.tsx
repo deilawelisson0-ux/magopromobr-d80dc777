@@ -18,16 +18,12 @@ import {
 const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
 const INSTAGRAM_LINK = "https://instagram.com/magopromobr";
 
-const CTAButton = ({ text, secondary = false }: { text: string; secondary?: boolean }) => (
+const CTAButton = ({ text }: { text: string }) => (
   <a
     href={WHATSAPP_LINK}
     target="_blank"
     rel="noopener noreferrer"
-    className={`shimmer block w-full text-center font-extrabold text-lg py-4 rounded-xl transition-transform duration-200 hover:scale-[1.02] ${
-      secondary
-        ? "bg-cta-green/90 text-cta-green-foreground animate-pulse-glow"
-        : "bg-cta-green text-cta-green-foreground animate-pulse-glow"
-    }`}
+    className="shimmer block w-full text-center font-extrabold text-xl py-5 rounded-2xl transition-transform duration-200 hover:scale-[1.03] bg-cta-green text-cta-green-foreground animate-pulse-glow shadow-lg shadow-cta-green/30"
   >
     {text}
   </a>
@@ -73,9 +69,9 @@ const Index = () => {
 
         {/* ===== 3. BOTÃO PRINCIPAL (ACIMA DA DOBRA) ===== */}
         <div className="w-full space-y-2">
-          <CTAButton text="👉 QUERO ENTRAR NO GRUPO AGORA" />
-          <p className="text-center text-xs text-muted-foreground font-medium">
-            🔒 100% gratuito • Sem spam • Só ofertas reais
+          <CTAButton text="👉 QUERO ENTRAR NO GRUPO AGORA 🔥" />
+          <p className="text-center text-xs text-muted-foreground font-semibold">
+            🔒 Grupo gratuito • Sem spam • Só ofertas reais
           </p>
         </div>
 
@@ -242,11 +238,21 @@ const Index = () => {
         </div>
 
         {/* ===== RODAPÉ ===== */}
-        <footer className="text-center text-xs text-muted-foreground py-4">
+        <footer className="text-center text-xs text-muted-foreground py-4 pb-20">
           <p>Grupo gratuito • Entre e aproveite</p>
           <p className="mt-1 opacity-60">© 2026 Mago das Promoções</p>
         </footer>
       </div>
+
+      {/* ===== BOTÃO FLUTUANTE FIXO ===== */}
+      <a
+        href={WHATSAPP_LINK}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-4 left-4 right-4 max-w-md mx-auto z-50 shimmer block text-center font-extrabold text-lg py-4 rounded-2xl bg-cta-green text-cta-green-foreground animate-pulse-glow shadow-2xl shadow-cta-green/40 hover:scale-[1.02] transition-transform"
+      >
+        👉 ENTRAR NO GRUPO AGORA
+      </a>
     </div>
   );
 };
