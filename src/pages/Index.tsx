@@ -5,11 +5,8 @@ import {
   Users,
   Zap,
   Shield,
-  ChevronRight,
   ShoppingBag,
   Smartphone,
-  Shirt,
-  Clock,
   CheckCircle2,
   AlertTriangle,
   MessageCircle,
@@ -69,7 +66,7 @@ const Index = () => {
 
         {/* ===== 3. BOTÃO PRINCIPAL (ACIMA DA DOBRA) ===== */}
         <div className="w-full space-y-2">
-          <CTAButton text="👉 QUERO ENTRAR NO GRUPO AGORA 🔥" />
+          <CTAButton text="🚀 ENTRAR E COMEÇAR A ECONOMIZAR" />
           <p className="text-center text-xs text-muted-foreground font-semibold">
             🔒 Grupo gratuito • Sem spam • Só ofertas reais
           </p>
@@ -212,30 +209,19 @@ const Index = () => {
           </p>
         </div>
 
-        {/* ===== LINKS SECUNDÁRIOS ===== */}
-        <div className="w-full flex flex-col gap-3">
-          <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex items-center justify-between w-full bg-secondary hover:bg-primary hover:text-primary-foreground text-foreground font-bold text-base py-3.5 px-5 rounded-xl transition-all duration-200 border border-border hover:border-primary"
-          >
-            <span>VER OFERTAS DO DIA 👀</span>
-            <ChevronRight className="w-5 h-5 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-          </a>
-
-          <a
-            href={INSTAGRAM_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex items-center justify-between w-full bg-secondary hover:bg-primary hover:text-primary-foreground text-foreground font-bold text-base py-3.5 px-5 rounded-xl transition-all duration-200 border border-border hover:border-primary"
-          >
-            <span>ME SEGUE NO INSTAGRAM 📲</span>
-            <span className="text-sm font-normal text-muted-foreground group-hover:text-primary-foreground transition-colors">
-              @magopromobr
-            </span>
-          </a>
-        </div>
+        {/* ===== INSTAGRAM ===== */}
+        <a
+          href={INSTAGRAM_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex items-center justify-between w-full font-bold text-base py-3.5 px-5 rounded-xl transition-all duration-200 text-white"
+          style={{ background: "linear-gradient(135deg, #833AB4, #E1306C, #F77737)" }}
+        >
+          <span>ME SEGUE NO INSTAGRAM 📲</span>
+          <span className="text-sm font-normal text-white/80">
+            @magopromobr
+          </span>
+        </a>
 
         {/* ===== RODAPÉ ===== */}
         <footer className="text-center text-xs text-muted-foreground py-4 pb-20">
@@ -251,7 +237,7 @@ const Index = () => {
         rel="noopener noreferrer"
         className="fixed bottom-4 left-4 right-4 max-w-md mx-auto z-50 shimmer block text-center font-extrabold text-lg py-4 rounded-2xl bg-cta-green text-cta-green-foreground animate-pulse-glow shadow-2xl shadow-cta-green/40 hover:scale-[1.02] transition-transform"
       >
-        👉 ENTRAR NO GRUPO AGORA
+        🚀 ENTRAR E ECONOMIZAR
       </a>
     </div>
   );
