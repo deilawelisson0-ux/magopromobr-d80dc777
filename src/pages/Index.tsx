@@ -66,7 +66,17 @@ const Index = () => {
 
         {/* ===== 3. BOTÃO PRINCIPAL (ACIMA DA DOBRA) ===== */}
         <div className="w-full space-y-2">
-          <CTAButton text="🚀 ENTRAR E COMEÇAR A ECONOMIZAR" />
+          <button
+  onClick={() => {
+    if (typeof window !== "undefined" && (window as any).fbq) {
+      (window as any).fbq("track", "Lead");
+    }
+    window.open("https://chat.whatsapp.com/SEULINKREAL", "_blank", "noopener,noreferrer");
+  }}
+  className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-xl text-lg transition"
+>
+  ENTRAR E COMEÇAR A ECONOMIZAR
+</button>
           <p className="text-center text-xs text-muted-foreground font-semibold">
             🔒 Grupo gratuito • Sem spam • Só ofertas reais
           </p>
