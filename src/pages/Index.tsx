@@ -203,7 +203,14 @@ const Index = () => {
 
         {/* ===== 10. CTA FINAL ===== */}
         <div className="w-full space-y-2">
-          <CTAButton text="🚀 ENTRAR E COMEÇAR A ECONOMIZAR AGORA" />
+          <CTAButton
+  text="ENTRAR E COMEÇAR A ECONOMIZAR"
+  onClick={() => {
+    if (typeof window !== "undefined" && (window as any).fbq) {
+      (window as any).fbq("track", "Lead");
+    }
+  }}
+/>
           <p className="text-center text-sm font-bold text-primary">
             🔥 Já somos +1000 membros
           </p>
