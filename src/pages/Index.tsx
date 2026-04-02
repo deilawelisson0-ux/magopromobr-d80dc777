@@ -25,7 +25,7 @@ const CTAButton = ({ text, className = "" }: { text: string; className?: string 
       }
       window.open(WHATSAPP_LINK, "_blank", "noopener,noreferrer");
     }}
-    className={`shimmer block w-full text-center font-extrabold text-xl py-5 rounded-2xl transition-transform duration-200 hover:scale-[1.03] bg-cta-green text-cta-green-foreground animate-pulse-glow shadow-lg shadow-cta-green/30 ${className}`}
+    className={`shimmer block w-full text-center font-extrabold text-2xl py-6 rounded-2xl transition-all duration-200 hover:scale-[1.04] hover:shadow-xl bg-cta-green text-cta-green-foreground animate-pulse-glow shadow-lg shadow-cta-green/40 ${className}`}
   >
     {text}
   </button>
@@ -37,7 +37,7 @@ const Index = () => {
       {/* Decorative top bar */}
       <div className="w-full h-1 gold-gradient" />
 
-      <div className="w-full max-w-md mx-auto px-4 py-6 flex flex-col items-center gap-7">
+      <div className="w-full max-w-md mx-auto px-4 py-6 flex flex-col items-center gap-8">
 
         {/* ===== 1. LOGO + NOME ===== */}
         <header className="flex flex-col items-center gap-3 text-center">
@@ -71,7 +71,7 @@ const Index = () => {
 
         {/* ===== 3. BOTÃO PRINCIPAL (ACIMA DA DOBRA) ===== */}
         <div className="w-full space-y-2">
-          <CTAButton text="🚀 LIBERAR MEU ACESSO AO GRUPO VIP" />
+          <CTAButton text="QUERO ENTRAR NO GRUPO AGORA 🔥" />
           <p className="text-center text-xs text-muted-foreground font-semibold">
             🔒 100% gratuito • Sem spam • Só ofertas reais
           </p>
@@ -215,15 +215,15 @@ const Index = () => {
 
         {/* ===== 10. CTA FINAL ===== */}
         <div className="w-full space-y-3">
-          <p className="text-center text-xs text-muted-foreground font-semibold">
-            ⏳ Últimas vagas disponíveis hoje…
+          <p className="text-center text-xs text-destructive font-bold animate-pulse">
+            ⚠️ Últimas vagas disponíveis hoje…
           </p>
           <p className="text-center text-base font-extrabold text-foreground">
             Você pode continuar pagando caro ou entrar agora e economizar. 👇
           </p>
-          <CTAButton text="🚀 LIBERAR MEU ACESSO AO GRUPO VIP" />
+          <CTAButton text="QUERO ENTRAR NO GRUPO AGORA 🔥" />
           <p className="text-center text-sm font-bold text-primary">
-            🔥 +1000 pessoas já economizando AGORA
+            🔥 +1000 pessoas já estão economizando AGORA
           </p>
         </div>
 
