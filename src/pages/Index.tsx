@@ -136,7 +136,7 @@ const Index = () => {
               </div>
             ))}
             <span className="text-xs text-primary font-semibold ml-2">
-              +1000 pessoas economizando agora
+              +1000 pessoas economizando AGORA
             </span>
           </div>
         </section>
