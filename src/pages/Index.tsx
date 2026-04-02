@@ -10,20 +10,25 @@ import {
   CheckCircle2,
   AlertTriangle,
   MessageCircle,
+  TrendingDown,
+  Gift,
 } from "lucide-react";
 
 const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
 const INSTAGRAM_LINK = "https://instagram.com/magopromobr";
 
-const CTAButton = ({ text }: { text: string }) => (
-  <a
-    href={WHATSAPP_LINK}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="shimmer block w-full text-center font-extrabold text-xl py-5 rounded-2xl transition-transform duration-200 hover:scale-[1.03] bg-cta-green text-cta-green-foreground animate-pulse-glow shadow-lg shadow-cta-green/30"
+const CTAButton = ({ text, className = "" }: { text: string; className?: string }) => (
+  <button
+    onClick={() => {
+      if (typeof window !== "undefined" && (window as any).fbq) {
+        (window as any).fbq("track", "Lead");
+      }
+      window.open(WHATSAPP_LINK, "_blank", "noopener,noreferrer");
+    }}
+    className={`shimmer block w-full text-center font-extrabold text-xl py-5 rounded-2xl transition-transform duration-200 hover:scale-[1.03] bg-cta-green text-cta-green-foreground animate-pulse-glow shadow-lg shadow-cta-green/30 ${className}`}
   >
     {text}
-  </a>
+  </button>
 );
 
 const Index = () => {
@@ -54,39 +59,29 @@ const Index = () => {
           </h1>
         </header>
 
-        {/* ===== 2. HEADLINE ===== */}
+        {/* ===== 2. HEADLINE — GANCHO FORTE ===== */}
         <section className="text-center space-y-3">
-          <h2 className="text-3xl font-black text-foreground leading-tight">
-            💸 ECONOMIZE ATÉ <span className="text-primary">70%</span> TODOS OS DIAS
+          <h2 className="text-2xl sm:text-3xl font-black text-foreground leading-tight">
+            Você está <span className="text-primary">pagando caro</span> sem saber disso… 😱
           </h2>
           <p className="text-muted-foreground text-base font-medium leading-relaxed">
-            Entre no grupo gratuito onde mais de <strong className="text-primary">+1000 pessoas</strong> já estão pagando mais barato em tudo 🔥
+            Enquanto você paga o preço cheio, <strong className="text-primary">+1000 pessoas</strong> já estão comprando pela <strong className="text-primary">metade do preço</strong> todos os dias 🔥
           </p>
         </section>
 
         {/* ===== 3. BOTÃO PRINCIPAL (ACIMA DA DOBRA) ===== */}
         <div className="w-full space-y-2">
-          <button
-  onClick={() => {
-    if (typeof window !== "undefined" && (window as any).fbq) {
-      (window as any).fbq("track", "Lead");
-    }
-    window.open(WHATSAPP_LINK, "_blank", "noopener,noreferrer");
-  }}
-  className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-xl text-lg transition"
->
-  ENTRAR E COMEÇAR A ECONOMIZAR
-</button>
+          <CTAButton text="🔥 QUERO ENTRAR NO GRUPO AGORA" />
           <p className="text-center text-xs text-muted-foreground font-semibold">
-            🔒 Grupo gratuito • Sem spam • Só ofertas reais
+            🔒 100% gratuito • Sem spam • Só ofertas reais
           </p>
         </div>
 
         {/* ===== 4. STATS PILLS ===== */}
         <div className="flex gap-2.5 flex-wrap justify-center">
           {[
-            { icon: <Users className="w-3.5 h-3.5" />, text: "+1000 membros" },
-            { icon: <Zap className="w-3.5 h-3.5" />, text: "Ofertas diárias" },
+            { icon: <Users className="w-3.5 h-3.5" />, text: "+1000 membros ativos" },
+            { icon: <Zap className="w-3.5 h-3.5" />, text: "Ofertas a cada hora" },
             { icon: <Shield className="w-3.5 h-3.5" />, text: "100% gratuito" },
           ].map((item) => (
             <span
@@ -102,13 +97,13 @@ const Index = () => {
         {/* ===== 5. PROVA SOCIAL - DEPOIMENTOS ===== */}
         <section className="w-full space-y-3">
           <h3 className="text-center text-sm font-bold text-muted-foreground uppercase tracking-wider">
-            O que nossos membros dizem
+            Quem entrou, não sai mais 👇
           </h3>
           <div className="space-y-2.5">
             {[
-              { name: "Ana M.", text: "Entrei ontem e já economizei mais de R$100! 🤑", stars: 5 },
-              { name: "Pedro S.", text: "As promoções chegam primeiro aqui, não perco nenhuma!", stars: 5 },
-              { name: "Julia R.", text: "Vale MUITO a pena. Grupo sério e sem enrolação.", stars: 5 },
+              { name: "Ana M.", text: "Entrei sem acreditar… economizei mais de R$200 em poucos dias 😳", stars: 5 },
+              { name: "Pedro S.", text: "As ofertas chegam ANTES de qualquer outro lugar. Já indiquei pra família toda!", stars: 5 },
+              { name: "Julia R.", text: "Comprei um celular por METADE do preço. Grupo sério demais! 🔥", stars: 5 },
             ].map((dep) => (
               <div
                 key={dep.name}
@@ -141,7 +136,7 @@ const Index = () => {
               </div>
             ))}
             <span className="text-xs text-primary font-semibold ml-2">
-              +1000 pessoas economizando
+              +1000 pessoas economizando agora
             </span>
           </div>
         </section>
@@ -160,21 +155,22 @@ const Index = () => {
             />
           </div>
           <p className="text-center text-sm text-muted-foreground font-semibold">
-            📲 Ofertas reais enviadas direto no grupo todos os dias
+            👆 Isso é o que rola no grupo TODOS os dias
           </p>
         </section>
 
         {/* ===== 7. BENEFÍCIOS ===== */}
         <section className="w-full bg-card border border-border rounded-2xl p-5 space-y-4">
           <h3 className="text-center text-lg font-extrabold text-foreground">
-            O que você ganha no grupo:
+            Por que entrar no grupo? 👇
           </h3>
           <div className="space-y-3">
             {[
-              { icon: <ShoppingBag className="w-5 h-5" />, text: "Produtos pela metade do preço" },
-              { icon: <Zap className="w-5 h-5" />, text: "Ofertas exclusivas todos os dias" },
-              { icon: <Smartphone className="w-5 h-5" />, text: "Eletrônicos, perfumes, roupas e mais" },
-              { icon: <CheckCircle2 className="w-5 h-5" />, text: "Links confiáveis (Shopee, Amazon, etc)" },
+              { icon: <TrendingDown className="w-5 h-5" />, text: "Produtos até 70% mais baratos" },
+              { icon: <Zap className="w-5 h-5" />, text: "Ofertas relâmpago a cada hora" },
+              { icon: <Smartphone className="w-5 h-5" />, text: "Eletrônicos, roupas, perfumes e mais" },
+              { icon: <CheckCircle2 className="w-5 h-5" />, text: "Links verificados (Shopee, Amazon, ML)" },
+              { icon: <Gift className="w-5 h-5" />, text: "Cupons exclusivos que ninguém divulga" },
               { icon: <MessageCircle className="w-5 h-5" />, text: "Comunidade ativa com +1000 membros" },
             ].map((b) => (
               <div key={b.text} className="flex items-center gap-3">
@@ -191,41 +187,40 @@ const Index = () => {
         <section className="w-full bg-destructive/10 border border-destructive/30 rounded-2xl p-5 space-y-3">
           <div className="flex items-center gap-2 justify-center">
             <AlertTriangle className="w-5 h-5 text-destructive animate-pulse" />
-            <h3 className="text-base font-extrabold text-destructive">NÃO FIQUE DE FORA</h3>
+            <h3 className="text-base font-extrabold text-destructive">ATENÇÃO: VOCÊ ESTÁ PERDENDO DINHEIRO</h3>
             <AlertTriangle className="w-5 h-5 text-destructive animate-pulse" />
           </div>
           <div className="space-y-2 text-center">
             <p className="text-sm font-bold text-foreground">
-              ⚠️ As melhores ofertas acabam em minutos
+              ⚠️ As melhores ofertas acabam em <span className="text-destructive">minutos</span>
             </p>
             <p className="text-sm font-bold text-foreground">
-              ⏳ Quem entra primeiro pega os melhores preços
+              💸 Quem entra depois <span className="text-destructive">paga mais caro</span>
+            </p>
+            <p className="text-sm font-bold text-foreground">
+              ⏳ Cada segundo fora do grupo é dinheiro jogado fora
             </p>
           </div>
         </section>
 
         {/* ===== 9. ESCASSEZ ===== */}
-        <div className="w-full bg-secondary border border-primary/30 rounded-xl p-4 text-center">
+        <div className="w-full bg-secondary border border-primary/30 rounded-xl p-4 text-center space-y-1">
           <p className="text-sm font-bold text-primary">
-            ⏳ Vagas limitadas no grupo para manter a qualidade das ofertas
+            🚨 Vagas limitadas para manter a qualidade das ofertas
+          </p>
+          <p className="text-xs text-muted-foreground font-semibold">
+            O grupo pode fechar a qualquer momento
           </p>
         </div>
 
         {/* ===== 10. CTA FINAL ===== */}
-        <div className="w-full space-y-2">
-          <button
-  onClick={() => {
-    if (typeof window !== "undefined" && (window as any).fbq) {
-      (window as any).fbq("track", "Lead");
-    }
-    window.open(WHATSAPP_LINK, "_blank", "noopener,noreferrer");
-  }}
-  className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-xl text-lg transition"
->
-  ENTRAR E COMEÇAR A ECONOMIZAR
-</button>
+        <div className="w-full space-y-3">
+          <p className="text-center text-base font-extrabold text-foreground">
+            Não fique de fora. Entre agora e comece a economizar 👇
+          </p>
+          <CTAButton text="🚀 LIBERAR MEU ACESSO AO GRUPO VIP" />
           <p className="text-center text-sm font-bold text-primary">
-            🔥 Já somos +1000 membros
+            🔥 +1000 pessoas já economizando todos os dias
           </p>
         </div>
 
@@ -245,7 +240,7 @@ const Index = () => {
 
         {/* ===== RODAPÉ ===== */}
         <footer className="text-center text-xs text-muted-foreground py-4">
-          <p>Grupo gratuito • Entre e aproveite</p>
+          <p>Grupo 100% gratuito • Sem spam • Ofertas reais</p>
           <p className="mt-1 opacity-60">© 2026 Mago das Promoções</p>
         </footer>
       </div>
