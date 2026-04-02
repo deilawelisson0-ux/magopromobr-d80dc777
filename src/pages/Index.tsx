@@ -81,7 +81,7 @@ const Index = () => {
         <div className="flex gap-2.5 flex-wrap justify-center">
           {[
             { icon: <Users className="w-3.5 h-3.5" />, text: "+1000 economizando AGORA" },
-            { icon: <Zap className="w-3.5 h-3.5" />, text: "Ofertas a cada hora" },
+            { icon: <Zap className="w-3.5 h-3.5" />, text: "Ofertas acabam em minutos" },
             { icon: <Shield className="w-3.5 h-3.5" />, text: "100% gratuito" },
           ].map((item) => (
             <span
