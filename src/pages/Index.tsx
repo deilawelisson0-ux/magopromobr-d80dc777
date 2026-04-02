@@ -37,7 +37,7 @@ const Index = () => {
       {/* Decorative top bar */}
       <div className="w-full h-1 gold-gradient" />
 
-      <div className="w-full max-w-md mx-auto px-4 py-6 flex flex-col items-center gap-7">
+      <div className="w-full max-w-md mx-auto px-4 py-6 flex flex-col items-center gap-8">
 
         {/* ===== 1. LOGO + NOME ===== */}
         <header className="flex flex-col items-center gap-3 text-center">
