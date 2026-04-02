@@ -206,10 +206,10 @@ const Index = () => {
         {/* ===== 9. ESCASSEZ ===== */}
         <div className="w-full bg-secondary border border-primary/30 rounded-xl p-4 text-center space-y-1">
           <p className="text-sm font-bold text-primary">
-            🚨 Vagas limitadas para manter a qualidade das ofertas
+            🚨 Vagas limitadas — o grupo pode FECHAR a qualquer momento
           </p>
           <p className="text-xs text-muted-foreground font-semibold">
-            O grupo pode fechar a qualquer momento
+            Quem não entrar agora, pode ficar de fora
           </p>
         </div>
 
