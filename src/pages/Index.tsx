@@ -221,7 +221,7 @@ const Index = () => {
           <p className="text-center text-base font-extrabold text-foreground">
             Você pode continuar pagando caro ou entrar agora e economizar. 👇
           </p>
-          <CTAButton text="ENTRAR E COMEÇAR A ECONOMIZAR" />
+          <CTAButton text="🚀 LIBERAR MEU ACESSO AO GRUPO VIP" />
           <p className="text-center text-sm font-bold text-primary">
             🔥 +1000 pessoas já economizando AGORA
           </p>
