@@ -215,12 +215,15 @@ const Index = () => {
 
         {/* ===== 10. CTA FINAL ===== */}
         <div className="w-full space-y-3">
-          <p className="text-center text-base font-extrabold text-foreground">
-            Não fique de fora. Entre agora e comece a economizar 👇
+          <p className="text-center text-xs text-muted-foreground font-semibold">
+            ⏳ Últimas vagas disponíveis hoje…
           </p>
-          <CTAButton text="🚀 LIBERAR MEU ACESSO AO GRUPO VIP" />
+          <p className="text-center text-base font-extrabold text-foreground">
+            Você pode continuar pagando caro ou entrar agora e economizar. 👇
+          </p>
+          <CTAButton text="QUERO ENTRAR NO GRUPO AGORA 🔥" />
           <p className="text-center text-sm font-bold text-primary">
-            🔥 +1000 pessoas já economizando todos os dias
+            🔥 +1000 pessoas já economizando AGORA
           </p>
         </div>
 
