@@ -25,7 +25,7 @@ const CTAButton = ({ text, className = "" }: { text: string; className?: string 
       }
       window.open(WHATSAPP_LINK, "_blank", "noopener,noreferrer");
     }}
-    className={`shimmer block w-full text-center font-extrabold text-xl py-5 rounded-2xl transition-transform duration-200 hover:scale-[1.03] bg-cta-green text-cta-green-foreground animate-pulse-glow shadow-lg shadow-cta-green/30 ${className}`}
+    className={`shimmer block w-full text-center font-extrabold text-2xl py-6 rounded-2xl transition-all duration-200 hover:scale-[1.04] hover:shadow-xl bg-cta-green text-cta-green-foreground animate-pulse-glow shadow-lg shadow-cta-green/40 ${className}`}
   >
     {text}
   </button>
