@@ -71,7 +71,7 @@ const Index = () => {
 
         {/* ===== 3. BOTÃO PRINCIPAL (ACIMA DA DOBRA) ===== */}
         <div className="w-full space-y-2">
-          <CTAButton text="ENTRAR E COMEÇAR A ECONOMIZAR" />
+          <CTAButton text="🚀 LIBERAR MEU ACESSO AO GRUPO VIP" />
           <p className="text-center text-xs text-muted-foreground font-semibold">
             🔒 100% gratuito • Sem spam • Só ofertas reais
           </p>
