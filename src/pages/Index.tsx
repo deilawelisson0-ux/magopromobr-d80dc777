@@ -71,7 +71,7 @@ const Index = () => {
 
         {/* ===== 3. BOTÃO PRINCIPAL (ACIMA DA DOBRA) ===== */}
         <div className="w-full space-y-2">
-          <CTAButton text="🔥 QUERO ENTRAR NO GRUPO AGORA" />
+          <CTAButton text="QUERO ENTRAR NO GRUPO AGORA 🔥" />
           <p className="text-center text-xs text-muted-foreground font-semibold">
             🔒 100% gratuito • Sem spam • Só ofertas reais
           </p>
@@ -80,8 +80,8 @@ const Index = () => {
         {/* ===== 4. STATS PILLS ===== */}
         <div className="flex gap-2.5 flex-wrap justify-center">
           {[
-            { icon: <Users className="w-3.5 h-3.5" />, text: "+1000 membros ativos" },
-            { icon: <Zap className="w-3.5 h-3.5" />, text: "Ofertas a cada hora" },
+            { icon: <Users className="w-3.5 h-3.5" />, text: "+1000 economizando AGORA" },
+            { icon: <Zap className="w-3.5 h-3.5" />, text: "Ofertas acabam em minutos" },
             { icon: <Shield className="w-3.5 h-3.5" />, text: "100% gratuito" },
           ].map((item) => (
             <span
@@ -136,7 +136,7 @@ const Index = () => {
               </div>
             ))}
             <span className="text-xs text-primary font-semibold ml-2">
-              +1000 pessoas economizando agora
+              +1000 pessoas economizando AGORA
             </span>
           </div>
         </section>
@@ -206,21 +206,24 @@ const Index = () => {
         {/* ===== 9. ESCASSEZ ===== */}
         <div className="w-full bg-secondary border border-primary/30 rounded-xl p-4 text-center space-y-1">
           <p className="text-sm font-bold text-primary">
-            🚨 Vagas limitadas para manter a qualidade das ofertas
+            🚨 Vagas limitadas — o grupo pode FECHAR a qualquer momento
           </p>
           <p className="text-xs text-muted-foreground font-semibold">
-            O grupo pode fechar a qualquer momento
+            Quem não entrar agora, pode ficar de fora
           </p>
         </div>
 
         {/* ===== 10. CTA FINAL ===== */}
         <div className="w-full space-y-3">
-          <p className="text-center text-base font-extrabold text-foreground">
-            Não fique de fora. Entre agora e comece a economizar 👇
+          <p className="text-center text-xs text-muted-foreground font-semibold">
+            ⏳ Últimas vagas disponíveis hoje…
           </p>
-          <CTAButton text="🚀 LIBERAR MEU ACESSO AO GRUPO VIP" />
+          <p className="text-center text-base font-extrabold text-foreground">
+            Você pode continuar pagando caro ou entrar agora e economizar. 👇
+          </p>
+          <CTAButton text="QUERO ENTRAR NO GRUPO AGORA 🔥" />
           <p className="text-center text-sm font-bold text-primary">
-            🔥 +1000 pessoas já economizando todos os dias
+            🔥 +1000 pessoas já economizando AGORA
           </p>
         </div>
 
