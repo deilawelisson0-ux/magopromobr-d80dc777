@@ -125,7 +125,7 @@ const Index = () => {
   <div className="w-full px-3 mt-2">
     <button
   onClick={handleCTA}
-  className="animate-button-pulse w-full text-center font-extrabold text-sm sm:text-lg py-3.5 rounded-2xl"
+  className="shimmer animate-button-pulse w-full text-center font-extrabold text-sm sm:text-lg py-3.5 rounded-2xl transition-all duration-200 hover:scale-[1.03]"
 >
   🚀 QUERO ENTRAR NO GRUPO
 </button>
