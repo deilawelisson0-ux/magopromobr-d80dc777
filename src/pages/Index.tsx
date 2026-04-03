@@ -107,7 +107,7 @@ const Index = () => {
         </div>
 
         {/* 4. Reforço de decisão + Urgência + CTA */}
-        <div className="w-full shrink-0">
+        <div className="w-full shrink-0 mt-0">
           <p className="text-center text-[9px] sm:text-[11px] text-primary font-bold mb-1">
             ⚠️ Mais de 1.000 pessoas já estão economizando — não fique de fora
           </p>
