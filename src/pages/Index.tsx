@@ -29,7 +29,7 @@ const Index = () => {
         </header>
 
         {/* 2. Headline */}
-        <section className="text-center lg:text-left shrink-0 w-full lg:max-w-[900px]">
+        <section className="w-full max-w-[1300px] mx-auto text-center lg:text-left">
           <h2 className="text-[15px] sm:text-xl lg:text-6xl font-black text-foreground leading-tight max-w-4xl lg:max-w-[900px]">
             Você está <span className="text-primary">pagando caro</span> sem saber disso…
           </h2>
@@ -42,7 +42,7 @@ const Index = () => {
         </section>
 
         {/* 3. Bloco Principal — imagem + lado direito */}
-       <div className="w-full flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-5 mt-2 lg:mt-6">
+       <div className="w-full flex flex-col lg:flex-row lg:items-center justify-center gap-3 lg:gap-5 mt-2 lg:mt-6">
         {/* Imagem dominante */}
         <div className="w-full lg:w-[78%]">
           <img
@@ -144,7 +144,7 @@ const Index = () => {
         <div className="fixed bottom-0 left-0 w-full px-3 pb-3 z-50 bg-background/80 backdrop-blur-sm lg:static lg:bg-transparent lg:backdrop-blur-0 lg:px-0 lg:pb-0 lg:mt-2">
           <button
             onClick={handleCTA}
-            className="animate-button-pulse w-full lg:max-w-xl lg:mx-0 text-center font-extrabold text-sm sm:text-lg lg:text-xl py-3.5 lg:py-4 rounded-2xl bg-green-500 text-white shadow-lg shadow-green-500/30 transition-all duration-200 hover:scale-[1.05] active:scale-[0.97]"
+            className="animate-button-pulse w-full lg:max-w-[600px] mx-auto text-center font-extrabold text-sm sm:text-lg lg:text-xl py-3.5 lg:py-4 rounded-2xl bg-green-500 text-white shadow-lg shadow-green-500/30 transition-all">
           >
             🔥 ENTRAR NO GRUPO AGORA
           </button>
