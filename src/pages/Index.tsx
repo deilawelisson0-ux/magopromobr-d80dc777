@@ -36,6 +36,9 @@ const Index = () => {
           <p className="text-[9px] sm:text-xs text-muted-foreground font-medium leading-snug mt-0.5">
             <strong className="text-primary">+1.000 pessoas</strong> já economizam TODOS OS DIAS com ofertas até <strong className="text-primary">70% OFF</strong>
           </p>
+          <p className="text-[8px] sm:text-[10px] text-foreground/50 font-medium mt-0.5">
+            Todos os dias selecionamos as melhores promoções da internet
+          </p>
         </section>
 
         {/* 3. Bloco Principal — imagem + lado direito */}
@@ -127,7 +130,7 @@ const Index = () => {
             onClick={handleCTA}
             className="shimmer block w-full text-center font-extrabold text-sm sm:text-lg py-2.5 sm:py-3.5 rounded-2xl transition-all duration-200 hover:scale-[1.03] hover:shadow-xl bg-cta-green text-cta-green-foreground animate-pulse-glow shadow-lg shadow-cta-green/40"
           >
-            QUERO ENTRAR NO GRUPO AGORA 🔥
+            QUERO ECONOMIZAR AGORA 🔥
           </button>
         </div>
 
