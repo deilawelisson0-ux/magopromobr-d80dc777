@@ -1,6 +1,6 @@
 import magoAvatar from "@/assets/mago-avatar.webp";
 import magoBanner from "@/assets/mago-banner.webp";
-import { Star, Users, Zap, ShieldCheck, TrendingDown, CheckCircle2, Lock, Clock, MessageCircle } from "lucide-react";
+import { Star, Users, ShieldCheck, TrendingDown, CheckCircle2, Lock, Clock, MessageCircle } from "lucide-react";
 
 const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
 
@@ -16,19 +16,19 @@ const Index = () => {
     <div className="h-[100dvh] bg-background flex flex-col overflow-hidden">
       <div className="w-full h-0.5 gold-gradient shrink-0" />
 
-      <div className="flex-1 flex flex-col items-center w-full max-w-2xl mx-auto px-3 py-1 overflow-hidden" style={{ gap: '0.5vh' }}>
-        {/* 1. Logo + Nome + Exclusividade */}
+      <div className="flex-1 flex flex-col items-center w-full max-w-2xl mx-auto px-3 py-1.5 overflow-hidden" style={{ gap: '0.6vh' }}>
+        {/* 1. Logo + Nome + Escassez */}
         <header className="flex items-center gap-2 shrink-0">
           <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-full overflow-hidden border-2 border-primary glow-gold">
             <img src={magoAvatar} alt="Mago das Promoções" className="w-full h-full object-cover" width={36} height={36} fetchPriority="high" />
           </div>
           <h1 className="text-[11px] sm:text-sm font-black gold-text tracking-tight">MAGO DAS PROMOÇÕES</h1>
-          <span className="flex items-center gap-0.5 text-[7px] sm:text-[9px] text-primary/80 font-semibold border border-primary/30 rounded-full px-1.5 py-0.5">
-            <Lock className="w-2 h-2" /> Grupo Fechado
+          <span className="flex items-center gap-1 text-[7px] sm:text-[9px] text-primary font-bold border border-primary/40 rounded-full px-2 py-0.5 bg-primary/10 animate-pulse">
+            <Lock className="w-2.5 h-2.5" /> Grupo fechado • vagas limitadas
           </span>
         </header>
 
-        {/* 2. Headline com FOMO */}
+        {/* 2. Headline */}
         <section className="text-center shrink-0">
           <h2 className="text-[15px] sm:text-xl font-black text-foreground leading-tight">
             Você está <span className="text-primary">pagando caro</span> sem saber disso…
@@ -40,16 +40,16 @@ const Index = () => {
 
         {/* 3. Bloco Principal — imagem + lado direito */}
         <div className="w-full flex gap-2 items-stretch flex-1 min-h-0">
-          {/* Imagem dominante */}
-          <div className="flex-[1.6] min-w-0 flex items-center justify-center relative overflow-hidden rounded-2xl">
+          {/* Imagem dominante — mais espaço */}
+          <div className="flex-[1.8] min-w-0 flex items-center justify-center relative overflow-hidden rounded-2xl">
             <img
               src={magoBanner}
               alt=""
               aria-hidden="true"
-              className="absolute inset-0 w-full h-full object-cover scale-110 blur-md opacity-30"
+              className="absolute inset-0 w-full h-full object-cover scale-110 blur-md opacity-25"
               loading="eager"
             />
-            <div className="absolute inset-0 rounded-2xl glow-gold-border pointer-events-none z-20" />
+            <div className="absolute inset-0 rounded-2xl border border-primary/20 pointer-events-none z-20" />
             <img
               src={magoBanner}
               alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
@@ -58,7 +58,7 @@ const Index = () => {
             />
           </div>
 
-          {/* Lado direito — prova social + benefícios + chat simulado */}
+          {/* Lado direito — prova social + benefícios */}
           <div className="flex-1 min-w-0 flex flex-col gap-1 justify-center">
             {/* Prova social */}
             <div className="bg-card/60 border border-border rounded-lg px-2 py-1.5 text-center space-y-0.5">
@@ -78,7 +78,7 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Mini depoimentos simulados */}
+            {/* Mini depoimentos */}
             <div className="space-y-0.5">
               {[
                 { name: "Ana", msg: "Economizei R$200 essa semana! 🤩" },
@@ -109,15 +109,18 @@ const Index = () => {
           </div>
         </div>
 
-        {/* 4. Urgência + FOMO + CTA */}
-        <div className="w-full shrink-0" style={{ marginTop: '-0.2vh' }}>
-          <div className="flex items-center justify-center gap-2 mb-0.5">
-            <p className="text-[8px] sm:text-[10px] text-primary font-bold animate-pulse">
-              ⚠️ Quem não entra acaba pagando mais caro
-            </p>
-            <span className="text-[7px] sm:text-[9px] text-muted-foreground">•</span>
-            <p className="text-[8px] sm:text-[10px] text-foreground/70 font-semibold">
+        {/* 4. Reforço de decisão + Urgência + CTA */}
+        <div className="w-full shrink-0">
+          <p className="text-center text-[9px] sm:text-[11px] text-primary font-bold mb-1">
+            ⚠️ Mais de 1.000 pessoas já estão economizando — não fique de fora
+          </p>
+          <div className="flex items-center justify-center gap-2 mb-1">
+            <p className="text-[7px] sm:text-[9px] text-foreground/60 font-semibold">
               ⏳ Promoções somem em minutos
+            </p>
+            <span className="text-[7px] text-muted-foreground">•</span>
+            <p className="text-[7px] sm:text-[9px] text-foreground/60 font-semibold">
+              🔥 Quem entra primeiro pega os melhores preços
             </p>
           </div>
           <button
@@ -126,16 +129,13 @@ const Index = () => {
           >
             QUERO ENTRAR NO GRUPO AGORA 🔥
           </button>
-          <p className="text-center text-[7px] sm:text-[10px] text-muted-foreground font-semibold mt-0.5">
-            🔥 Quem entra primeiro pega os melhores preços
-          </p>
         </div>
 
-        {/* 5. Confiança */}
-        <footer className="flex flex-wrap justify-center gap-x-2 sm:gap-x-3 text-[7px] sm:text-[9px] text-muted-foreground font-medium shrink-0">
-          <span className="flex items-center gap-0.5"><CheckCircle2 className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-cta-green" /> 100% gratuito</span>
-          <span className="flex items-center gap-0.5"><CheckCircle2 className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-cta-green" /> Sem spam</span>
-          <span className="flex items-center gap-0.5"><CheckCircle2 className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-cta-green" /> Cancele quando quiser</span>
+        {/* 5. Microcopy persuasivo */}
+        <footer className="flex flex-wrap justify-center gap-x-3 sm:gap-x-4 text-[7px] sm:text-[9px] text-muted-foreground font-medium shrink-0">
+          <span className="flex items-center gap-0.5"><CheckCircle2 className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-cta-green" /> Acesso imediato</span>
+          <span className="flex items-center gap-0.5"><CheckCircle2 className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-cta-green" /> Promoções todos os dias</span>
+          <span className="flex items-center gap-0.5"><CheckCircle2 className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-cta-green" /> Saia quando quiser</span>
         </footer>
       </div>
     </div>
