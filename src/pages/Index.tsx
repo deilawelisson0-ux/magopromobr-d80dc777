@@ -16,7 +16,7 @@ const Index = () => {
     <div className="bg-background flex flex-col overflow-hidden">
       <div className="w-full h-0.5 gold-gradient shrink-0" />
 
-      <div className="flex-1 flex flex-col items-center w-full max-w-2xl mx-auto px-3 py-0 overflow-hidden" style={{ gap: '0.6vh' }}>
+      <div className="flex-1 flex flex-col items-center w-full max-w-2xl mx-auto px-3 py-0 pb-24 overflow-hidden" style={{ gap: '0.6vh' }}>
         {/* 1. Logo + Nome + Escassez */}
         <header className="flex items-center gap-2 shrink-0">
           <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-full overflow-hidden border-2 border-primary glow-gold">
@@ -120,14 +120,14 @@ const Index = () => {
               🔥 Quem entra primeiro pega os melhores preços
             </p>
           </div>
-          <button
-            onClick={handleCTA}
-            className="shimmer block w-full text-center font-extrabold text-sm sm:text-lg py-2 sm:py-3 rounded-2xl transition-all duration-200 hover:scale-[1.03] hover:shadow-xl bg-cta-green text-cta-green-foreground animate-pulse-glow shadow-lg shadow-cta-green/40"
-          >
-            🚀 QUERO ENTRAR NO GRUPO 
-          </button>
-        </div>
-
+          <div className="fixed bottom-0 left-0 w-full px-3 pb-3 z-50 bg-background">
+  <button
+    onClick={handleCTA}
+    className="animate-button-pulse w-full text-center font-extrabold text-sm sm:text-lg py-3.5 rounded-2xl"
+  >
+    🚀 QUERO ENTRAR NO GRUPO
+  </button>
+</div>
         {/* 5. Microcopy persuasivo */}
         <footer className="flex flex-wrap justify-center gap-x-3 sm:gap-x-4 text-[7px] sm:text-[9px] text-muted-foreground font-medium shrink-0">
           <span className="flex items-center gap-0.5"><CheckCircle2 className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-cta-green" /> Acesso imediato</span>
