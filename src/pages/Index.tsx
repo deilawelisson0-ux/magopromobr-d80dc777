@@ -16,7 +16,7 @@ const Index = () => {
     <div className="bg-background flex flex-col overflow-hidden">
       <div className="flex items-center gap-2 lg:gap-4 shrink-0">
 
-      <div className="flex-1 flex flex-col items-center lg:items-start w-full max-w-[1400px] mx-auto px-3 lg:px-10 py-0 pb-16 lg:pb-20 overflow-hidden" style={{ gap: '0.6vh' }}>
+      <div className="flex-1 flex flex-col items-center lg:items-start w-full max-w-[1900px] mx-auto px-3 lg:px-10 py-0 pb-16 lg:pb-20 overflow-hidden" style={{ gap: '0.6vh' }}>
         {/* 1. Logo + Nome + Escassez */}
         <header className="flex items-center gap-2 lg:gap-4 shrink-0">
           <div className="w-7 h-7 sm:w-9 sm:h-9 lg:w-12 lg:h-12 rounded-full overflow-hidden border-2 border-primary glow-gold">
@@ -30,7 +30,7 @@ const Index = () => {
 
         {/* 2. Headline */}
         <section className="text-center lg:text-left shrink-0 w-full">
-          <h2 className="text-[15px] sm:text-xl lg:text-6xl font-black text-foreground leading-tight max-w-4xl lg:max-w-5xl">
+          <h2 className="text-[15px] sm:text-xl lg:text-8xl font-black text-foreground leading-tight max-w-4xl lg:max-w-5xl">
             Você está <span className="text-primary">pagando caro</span> sem saber disso…
           </h2>
           <p className="text-[9px] sm:text-xs lg:text-xl text-muted-foreground font-medium leading-snug mt-1">
@@ -50,7 +50,7 @@ const Index = () => {
             <img
               src={magoBanner}
               alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
-              className="w-full lg:max-w-[1150px] h-auto object-cover relative z-10 rounded-2xl glow-gold-border"
+              className="w-full lg:max-w-[1650px] h-auto object-cover relative z-10 rounded-2xl glow-gold-border"
               loading="eager"
             />
           </div>
