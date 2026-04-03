@@ -39,11 +39,12 @@ const Index = () => {
         {/* 4. Bloco Principal — imagem dominante + lado direito */}
         <div className="w-full flex gap-2 items-stretch flex-1 min-h-0">
           {/* Imagem — solta, sem caixa, dominante */}
-          <div className="flex-[1.6] min-w-0 flex items-center justify-center">
+          <div className="flex-[1.6] min-w-0 flex items-center justify-center relative">
+            <div className="absolute inset-0 rounded-2xl glow-gold-border pointer-events-none" />
             <img
               src={magoBanner}
               alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
-              className="w-full h-full object-contain drop-shadow-2xl"
+              className="w-full h-full object-contain drop-shadow-2xl relative z-10"
               loading="eager"
             />
           </div>
