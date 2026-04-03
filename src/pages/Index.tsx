@@ -131,15 +131,11 @@ const Index = () => {
           ⚠️ Mais de 1.000 pessoas já estão economizando — não fique de fora
         </p>
 
-        <div className="flex items-center justify-center gap-2 mb-0">
-          <p className="text-[7px] sm:text-[9px] text-foreground/60 font-semibold">
-            ⏳ Promoções somem em minutos
-          </p>
-          <span className="text-[7px] text-muted-foreground">•</span>
-          <p className="text-[7px] sm:text-[9px] text-foreground/60 font-semibold">
-            🔥 Quem entra primeiro pega os melhores preços
-          </p>
-        </div>
+       <div className="flex items-center justify-center gap-2 mb-0 text-[7px] sm:text-[9px] text-foreground/60 font-semibold">
+  <span>Promoções somem em minutos</span>
+  <span className="text-muted-foreground">•</span>
+  <span>Quem entra primeiro pega os melhores preços</span>
+</div>
 
         <div className="fixed bottom-0 left-0 w-full px-3 pb-3 z-50 bg-background/80 backdrop-blur-sm lg:static lg:bg-transparent lg:backdrop-blur-0 lg:px-0 lg:pb-0 lg:mt-2">
           <button
