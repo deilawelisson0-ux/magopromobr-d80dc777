@@ -50,15 +50,15 @@ const Index = () => {
             <img
               src={magoBanner}
               alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
-              className="w-full max-w-full h-auto object-contain relative z-10 drop-shadow-2xl px-1 sm:px-0"
+              className="w-full max-w-full h-auto object-contain relative z-10 drop-shadow-2xl"
               loading="eager"
             />
           </div>
 
           {/* Lado direito — prova social + benefícios */}
-          <div className="w-full lg:flex-1 min-w-0 flex flex-col gap-2 justify-center">
+          <div className="w-full lg:flex-1 min-w-0 flex flex-col gap-1 justify-center">
             {/* Prova social */}
-            <div className="bg-card/60 border border-border rounded-lg px-2 py-1.5 text-center space-y-0.5">
+            <div className="bg-card/60 border border-border rounded-lg px-2 py-1 text-center space-y-0">
               <div className="flex justify-center gap-0.5">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-primary text-primary" />
@@ -76,7 +76,7 @@ const Index = () => {
             </div>
 
             {/* Mini depoimentos */}
-            <div className="space-y-0.5">
+            <div className=""space-y-0">
               {[
                 { name: "Ana", msg: "Economizei R$200 essa semana! 🤩" },
                 { name: "Pedro", msg: "Melhor grupo que entrei 🔥" },
