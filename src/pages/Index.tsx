@@ -42,40 +42,87 @@ const Index = () => {
         </section>
 
         {/* 3. Bloco Principal — imagem + lado direito */}
-        <div className="w-full grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-3 lg:gap-8 items-center lg:items-center mt-2 lg:mt-6">
-          {/* Imagem dominante — mais espaço */}
-          <div className="w-full min-w-0 flex flex-col gap-2 lg:gap-5 justify-center">
-            
-            
-            <img
-              src={magoBanner}
-              alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
-              className="w-full lg:max-w-[1120px] h-auto object-cover relative z-10 rounded-2xl glow-gold-border"
-              loading="eager"
-            />
+       <div className="w-full flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-8 mt-2 lg:mt-6">
+        {/* Imagem dominante */}
+        <div className="w-full lg:w-[68%]">
+          <img
+            src={magoBanner}
+            alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
+            className="w-full h-auto object-cover relative z-10 rounded-2xl glow-gold-border"
+            loading="eager"
+          />
+        </div>
+
+        {/* Lado direito — prova social + benefícios */}
+        <div className="w-full lg:w-[32%] flex flex-col gap-2 lg:gap-3 justify-center">
+          {/* Prova social */}
+          <div className="bg-card/60 border border-border rounded-lg px-3 py-2 lg:px-4 lg:py-3 text-center space-y-1">
+            <div className="flex justify-center gap-0.5">
+              {[...Array(5)].map((_, i) => (
+                <Star
+                  key={i}
+                  className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-primary text-primary"
+                />
+              ))}
+            </div>
+
+            <div className="flex items-center justify-center gap-1">
+              <Users className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-primary" />
+              <span className="text-[8px] sm:text-[11px] lg:text-lg font-bold text-primary">
+                +1.000 economizando
+              </span>
+            </div>
+
+            <div className="flex justify-center -space-x-1.5">
+              {["A", "M", "J", "P", "R"].map((l) => (
+                <div
+                  key={l}
+                  className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-muted border border-background flex items-center justify-center text-[6px] sm:text-[7px] font-bold text-muted-foreground"
+                >
+                  {l}
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Lado direito — prova social + benefícios */}
-          <div className="w-full min-w-0 flex flex-col gap-2 lg:gap-4 justify-center">
-            {/* Prova social */}
-           <div className="w-full grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-3 lg:gap-8 items-center lg:items-center mt-2 lg:mt-6">
-  
-  <div className="flex justify-center gap-0.5">
-    {[...Array(5)].map((_, i) => (
-      <Star
-        key={i}
-        className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-primary text-primary"
-      />
-    ))}
-  </div>
-              <div className="flex items-center justify-center gap-1">
-    <Users className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-primary" />
-    <span className="text-[8px] sm:text-[11px] lg:text-lg font-bold text-primary">
-      +1.000 economizando
-    </span>
-  </div>
+          {/* Mini depoimentos */}
+          <div className="space-y-1">
+            {[
+              { name: "Ana", msg: "Economizei R$200 essa semana! 😍" },
+              { name: "Pedro", msg: "Melhor grupo que entrei 🔥" },
+            ].map((d, i) => (
+              <div
+                key={i}
+                className="flex items-start gap-1 bg-card/40 border border-border/50 rounded-md px-1.5 py-0.5 lg:px-3 lg:py-2"
+              >
+                <MessageCircle className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-primary shrink-0 mt-0.5" />
+                <p className="text-[7px] sm:text-[9px] lg:text-sm text-foreground/80 leading-tight">
+                  <strong className="text-foreground">{d.name}:</strong> {d.msg}
+                </p>
+              </div>
+            ))}
+          </div>
 
-</div>
+          {/* Benefícios */}
+          <div className="space-y-1">
+            {[
+              { icon: <TrendingDown className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "Até 70% OFF" },
+              { icon: <Clock className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "Somem em minutos" },
+              { icon: <ShieldCheck className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "Links confiáveis" },
+            ].map((b) => (
+              <div
+                key={b.text}
+                className="flex items-center gap-1 bg-card/60 border border-border rounded-md px-1.5 py-0.5 lg:px-3 lg:py-2"
+              >
+                <span className="text-primary shrink-0">{b.icon}</span>
+                <span className="text-[8px] sm:text-[11px] lg:text-sm font-semibold text-foreground">
+                  {b.text}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
             {/* Mini depoimentos */}
 <div className="space-y-0">
