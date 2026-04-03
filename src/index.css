@@ -141,3 +141,18 @@
     50% { box-shadow: 0 0 35px hsl(45 100% 50% / 0.7), 0 0 70px hsl(45 100% 50% / 0.35), 0 0 100px hsl(38 90% 55% / 0.25); }
   }
 }
+@keyframes pulseButton {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-button-pulse {
+  animation: pulseButton 2s ease-in-out infinite;
+}
