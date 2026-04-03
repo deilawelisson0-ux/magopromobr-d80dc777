@@ -42,21 +42,21 @@ const Index = () => {
         </section>
 
         {/* 3. Bloco Principal — imagem + lado direito */}
-        <div className="w-full flex gap-2 items-stretch flex-1 min-h-0">
+        <div className="w-full flex flex-col lg:flex-row gap-3 items-stretch flex-1 min-h-0">
           {/* Imagem dominante — mais espaço */}
-          <div className="flex-[2.2] min-w-0 flex items-center justify-center relative">
+          <div className="w-full lg:flex-[2.2] min-w-0 flex items-center justify-center relative">
             
             
             <img
               src={magoBanner}
               alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
-              className="w-full max-w-full h-auto object-contain relative z-10 drop-shadow-2xl"
+              className="w-full max-w-full h-auto object-contain relative z-10 drop-shadow-2xl px-1 sm:px-0"
               loading="eager"
             />
           </div>
 
           {/* Lado direito — prova social + benefícios */}
-          <div className="flex-1 min-w-0 flex flex-col gap-1 justify-center">
+          <div className="w-full lg:flex-1 min-w-0 flex flex-col gap-2 justify-center">
             {/* Prova social */}
             <div className="bg-card/60 border border-border rounded-lg px-2 py-1.5 text-center space-y-0.5">
               <div className="flex justify-center gap-0.5">
