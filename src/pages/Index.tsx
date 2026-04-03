@@ -44,7 +44,7 @@ const Index = () => {
         {/* 3. Bloco Principal — imagem + lado direito */}
        <div className="w-full flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-8 mt-2 lg:mt-6">
         {/* Imagem dominante */}
-        <div className="w-full lg:w-[68%]">
+        <div className="w-full lg:w-[75%]">
           <img
             src={magoBanner}
             alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
@@ -54,7 +54,7 @@ const Index = () => {
         </div>
 
         {/* Lado direito — prova social + benefícios */}
-        <div className="w-full lg:w-[32%] flex flex-col gap-2 lg:gap-3 justify-center">
+        <div className="w-full lg:w-[25%] flex flex-col gap-2 lg:gap-3 justify-center">
           {/* Prova social */}
           <div className="bg-card/60 border border-border rounded-lg px-3 py-2 lg:px-4 lg:py-3 text-center space-y-1">
             <div className="flex justify-center gap-0.5">
@@ -165,8 +165,9 @@ const Index = () => {
             Saia quando quiser
           </span>
         </footer>
-      </div>
     </div>
+  </div>
+</div>
 );
 };
 
