@@ -42,7 +42,7 @@ const Index = () => {
         </section>
 
         {/* 3. Bloco Principal — imagem + lado direito */}
-        <div className="w-full grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-3 lg:gap-10 items-center lg:items-center mt-2 lg:mt-6">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-3 lg:gap-8 items-center lg:items-center mt-2 lg:mt-6">
           {/* Imagem dominante — mais espaço */}
           <div className="w-full min-w-0 flex flex-col gap-2 lg:gap-5 justify-center">
             
@@ -50,7 +50,7 @@ const Index = () => {
             <img
               src={magoBanner}
               alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
-              className="w-full lg:max-w-[1050px] h-auto object-cover relative z-10 rounded-2xl glow-gold-border"
+              className="w-full lg:max-w-[1120px] h-auto object-cover relative z-10 rounded-2xl glow-gold-border"
               loading="eager"
             />
           </div>
@@ -58,7 +58,7 @@ const Index = () => {
           {/* Lado direito — prova social + benefícios */}
           <div className="w-full min-w-0 flex flex-col gap-2 lg:gap-4 justify-center">
             {/* Prova social */}
-           <div className="bg-card/60 border border-border rounded-lg px-4 py-2.5 lg:px-5 lg:py-4 text-center space-y-1">
+           <div className="w-full grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-3 lg:gap-8 items-center lg:items-center mt-2 lg:mt-6">
   
   <div className="flex justify-center gap-0.5">
     {[...Array(5)].map((_, i) => (
@@ -70,7 +70,7 @@ const Index = () => {
   </div>
               <div className="flex items-center justify-center gap-1">
     <Users className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-primary" />
-    <span className="text-[8px] sm:text-[11px] lg:text-base font-bold text-primary">
+    <span className="text-[8px] sm:text-[11px] lg:text-lg font-bold text-primary">
       +1.000 economizando
     </span>
   </div>
@@ -127,7 +127,7 @@ const Index = () => {
         <div className="fixed bottom-0 left-0 w-full px-3 pb-3 z-50 bg-background/80 backdrop-blur-sm lg:static lg:bg-transparent lg:backdrop-blur-0 lg:px-0 lg:pb-0 lg:mt-2">
           <button
             onClick={handleCTA}
-            className="animate-button-pulse w-full lg:max-w-lg lg:mx-0 text-center font-extrabold text-sm sm:text-lg lg:text-xl py-3.5 lg:py-4 rounded-2xl bg-green-500 text-white shadow-lg shadow-green-500/30 transition-all duration-200 hover:scale-[1.05] active:scale-[0.97]"
+            className="animate-button-pulse w-full lg:max-w-xl lg:mx-0 text-center font-extrabold text-sm sm:text-lg lg:text-xl py-3.5 lg:py-4 rounded-2xl bg-green-500 text-white shadow-lg shadow-green-500/30 transition-all duration-200 hover:scale-[1.05] active:scale-[0.97]"
           >
             🔥 ENTRAR NO GRUPO AGORA
           </button>
