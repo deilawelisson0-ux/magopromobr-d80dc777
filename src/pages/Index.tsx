@@ -140,7 +140,7 @@ const Index = () => {
         <div className="fixed bottom-0 left-0 w-full px-3 pb-3 z-50 bg-background/80 backdrop-blur-sm lg:static lg:bg-transparent lg:backdrop-blur-0 lg:px-0 lg:pb-0 lg:mt-2">
           <button
             onClick={handleCTA}
-            className="animate-button-pulse w-full lg:max-w-[600px] mx-auto text-center font-extrabold text-sm sm:text-lg lg:text-xl py-3.5 lg:py-4 rounded-2xl bg-green-500 text-white shadow-lg shadow-green-500/30 transition-all">
+            className="animate-button-pulse w-full lg:max-w-[600px] mx-auto text-center font-extrabold text-sm sm:text-lg lg:text-xl py-3.5 lg:py-4 rounded-2xl bg-green-500 text-white shadow-lg shadow-green-500/30 transition-all"
           >
             🔥 ENTRAR NO GRUPO AGORA
           </button>
