@@ -1,6 +1,6 @@
 import magoAvatar from "@/assets/mago-avatar.webp";
 import magoBanner from "@/assets/mago-banner.webp";
-import { Star, Users, Zap, ShieldCheck, TrendingDown } from "lucide-react";
+import { Star, Users, Zap, ShieldCheck, TrendingDown, CheckCircle2 } from "lucide-react";
 
 const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
 
@@ -16,8 +16,8 @@ const Index = () => {
     <div className="h-[100dvh] bg-background flex flex-col overflow-hidden">
       <div className="w-full h-0.5 gold-gradient shrink-0" />
 
-      <div className="flex-1 flex flex-col items-center justify-between w-full max-w-lg mx-auto px-3 py-2 sm:py-3">
-        {/* Header */}
+      <div className="flex-1 flex flex-col items-center w-full max-w-2xl mx-auto px-3 py-2 gap-[1vh] overflow-hidden">
+        {/* 1. Logo + Nome */}
         <header className="flex items-center gap-2 shrink-0">
           <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden border-2 border-primary glow-gold">
             <img src={magoAvatar} alt="Mago das Promoções" className="w-full h-full object-cover" width={40} height={40} fetchPriority="high" />
@@ -26,57 +26,65 @@ const Index = () => {
           <span className="text-sm animate-sparkle">✨</span>
         </header>
 
-        {/* Headline */}
-        <section className="text-center shrink-0 space-y-0.5">
-          <h2 className="text-[15px] sm:text-xl font-black text-foreground leading-tight">
+        {/* 2 & 3. Headline + Subheadline */}
+        <section className="text-center shrink-0">
+          <h2 className="text-sm sm:text-xl font-black text-foreground leading-tight">
             Você está <span className="text-primary">pagando caro</span> sem saber disso…
           </h2>
-          <p className="text-[10px] sm:text-xs text-muted-foreground font-medium leading-snug">
+          <p className="text-[10px] sm:text-xs text-muted-foreground font-medium leading-snug mt-0.5">
             Mais de <strong className="text-primary">1.000 pessoas</strong> já economizam TODOS OS DIAS com ofertas até <strong className="text-primary">70% mais baratas</strong>.
           </p>
         </section>
 
-        {/* Banner — larger and dominant */}
-        <div className="w-full shrink-0 flex gap-2 items-stretch" style={{ flex: '1.5 1 0', minHeight: 0 }}>
-          <div className="flex-[1.3] min-w-0 rounded-xl overflow-hidden">
-            <img src={magoBanner} alt="Ofertas reais do grupo — Tênis de R$457 por R$99" className="w-full h-full object-contain" loading="eager" />
+        {/* 4. Bloco Principal — 2 colunas */}
+        <div className="w-full flex gap-2 items-stretch flex-1 min-h-0">
+          {/* Lado Esquerdo — Imagem dominante (~60%) */}
+          <div className="flex-[1.4] min-w-0 rounded-xl overflow-hidden flex items-center justify-center bg-card">
+            <img
+              src={magoBanner}
+              alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
+              className="w-full h-full object-contain"
+              loading="eager"
+            />
           </div>
 
-          {/* Side column */}
-          <div className="flex flex-col justify-between gap-1 shrink-0 w-[38%]">
-            <div className="bg-card border border-border rounded-lg px-2 py-1.5 text-center space-y-0.5">
+          {/* Lado Direito — Prova social + benefícios (~40%) */}
+          <div className="flex-1 min-w-0 flex flex-col gap-1.5 justify-center">
+            {/* Prova social */}
+            <div className="bg-card border border-border rounded-lg px-2 py-1.5 text-center space-y-1">
               <div className="flex justify-center gap-0.5">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-2.5 h-2.5 fill-primary text-primary" />
+                  <Star key={i} className="w-3 h-3 fill-primary text-primary" />
                 ))}
               </div>
-              <div className="flex items-center justify-center gap-0.5">
-                <Users className="w-2.5 h-2.5 text-primary" />
-                <span className="text-[8px] sm:text-[10px] font-bold text-primary">+1000 economizando</span>
+              <div className="flex items-center justify-center gap-1">
+                <Users className="w-3 h-3 text-primary" />
+                <span className="text-[9px] sm:text-[11px] font-bold text-primary">+1000 economizando</span>
               </div>
-              <div className="flex justify-center -space-x-1">
+              <div className="flex justify-center -space-x-1.5">
                 {["A", "M", "J", "P", "R"].map((l) => (
-                  <div key={l} className="w-3.5 h-3.5 rounded-full bg-muted border border-background flex items-center justify-center text-[6px] font-bold text-muted-foreground">{l}</div>
+                  <div key={l} className="w-4 h-4 rounded-full bg-muted border border-background flex items-center justify-center text-[7px] font-bold text-muted-foreground">{l}</div>
                 ))}
               </div>
             </div>
 
-            <div className="space-y-0.5">
+            {/* Benefícios */}
+            <div className="space-y-1">
               {[
-                { icon: <TrendingDown className="w-2.5 h-2.5" />, text: "Até 70% OFF" },
-                { icon: <Zap className="w-2.5 h-2.5" />, text: "Acabam em minutos" },
-                { icon: <ShieldCheck className="w-2.5 h-2.5" />, text: "Links confiáveis" },
+                { icon: <TrendingDown className="w-3 h-3" />, text: "Até 70% OFF" },
+                { icon: <Zap className="w-3 h-3" />, text: "Acabam em minutos" },
+                { icon: <ShieldCheck className="w-3 h-3" />, text: "Links confiáveis" },
               ].map((b) => (
-                <div key={b.text} className="flex items-center gap-1 bg-card border border-border rounded-md px-1.5 py-0.5">
+                <div key={b.text} className="flex items-center gap-1.5 bg-card border border-border rounded-md px-2 py-1">
                   <span className="text-primary shrink-0">{b.icon}</span>
-                  <span className="text-[8px] sm:text-[10px] font-semibold text-foreground">{b.text}</span>
+                  <span className="text-[9px] sm:text-[11px] font-semibold text-foreground">{b.text}</span>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        {/* Urgency + CTA */}
+        {/* 5. Urgência + 6. CTA + 7. Subtexto */}
         <div className="w-full space-y-1 shrink-0">
           <p className="text-center text-[9px] sm:text-[11px] text-primary font-bold animate-pulse">
             ⚡ Quem entra primeiro pega os melhores preços
@@ -92,12 +100,11 @@ const Index = () => {
           </p>
         </div>
 
-        {/* Trust footer */}
-        <footer className="flex flex-wrap justify-center gap-x-2 text-[7px] sm:text-[9px] text-muted-foreground font-medium shrink-0">
-          <span>🔒 100% gratuito</span>
-          <span>• Sem spam</span>
-          <span>• Ofertas reais</span>
-          <span>• Cancele quando quiser</span>
+        {/* 8. Confiança */}
+        <footer className="flex flex-wrap justify-center gap-x-3 text-[7px] sm:text-[9px] text-muted-foreground font-medium shrink-0">
+          <span className="flex items-center gap-0.5"><CheckCircle2 className="w-2.5 h-2.5 text-cta-green" /> 100% gratuito</span>
+          <span className="flex items-center gap-0.5"><CheckCircle2 className="w-2.5 h-2.5 text-cta-green" /> Sem spam</span>
+          <span className="flex items-center gap-0.5"><CheckCircle2 className="w-2.5 h-2.5 text-cta-green" /> Cancele quando quiser</span>
         </footer>
       </div>
     </div>
