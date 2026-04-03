@@ -37,7 +37,7 @@ const Index = () => {
         </section>
 
         {/* Banner — larger and dominant */}
-        <div className="w-full shrink-0 flex gap-2 items-stretch" style={{ flex: '1 1 0', minHeight: 0, maxHeight: '42vh' }}>
+        <div className="w-full shrink-0 flex gap-2 items-stretch" style={{ flex: '1.5 1 0', minHeight: 0 }}>
           <div className="flex-[1.3] min-w-0 rounded-xl overflow-hidden">
             <img src={magoBanner} alt="Ofertas reais do grupo — Tênis de R$457 por R$99" className="w-full h-full object-contain" loading="eager" />
           </div>
