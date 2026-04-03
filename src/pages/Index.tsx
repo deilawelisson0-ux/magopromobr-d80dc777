@@ -13,7 +13,7 @@ const Index = () => {
   };
 
   return (
-    <div className="h-[100dvh] bg-background flex flex-col overflow-hidden">
+    <div className="bg-background flex flex-col overflow-hidden">
       <div className="w-full h-0.5 gold-gradient shrink-0" />
 
       <div className="flex-1 flex flex-col items-center w-full max-w-2xl mx-auto px-3 py-0 overflow-hidden" style={{ gap: '0.6vh' }}>
