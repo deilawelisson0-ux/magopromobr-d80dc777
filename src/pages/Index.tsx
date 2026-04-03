@@ -122,13 +122,13 @@ const Index = () => {
     </p>
   </div>
 
-  <div className="fixed bottom-0 left-0 w-full px-3 pb-3 z-50 bg-background">
+  <div className="w-full px-3 mt-2">
     <button
-      onClick={handleCTA}
-      className="animate-button-pulse w-full text-center font-extrabold text-sm sm:text-lg py-3.5 rounded-2xl"
-    >
-      🚀 QUERO ENTRAR NO GRUPO
-    </button>
+  onClick={handleCTA}
+  className="animate-button-pulse w-full text-center font-extrabold text-sm sm:text-lg py-3.5 rounded-2xl"
+>
+  🚀 QUERO ENTRAR NO GRUPO
+</button>
   </div>
 
   {/* 5. Microcopy persuasivo */}
