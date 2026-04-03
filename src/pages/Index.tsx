@@ -50,7 +50,7 @@ const Index = () => {
             <img
               src={magoBanner}
               alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
-              className="w-full h-auto object-cover relative z-10 rounded-2xl border border-yellow-400/40 shadow-[0_0_40px_rgba(255,215,0,0.6)]"
+              className="w-full h-auto object-cover relative z-10 rounded-2xl glow-gold-border"
               loading="eager"
             />
           </div>
