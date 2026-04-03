@@ -58,22 +58,24 @@ const Index = () => {
           {/* Lado direito — prova social + benefícios */}
           <div className="w-full lg:flex-[0.95] min-w-0 flex flex-col gap-2 lg:gap-4 justify-center">
             {/* Prova social */}
-            <div className="bg-card/60 border border-border rounded-lg px-4 py-2.5 lg:px-5 lg:py-4 text-center space-y-1"
-              <div className="flex justify-center gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-primary text-primary" />
-                ))}
-              </div>
+           <div className="bg-card/60 border border-border rounded-lg px-4 py-2.5 lg:px-5 lg:py-4 text-center space-y-1">
+  
+  <div className="flex justify-center gap-0.5">
+    {[...Array(5)].map((_, i) => (
+      <Star
+        key={i}
+        className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-primary text-primary"
+      />
+    ))}
+  </div>
               <div className="flex items-center justify-center gap-1">
-                <Users className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-primary" />
-                <span className="text-[8px] sm:text-[11px] lg:text-base font-bold text-primary">+1000 economizando</span>
-              </div>
-              <div className="flex justify-center -space-x-1.5">
-                {["A", "M", "J", "P", "R"].map((l) => (
-                  <div key={l} className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-muted border border-background flex items-center justify-center text-[6px] sm:text-[7px] font-bold text-muted-foreground">{l}</div>
-                ))}
-              </div>
-            </div>
+    <Users className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-primary" />
+    <span className="text-[8px] sm:text-[11px] lg:text-base font-bold text-primary">
+      +1.000 economizando
+    </span>
+  </div>
+
+</div>
 
             {/* Mini depoimentos */}
 <div className="space-y-0">
