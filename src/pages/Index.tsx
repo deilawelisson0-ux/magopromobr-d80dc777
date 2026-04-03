@@ -124,7 +124,7 @@ const Index = () => {
             onClick={handleCTA}
             className="shimmer block w-full text-center font-extrabold text-sm sm:text-lg py-2.5 sm:py-3.5 rounded-2xl transition-all duration-200 hover:scale-[1.03] hover:shadow-xl bg-cta-green text-cta-green-foreground animate-pulse-glow shadow-lg shadow-cta-green/40"
           >
-            QUERO ECONOMIZAR AGORA 🔥
+            🚀 QUERO ENTRAR NO GRUPO 
           </button>
         </div>
 
