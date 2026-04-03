@@ -142,11 +142,11 @@ const Index = () => {
     <span className="flex items-center gap-0.5">
       <CheckCircle2 className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-cta-green" /> Saia quando quiser
     </span>
-  </footer>
-</div>
+        </footer>
     </div>
-   </div>    
-  );
+  </div>
+</div>
+);
 };
 
 export default Index;
