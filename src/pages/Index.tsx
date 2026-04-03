@@ -44,19 +44,13 @@ const Index = () => {
         {/* 3. Bloco Principal — imagem + lado direito */}
         <div className="w-full flex gap-2 items-stretch flex-1 min-h-0">
           {/* Imagem dominante — mais espaço */}
-          <div className="flex-[1.8] min-w-0 flex items-center justify-center relative overflow-hidden rounded-2xl">
-            <img
-              src={magoBanner}
-              alt=""
-              aria-hidden="true"
-              className="absolute inset-0 w-full h-full object-cover scale-110 blur-md opacity-25"
-              loading="eager"
-            />
-            <div className="absolute inset-0 rounded-2xl border border-primary/20 pointer-events-none z-20" />
+          <div className="flex-[2.2] min-w-0 flex items-center justify-center relative">
+            
+            
             <img
               src={magoBanner}
               alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
-              className="w-full h-full object-contain relative z-10"
+              className="w-full max-w-full h-auto object-contain relative z-10 drop-shadow-2xl"
               loading="eager"
             />
           </div>
