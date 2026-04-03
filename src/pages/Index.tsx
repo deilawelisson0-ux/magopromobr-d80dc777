@@ -16,7 +16,7 @@ const Index = () => {
     <div className="h-[100dvh] bg-background flex flex-col overflow-hidden">
       <div className="w-full h-0.5 gold-gradient shrink-0" />
 
-      <div className="flex-1 flex flex-col items-center w-full max-w-2xl mx-auto px-3 py-1.5 overflow-hidden" style={{ gap: '0.6vh' }}>
+      <div className="flex-1 flex flex-col items-center w-full max-w-2xl mx-auto px-3 py-0 overflow-hidden" style={{ gap: '0.6vh' }}>
         {/* 1. Logo + Nome + Escassez */}
         <header className="flex items-center gap-2 shrink-0">
           <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-full overflow-hidden border-2 border-primary glow-gold">
@@ -98,7 +98,7 @@ const Index = () => {
                 { icon: <ShieldCheck className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "Links confiáveis" },
               ].map((b) => (
                 <div key={b.text} className="flex items-center gap-1 bg-card/60 border border-border rounded-md px-1.5 py-0.5">
-                  <span className="text-primary shrink-0">{b.icon}</span>
+                  <span className="text-primary shrink-0 mt-1">{b.icon}</span>
                   <span className="text-[8px] sm:text-[11px] font-semibold text-foreground">{b.text}</span>
                 </div>
               ))}
@@ -111,7 +111,7 @@ const Index = () => {
           <p className="text-center text-[9px] sm:text-[11px] text-primary font-bold mb-1">
             ⚠️ Mais de 1.000 pessoas já estão economizando — não fique de fora
           </p>
-          <div className="flex items-center justify-center gap-2 mb-1">
+          <div className="flex items-center justify-center gap-2 mb-0">
             <p className="text-[7px] sm:text-[9px] text-foreground/60 font-semibold">
               ⏳ Promoções somem em minutos
             </p>
@@ -122,7 +122,7 @@ const Index = () => {
           </div>
           <button
             onClick={handleCTA}
-            className="shimmer block w-full text-center font-extrabold text-sm sm:text-lg py-2.5 sm:py-3.5 rounded-2xl transition-all duration-200 hover:scale-[1.03] hover:shadow-xl bg-cta-green text-cta-green-foreground animate-pulse-glow shadow-lg shadow-cta-green/40"
+            className="shimmer block w-full text-center font-extrabold text-sm sm:text-lg py-2 sm:py-3 rounded-2xl transition-all duration-200 hover:scale-[1.03] hover:shadow-xl bg-cta-green text-cta-green-foreground animate-pulse-glow shadow-lg shadow-cta-green/40"
           >
             🚀 QUERO ENTRAR NO GRUPO 
           </button>
