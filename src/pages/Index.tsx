@@ -108,33 +108,42 @@ const Index = () => {
 
         {/* 4. Reforço de decisão + Urgência + CTA */}
         <div className="w-full shrink-0 mt-0">
-          <p className="text-center text-[9px] sm:text-[11px] text-primary font-bold mb-1">
-            ⚠️ Mais de 1.000 pessoas já estão economizando — não fique de fora
-          </p>
-          <div className="flex items-center justify-center gap-2 mb-0">
-            <p className="text-[7px] sm:text-[9px] text-foreground/60 font-semibold">
-              ⏳ Promoções somem em minutos
-            </p>
-            <span className="text-[7px] text-muted-foreground">•</span>
-            <p className="text-[7px] sm:text-[9px] text-foreground/60 font-semibold">
-              🔥 Quem entra primeiro pega os melhores preços
-            </p>
-          </div>
-          <div className="fixed bottom-0 left-0 w-full px-3 pb-3 z-50 bg-background">
-  <button
-    onClick={handleCTA}
-    className="animate-button-pulse w-full text-center font-extrabold text-sm sm:text-lg py-3.5 rounded-2xl"
-  >
-    🚀 QUERO ENTRAR NO GRUPO
-  </button>
+  <p className="text-center text-[9px] sm:text-[11px] text-primary font-bold mb-1">
+    ⚠️ Mais de 1.000 pessoas já estão economizando — não fique de fora
+  </p>
+
+  <div className="flex items-center justify-center gap-2 mb-0">
+    <p className="text-[7px] sm:text-[9px] text-foreground/60 font-semibold">
+      ⏳ Promoções somem em minutos
+    </p>
+    <span className="text-[7px] text-muted-foreground">•</span>
+    <p className="text-[7px] sm:text-[9px] text-foreground/60 font-semibold">
+      🔥 Quem entra primeiro pega os melhores preços
+    </p>
+  </div>
+
+  <div className="fixed bottom-0 left-0 w-full px-3 pb-3 z-50 bg-background">
+    <button
+      onClick={handleCTA}
+      className="animate-button-pulse w-full text-center font-extrabold text-sm sm:text-lg py-3.5 rounded-2xl"
+    >
+      🚀 QUERO ENTRAR NO GRUPO
+    </button>
+  </div>
+
+  {/* 5. Microcopy persuasivo */}
+  <footer className="flex flex-wrap justify-center gap-x-3 sm:gap-x-4 text-[7px] sm:text-[9px] text-muted-foreground font-medium">
+    <span className="flex items-center gap-0.5">
+      <CheckCircle2 className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-cta-green" /> Acesso imediato
+    </span>
+    <span className="flex items-center gap-0.5">
+      <CheckCircle2 className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-cta-green" /> Promoções todos os dias
+    </span>
+    <span className="flex items-center gap-0.5">
+      <CheckCircle2 className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-cta-green" /> Saia quando quiser
+    </span>
+  </footer>
 </div>
-        {/* 5. Microcopy persuasivo */}
-        <footer className="flex flex-wrap justify-center gap-x-3 sm:gap-x-4 text-[7px] sm:text-[9px] text-muted-foreground font-medium shrink-0">
-          <span className="flex items-center gap-0.5"><CheckCircle2 className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-cta-green" /> Acesso imediato</span>
-          <span className="flex items-center gap-0.5"><CheckCircle2 className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-cta-green" /> Promoções todos os dias</span>
-          <span className="flex items-center gap-0.5"><CheckCircle2 className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-cta-green" /> Saia quando quiser</span>
-        </footer>
-      </div>
     </div>
   );
 };
