@@ -122,7 +122,7 @@ const Index = () => {
     </p>
   </div>
 
-  <div className="w-full px-3 mt-2">
+  <div className="fixed bottom-0 left-0 w-full px-3 pb-3 z-50 bg-background">
     <button
   onClick={handleCTA}
   className="animate-button-pulse w-full text-center font-extrabold text-sm sm:text-lg py-3.5 rounded-2xl bg-green-500 text-white shadow-lg shadow-green-500/30 transition-all duration-200 hover:scale-[1.05] active:scale-[0.97]"
