@@ -16,7 +16,7 @@ const Index = () => {
     <div className="bg-background flex flex-col overflow-hidden">
       <div className="flex items-center gap-2 lg:gap-4 shrink-0">
 
-      <div className="flex-1 flex flex-col items-start w-full px-3 lg:px-12 py-0 pb-16 lg:pb-20 overflow-hidden" style={{ gap: '0.6vh' }}>
+      <div className="flex-1 flex flex-col items-start lg:items-start w-full max-w-[1500px] mx-auto px-3 lg:px-10 py-0 pb-16 lg:pb-20 overflow-hidden" style={{ gap: '0.6vh' }}>
         {/* 1. Logo + Nome + Escassez */}
         <header className="flex items-center gap-2 lg:gap-4 shrink-0">
           <div className="w-7 h-7 sm:w-9 sm:h-9 lg:w-12 lg:h-12 rounded-full overflow-hidden border-2 border-primary glow-gold">
@@ -29,8 +29,8 @@ const Index = () => {
         </header>
 
         {/* 2. Headline */}
-        <section className="text-center lg:text-left shrink-0 w-full">
-          <h2 className="text-[15px] sm:text-xl lg:text-[72px] font-black text-foreground leading-tight max-w-4xl lg:max-w-5xl">
+        <section className="text-center lg:text-left shrink-0 w-full lg:max-w-[900px]">
+          <h2 className="text-[15px] sm:text-xl lg:text-6xl font-black text-foreground leading-tight max-w-4xl lg:max-w-[900px]">
             Você está <span className="text-primary">pagando caro</span> sem saber disso…
           </h2>
           <p className="text-[9px] sm:text-xs lg:text-xl text-muted-foreground font-medium leading-snug mt-1">
@@ -42,7 +42,7 @@ const Index = () => {
         </section>
 
         {/* 3. Bloco Principal — imagem + lado direito */}
-        <div className="w-full grid grid-cols-1 lg:grid-cols-[1.35fr_0.85fr] gap-3 lg:gap-12 items-center lg:items-stretch mt-2 lg:mt-6">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-3 lg:gap-10 items-center lg:items-center mt-2 lg:mt-6">
           {/* Imagem dominante — mais espaço */}
           <div className="w-full min-w-0 flex flex-col gap-2 lg:gap-5 justify-center">
             
@@ -50,7 +50,7 @@ const Index = () => {
             <img
               src={magoBanner}
               alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
-              className="w-full h-auto object-cover relative z-10 rounded-2xl glow-gold-border"
+              className="w-full lg:max-w-[1050px] h-auto object-cover relative z-10 rounded-2xl glow-gold-border"
               loading="eager"
             />
           </div>
@@ -127,7 +127,7 @@ const Index = () => {
         <div className="fixed bottom-0 left-0 w-full px-3 pb-3 z-50 bg-background/80 backdrop-blur-sm lg:static lg:bg-transparent lg:backdrop-blur-0 lg:px-0 lg:pb-0 lg:mt-2">
           <button
             onClick={handleCTA}
-            className="animate-button-pulse w-full lg:w-[500px] lg:mx-auto text-center font-extrabold text-sm sm:text-lg lg:text-2xl py-3.5 lg:py-5 rounded-2xl bg-green-500 text-white shadow-lg shadow-green-500/30 transition-all duration-200 hover:scale-[1.05] active:scale-[0.97]"
+            className=className="animate-button-pulse w-full lg:max-w-lg lg:mx-0 text-center font-extrabold text-sm sm:text-lg lg:text-xl py-3.5 lg:py-4 rounded-2xl bg-green-500 text-white shadow-lg shadow-green-500/30 transition-all duration-200 hover:scale-[1.05] active:scale-[0.97]"
           >
             🔥 ENTRAR NO GRUPO AGORA
           </button>
