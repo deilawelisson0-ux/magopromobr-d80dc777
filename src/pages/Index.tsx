@@ -122,12 +122,12 @@ const Index = () => {
     </p>
   </div>
 
-  <div className="fixed bottom-0 left-0 w-full px-3 pb-3 z-50 bg-background/80 backdrop-blur-sm">
+  <div className="fixed bottom-0 left-0 w-full px-4 pb-2 z-50 bg-background/80 backdrop-blur-sm">
     <button
   onClick={handleCTA}
-  className="animate-button-pulse w-full text-center font-extrabold text-sm sm:text-lg py-3.5 rounded-2xl bg-green-500 text-white shadow-lg shadow-green-500/30 transition-all duration-200 hover:scale-[1.05] active:scale-[0.97]"
+  className="animate-button-pulse w-full text-center font-extrabold text-sm sm:text-lg py-4 rounded-2xl bg-gradient-to-r from-green-500 to-green-600 text-white shadow-[0_0_25px_rgba(34,197,94,0.45)] transition-all duration-200 hover:scale-[1.03] active:scale-[0.98]"
 >
-  🚀 QUERO ENTRAR NO GRUPO
+  🔥 ENTRAR NO GRUPO AGORA
 </button>
   </div>
 
