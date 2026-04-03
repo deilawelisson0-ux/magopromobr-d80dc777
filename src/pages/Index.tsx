@@ -155,8 +155,8 @@ const Index = () => {
           </div>
         </div>
 
-        {/* 4. Reforço de decisão + Urgência + CTA */}
-        <div className="w-full shrink-0 mt-0">
+         {/* 4. Reforço de decisão + Urgência + CTA */}
+      <div className="w-full shrink-0 mt-0">
         <p className="text-center text-[9px] sm:text-[11px] text-primary font-bold mb-1">
           ⚠️ Mais de 1.000 pessoas já estão economizando — não fique de fora
         </p>
@@ -171,7 +171,7 @@ const Index = () => {
           </p>
         </div>
 
-                <div className="fixed bottom-0 left-0 w-full px-3 pb-3 z-50 bg-background/80 backdrop-blur-sm lg:static lg:bg-transparent lg:backdrop-blur-0 lg:px-0 lg:pb-0 lg:mt-2">
+        <div className="fixed bottom-0 left-0 w-full px-3 pb-3 z-50 bg-background/80 backdrop-blur-sm lg:static lg:bg-transparent lg:backdrop-blur-0 lg:px-0 lg:pb-0 lg:mt-2">
           <button
             onClick={handleCTA}
             className="animate-button-pulse w-full lg:max-w-xl lg:mx-0 text-center font-extrabold text-sm sm:text-lg lg:text-xl py-3.5 lg:py-4 rounded-2xl bg-green-500 text-white shadow-lg shadow-green-500/30 transition-all duration-200 hover:scale-[1.05] active:scale-[0.97]"
@@ -180,7 +180,7 @@ const Index = () => {
           </button>
         </div>
 
-         {/* 5. Microcopy persuasivo */}
+        {/* 5. Microcopy persuasivo */}
         <footer className="flex flex-wrap justify-center gap-x-3 sm:gap-x-4 text-[7px] sm:text-[9px] text-muted-foreground font-medium">
           <span className="flex items-center gap-0.5">
             <CheckCircle2 className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-cta-green" />
@@ -197,7 +197,6 @@ const Index = () => {
         </footer>
       </div>
     </div>
-  </div>
 );
 };
 
