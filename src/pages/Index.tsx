@@ -92,17 +92,17 @@ const Index = () => {
 
             {/* Benefícios */}
             <div className="space-y-0.5">
-              {[
-                { icon: <TrendingDown className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "Até 70% OFF" },
-                { icon: <Clock className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "Somem em minutos" },
-                { icon: <ShieldCheck className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "Links confiáveis" },
-              ].map((b) => (
-                <div key={b.text} className="flex items-center gap-1 bg-card/60 border border-border rounded-md px-1.5 py-0.5">
-                  <span className="text-primary shrink-0 mt-1">{b.icon}</span>
-                  <span className="text-[8px] sm:text-[11px] font-semibold text-foreground">{b.text}</span>
-                </div>
-              ))}
-            </div>
+  {[
+    { icon: <TrendingDown className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "Até 70% OFF" },
+    { icon: <Clock className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "Somem em minutos" },
+    { icon: <ShieldCheck className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "Links confiáveis" },
+  ].map((b) => (
+    <div key={b.text} className="flex items-center gap-1 bg-card/60 border border-border rounded-md px-1.5 py-0.5">
+      <span className="text-primary shrink-0 mt-1">{b.icon}</span>
+      <span className="text-[8px] sm:text-[11px] font-semibold text-foreground">{b.text}</span>
+    </div>
+  ))}
+</div>
           </div>
         </div>
 
