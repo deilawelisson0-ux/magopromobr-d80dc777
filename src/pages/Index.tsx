@@ -44,11 +44,11 @@ const Index = () => {
         {/* 3. Bloco Principal — imagem + lado direito */}
        <div className="w-full flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-8 mt-2 lg:mt-6">
         {/* Imagem dominante */}
-        <div className="w-full lg:w-[75%]">
+        <div className="w-full lg:w-[75%] lg:h-auto">
           <img
             src={magoBanner}
             alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
-            className="w-full h-auto object-cover relative z-10 rounded-2xl glow-gold-border"
+            className="w-full h-full object-cover relative z-10 rounded-2xl glow-gold-border"
             loading="eager"
           />
         </div>
