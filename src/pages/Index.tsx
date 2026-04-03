@@ -36,6 +36,9 @@ const Index = () => {
           <p className="text-[9px] sm:text-xs text-muted-foreground font-medium leading-snug mt-0.5">
             <strong className="text-primary">+1.000 pessoas</strong> já economizam TODOS OS DIAS com ofertas até <strong className="text-primary">70% OFF</strong>
           </p>
+          <p className="text-[8px] sm:text-[10px] text-foreground/50 font-medium mt-0.5">
+            Todos os dias selecionamos as melhores promoções da internet
+          </p>
         </section>
 
         {/* 3. Bloco Principal — imagem + lado direito */}
