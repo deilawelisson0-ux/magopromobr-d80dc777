@@ -124,37 +124,7 @@ const Index = () => {
         </div>
       </div>
 
-            {/* Mini depoimentos */}
-<div className="space-y-0">
-  {[
-    { name: "Ana", msg: "Economizei R$200 essa semana! 😍" },
-    { name: "Pedro", msg: "Melhor grupo que entrei 🔥" }
-  ].map((d, i) => (
-    <div key={i} className="flex items-center gap-1 bg-card/40 border border-border/50 rounded-md px-1.5 py-0.5 lg:px-3 lg:py-2">
-      <MessageCircle className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-primary shrink-0 mt-0.5" />
-      <p className="text-[7px] sm:text-[9px] text-foreground/80 leading-tight">
-        <strong className="text-foreground">{d.name}:</strong> {d.msg}
-      </p>
-    </div>
-  ))}
-</div>
-
-            {/* Benefícios */}
-            <div className="space-y-0.5">
-  {[
-    { icon: <TrendingDown className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "Até 70% OFF" },
-    { icon: <Clock className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "Somem em minutos" },
-    { icon: <ShieldCheck className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "Links confiáveis" },
-  ].map((b) => (
-    <div key={b.text} className="flex items-center gap-1 bg-card/60 border border-border rounded-md px-1.5 py-0.5">
-      <span className="text-primary shrink-0 mt-1">{b.icon}</span>
-      <span className="text-[8px] sm:text-[11px] font-semibold text-foreground">{b.text}</span>
-    </div>
-  ))}
-</div>
-          </div>
-        </div>
-
+       
          {/* 4. Reforço de decisão + Urgência + CTA */}
       <div className="w-full shrink-0 mt-0">
         <p className="text-center text-[9px] sm:text-[11px] text-primary font-bold mb-1">
