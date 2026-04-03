@@ -16,9 +16,9 @@ const Index = () => {
     <div className="bg-background flex flex-col overflow-hidden">
       <div className="flex items-center gap-2 lg:gap-4 shrink-0">
 
-      <div className="flex-1 flex flex-col items-center w-full max-w-6xl mx-auto px-3 lg:px-8 py-0 pb-24 overflow-hidden" style={{ gap: '0.6vh' }}>
+      <div className="flex-1 flex flex-col items-center lg:items-start w-full max-w-6xl mx-auto px-3 lg:px-8 py-0 pb-24 overflow-hidden" style={{ gap: '0.6vh' }}>
         {/* 1. Logo + Nome + Escassez */}
-        <header className="flex items-center gap-2 shrink-0">
+        <header className="flex items-center gap-2 lg:gap-4 shrink-0">
           <div className="w-7 h-7 sm:w-9 sm:h-9 lg:w-12 lg:h-12 rounded-full overflow-hidden border-2 border-primary glow-gold">
             <img src={magoAvatar} alt="Mago das Promoções" className="w-full h-full object-cover" width={36} height={36} fetchPriority="high" />
           </div>
@@ -29,8 +29,8 @@ const Index = () => {
         </header>
 
         {/* 2. Headline */}
-        <section className="text-center shrink-0">
-          <h2 className="text-[15px] sm:text-xl lg:text-4xl font-black text-foreground leading-tight max-w-4xl">
+        <section className="text-center lg:text-left shrink-0 w-full">
+          <h2 className="text-[15px] sm:text-xl lg:text-5xl font-black text-foreground leading-tight max-w-4xl lg:max-w-4xl">
             Você está <span className="text-primary">pagando caro</span> sem saber disso…
           </h2>
           <p className="text-[9px] sm:text-xs lg:text-lg text-muted-foreground font-medium leading-snug mt-0.5">
@@ -42,21 +42,21 @@ const Index = () => {
         </section>
 
         {/* 3. Bloco Principal — imagem + lado direito */}
-        <div className="w-full flex flex-col lg:flex-row gap-3 lg:gap-8 items-stretch flex-1 min-h-0 mt-2 lg:mt-6">
+        <div className="w-full flex flex-col lg:flex-row gap-3 lg:gap-10 items-stretch flex-1 min-h-0 mt-2 lg:mt-8">
           {/* Imagem dominante — mais espaço */}
-          <div className="w-full lg:flex-[1.8] min-w-0 flex items-center justify-center relative">
+          <div className="w-full lg:flex-[2.2] min-w-0 flex items-center justify-center relative">
             
             
             <img
               src={magoBanner}
               alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
-              className="w-full lg:max-w-[760px] h-auto object-cover relative z-10 rounded-2xl glow-gold-border"
+              className="w-full lg:max-w-[920px] h-auto object-cover relative z-10 rounded-2xl glow-gold-border"
               loading="eager"
             />
           </div>
 
           {/* Lado direito — prova social + benefícios */}
-          <div className="w-full lg:flex-1 min-w-0 flex flex-col gap-2 lg:gap-3 justify-center">
+          <div className="w-full lg:flex-[0.95] min-w-0 flex flex-col gap-2 lg:gap-4 justify-center">
             {/* Prova social */}
             <div className="bg-card/60 border border-border rounded-lg px-2 py-1 lg:px-4 lg:py-3 text-center space-y-0">
               <div className="flex justify-center gap-0.5">
@@ -122,14 +122,14 @@ const Index = () => {
     </p>
   </div>
 
-  <div className=<div className="fixed bottom-0 left-0 w-full px-3 pb-3 z-50 bg-background/80 backdrop-blur-sm lg:static lg:bg-transparent lg:backdrop-blur-0 lg:px-0 lg:pb-0 lg:mt-4">
-    <button
-  onClick={handleCTA}
-  className="animate-button-pulse w-full lg:max-w-md lg:mx-auto text-center font-extrabold text-sm sm:text-lg lg:text-xl py-3.5 lg:py-4 rounded-2xl bg-green-500 text-white shadow-lg shadow-green-500/30 transition-all duration-200 hover:scale-[1.05] active:scale-[0.97]"
->
-  🔥 ENTRAR NO GRUPO AGORA
-</button>
-  </div>
+  <div className="fixed bottom-0 left-0 w-full px-3 pb-3 z-50 bg-background/80 backdrop-blur-sm lg:static lg:bg-transparent lg:backdrop-blur-0 lg:px-0 lg:pb-0 lg:mt-4">
+  <button
+    onClick={handleCTA}
+    className="animate-button-pulse w-full lg:max-w-md lg:mx-auto text-center font-extrabold text-sm sm:text-lg lg:text-xl py-3.5 lg:py-4 rounded-2xl bg-green-500 text-white shadow-lg shadow-green-500/30 transition-all duration-200 hover:scale-[1.05] active:scale-[0.97]"
+  >
+    🔥 ENTRAR NO GRUPO AGORA
+  </button>
+</div>
 
   {/* 5. Microcopy persuasivo */}
   <footer className="flex flex-wrap justify-center gap-x-3 sm:gap-x-4 text-[7px] sm:text-[9px] text-muted-foreground font-medium">
