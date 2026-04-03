@@ -165,6 +165,7 @@ const Index = () => {
             Saia quando quiser
           </span>
         </footer>
+      </div>
     </div>
   </div>
 </div>
