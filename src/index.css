@@ -162,8 +162,23 @@ body {
 }
 
 #root {
-  height: 100dvh;
-  overflow: hidden;
+  min-height: 100dvh;
+}
+
+/* desktop sem rolagem */
+@media (min-width: 769px) {
+  #root {
+    height: 100dvh;
+    overflow: hidden;
+  }
+}
+
+/* mobile com rolagem normal */
+@media (max-width: 768px) {
+  #root {
+    height: auto;
+    overflow: auto;
+  }
 }
 
 img {
