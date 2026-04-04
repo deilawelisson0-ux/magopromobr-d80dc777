@@ -27,7 +27,7 @@ useEffect(() => {
     <div className="bg-background flex flex-col overflow-hidden">
       <div className="flex items-center gap-2 lg:gap-4 shrink-0">
 
-      <div className="flex-1 flex flex-col items-center w-full max-w-[1500px] mx-auto px-3 lg:px-8 py-0 pb-16 lg:pb-20 overflow-hidden">
+      <div className="flex-1 flex flex-col items-center lg:items-center w-full max-w-[1850px] mx-auto px-3 lg:px-8 py-0 pb-16 lg:pb-20 overflow-hidden">
         {/* 1. Logo + Nome + Escassez */}
         <header className="flex items-center justify-center gap-2 lg:gap-4 shrink-0 w-full">
           <div className="w-7 h-7 sm:w-9 sm:h-9 lg:w-12 lg:h-12 rounded-full overflow-hidden border-2 border-primary glow-gold">
