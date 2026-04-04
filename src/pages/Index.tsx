@@ -1,7 +1,7 @@
 import magoAvatar from "@/assets/mago-avatar.webp";
 import magoBanner from "@/assets/mago-banner.webp";
 import { useState, useEffect } from "react";
-import { Star, Users, ShieldCheck, TrendingDown, CheckCircle2, Lock, Clock, MessageCircle } from "lucide-react";
+import { Star, Users, ShieldCheck, TrendingDown, CheckCircle2, Lock, Clock, MessageCircle, Instagram } from "lucide-react";
 
 const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
 
