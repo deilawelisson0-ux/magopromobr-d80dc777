@@ -21,21 +21,21 @@ const proofItems = [
   },
   {
     product: "Perfume Importado",
-    before: "R$320",
+    before: "R$344",
     after: "R$129",
     emoji: "🧴",
     image: perfumeImportadoImg,
   },
   {
-    product: "Smartwatch",
-    before: "R$599",
-    after: "R$149",
+    product: "Relógio",
+    before: "R$249",
+    after: "R$74",
     emoji: "⌚",
     image: smartwatchImg,
   },
   {
     product: "Camiseta Dry-Fit",
-    before: "R$120",
+    before: "R$70",
     after: "R$29",
     emoji: "👕",
     image: camisetaDryfitImg,
@@ -63,7 +63,7 @@ const ProofCarousel = () => {
         {proofItems.map((item, i) => (
           <div
             key={i}
-            className={`relative flex-shrink-0 rounded-lg overflow-hidden border border-border text-center transition-all duration-500 min-w-[110px] sm:min-w-[110px] lg:min-w-[120px] min-h-[90px] sm:min-h-[100px] lg:min-h-[110px] ${
+            className={`relative flex-shrink-0 rounded-lg overflow-hidden border border-border text-center transition-all duration-500 min-w-[110px] sm:min-w-[120px] lg:min-w-[130px] min-h-[90px] sm:min-h-[100px] lg:min-h-[110px] ${
               i === active ? "border-primary/70 scale-110 shadow-lg" : "opacity-70"
             }`}
             style={{
@@ -73,6 +73,10 @@ const ProofCarousel = () => {
             }}
           >
             <div className="absolute inset-0 bg-black/55"></div>
+          {/* 🔥 ETIQUETA DE DESCONTO */}
+  <div className="absolute top-1 right-1 bg-red-500 text-white text-[10px] px-1.5 py-0.5 rounded">
+    -70%
+  </div>
 
             <div className="relative z-10 flex flex-col justify-end h-full px-2 py-2 lg:px-3 lg:py-2">
               <div className="text-[11px] sm:text-xs lg:text-sm font-bold text-white leading-tight">
