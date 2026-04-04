@@ -74,9 +74,9 @@ const ProofCarousel = () => {
           >
             <div className="absolute inset-0 bg-black/55"></div>
           {/* 🔥 ETIQUETA DE DESCONTO */}
-  <div className="absolute top-1 right-1 bg-red-500 text-white text-[12px] font-bold px-2 py-1 shadow-lg rounded">
-    -70%
-  </div>
+  <div className="absolute top-1 right-1 bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-lg">
+  -{getDiscountPercent(item.before, item.after)}%
+</div>
 
             <div className="relative z-10 flex flex-col justify-end h-full px-2 py-2 lg:px-3 lg:py-2">
               <div className="text-[11px] sm:text-xs lg:text-sm font-bold text-white leading-tight">
