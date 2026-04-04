@@ -1,7 +1,7 @@
 import magoAvatar from "@/assets/mago-avatar.webp";
 import magoBanner from "@/assets/mago-banner.webp";
 import { useState, useEffect } from "react";
-import { Star, Users, ShieldCheck, TrendingDown, CheckCircle2, Lock, Clock, MessageCircle } from "lucide-react";
+import { Star, Users, ShieldCheck, TrendingDown, CheckCircle2, Lock, Clock, MessageCircle, Instagram } from "lucide-react";
 
 const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
 
@@ -165,6 +165,17 @@ useEffect(() => {
 >
   🔥 QUERO ECONOMIZAR AGORA
 </button>
+
+<a
+  href="https://www.instagram.com/magopromobr"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="w-full max-w-[600px] mx-auto flex items-center justify-center gap-2 font-extrabold text-xs sm:text-base lg:text-lg py-3 lg:py-3.5 rounded-2xl text-white border border-white/20 hover:scale-[1.03] hover:shadow-[0_0_28px_rgba(131,58,180,0.5)] transition-all mt-2"
+  style={{ background: "linear-gradient(135deg, #833AB4, #E1306C, #F77737)" }}
+>
+  <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
+  SEGUIR NO INSTAGRAM
+</a>
         
 
         {/* 5. Microcopy persuasivo */}
