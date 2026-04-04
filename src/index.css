@@ -155,4 +155,45 @@
 
 .animate-button-pulse {
   animation: pulseButton 2s ease-in-out infinite;
+}/* ===== AJUSTE PARA CABER EM UMA TELA ===== */
+
+body {
+  overflow-x: hidden;
+}
+
+#root {
+  height: 100dvh;
+  overflow: hidden;
+}
+
+img {
+  max-height: 42vh;
+  height: auto;
+  object-fit: contain;
+}
+
+/* reduzir espaçamentos gerais */
+h1, h2, h3 {
+  margin: 0;
+  line-height: 1;
+}
+
+p {
+  margin: 4px 0;
+  line-height: 1.1;
+}
+
+button {
+  padding: 10px 16px !important;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  img {
+    max-height: 34vh;
+  }
+
+  h1 {
+    font-size: clamp(22px, 6vw, 32px);
+  }
 }
