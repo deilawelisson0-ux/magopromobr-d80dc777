@@ -1,40 +1,45 @@
 import { useState, useEffect } from "react";
+import tenisNikeImg from "@/assets/tenis-nike.jpeg";
+import foneBluetoothImg from "@/assets/fone-bluetooth.jpeg";
+import perfumeImportadoImg from "@/assets/perfume-importado.jpeg";
+import smartwatchImg from "@/assets/smartwatch.jpg";
+import camisetaDryfitImg from "@/assets/camiseta-dryfit.jpeg";
 
 const proofItems = [
-  {
+    {
     product: "Tênis Nike",
     before: "R$457",
     after: "R$99",
     emoji: "👟",
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80",
+    image: tenisNikeImg,
   },
   {
     product: "Fone Bluetooth",
     before: "R$189",
     after: "R$39",
     emoji: "🎧",
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
+    image: foneBluetoothImg,
   },
   {
     product: "Perfume Importado",
     before: "R$320",
     after: "R$129",
     emoji: "🧴",
-    image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80",
+    image: perfumeImportadoImg,
   },
   {
     product: "Smartwatch",
     before: "R$599",
     after: "R$149",
     emoji: "⌚",
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
+    image: smartwatchImg,
   },
   {
     product: "Camiseta Dry-Fit",
     before: "R$120",
     after: "R$29",
     emoji: "👕",
-    image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80",
+    image: camisetaDryfitImg,
   },
 ];
 
