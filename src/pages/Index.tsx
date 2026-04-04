@@ -36,7 +36,7 @@ const Index = () => {
           </div>
           <h1 className="text-[11px] sm:text-sm lg:text-xl font-black gold-text tracking-tight">MAGO DAS PROMOÇÕES</h1>
           <span className="flex items-center gap-1 text-[7px] sm:text-[9px] text-primary font-bold border border-primary/40 rounded-full px-2 py-0.5 bg-primary/10 animate-pulse">
-            <Lock className="w-2.5 h-2.5" /> Grupo fechado • vagas limitadas
+            <Lock className="w-2.5 h-2.5" /> Grupo VIP • vagas limitadas
           </span>
         </header>
 
@@ -100,9 +100,9 @@ const Index = () => {
             {/* Mini depoimentos */}
             <div className="space-y-1">
               {[
-                { name: "Ana", msg: "Economizei R$200 essa semana! 😍" },
+                { name: "Ana", msg: "Economizei R$200 essa semana! 💃😍" },
                 { name: "Pedro", msg: "Melhor grupo que já entrei 🔥" },
-                { name: "Juliana", msg: "Todo dia tem promoção absurda 🤯" },
+                { name: "Juliana", msg: "Todo dia tem promoção absurda 🚀" },
               ].map((d, i) => (
                 <div key={i} className="flex items-start gap-1 bg-card/40 border border-border/50 rounded-md px-1.5 py-0.5 lg:px-3 lg:py-2">
                   <MessageCircle className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-primary shrink-0 mt-0.5" />
@@ -116,10 +116,10 @@ const Index = () => {
             {/* Benefícios */}
             <div className="space-y-1">
               {[
-                { icon: <TrendingDown className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "Descontos reais de até 70%" },
-                { icon: <Clock className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "Promoções todos os dias" },
-                { icon: <ShieldCheck className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "Links confiáveis" },
-                { icon: <ShieldOff className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "Sem spam" },
+                { icon: <TrendingDown className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "✅ Descontos reais de até 70%" },
+                { icon: <Clock className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "✅ Promoções novas todos os dias" },
+                { icon: <ShieldCheck className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "✅ Links confiáveis e verificados" },
+                { icon: <ShieldOff className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "✅ Grupo gratuito e sem spam" },
               ].map((b) => (
                 <div key={b.text} className="flex items-center gap-1 bg-card/60 border border-border rounded-md px-1.5 py-0.5 lg:px-3 lg:py-2">
                   <span className="text-primary shrink-0">{b.icon}</span>
@@ -155,7 +155,7 @@ const Index = () => {
             onClick={handleCTA}
             className="animate-button-pulse w-full max-w-[600px] mx-auto block text-center font-extrabold text-sm sm:text-lg lg:text-xl py-3.5 lg:py-4 rounded-2xl bg-green-500 text-white border border-green-300/40 shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:scale-[1.03] hover:shadow-[0_0_28px_rgba(34,197,94,0.6)] transition-all"
           >
-            🔥 QUERO ECONOMIZAR AGORA
+            🔥 QUERO ENTRAR NO GRUPO AGORA
           </button>
 
           <p className="text-[8px] sm:text-[10px] text-muted-foreground text-center mt-1.5 font-medium">
