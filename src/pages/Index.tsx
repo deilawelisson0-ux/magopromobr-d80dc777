@@ -53,13 +53,13 @@ useEffect(() => {
         </section>
 
         {/* 3. Bloco Principal — imagem + lado direito */}
-       <div className="w-full flex flex-col lg:flex-row lg:items-center lg:justify-center gap-3 lg:gap-8 mt-2 lg:mt-6">
+       <div className="w-full flex flex-col lg:flex-row lg:items-center lg:justify-center gap-3 lg:gap-12">
         {/* Imagem dominante */}
-        <div className="w-full lg:w-[77%]">
+        <div className="w-full lg:w-[77%] flex justify-center">
           <img
             src={magoBanner}
             alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
-            className="w-full h-full object-cover relative z-10 rounded-2xl glow-gold-border"
+            className="w-full max-w-[900px] mx-auto h-full object-cover relative z-10 rounded-2xl glow-gold-border"
             loading="eager"
           />
         </div>
