@@ -18,7 +18,7 @@ const Index = () => {
 
       <div className="flex-1 flex flex-col items-start lg:items-start w-full max-w-[1850px] mx-auto px-3 lg:px-8 py-0 pb-16 lg:pb-20 overflow-hidden">
         {/* 1. Logo + Nome + Escassez */}
-        <header className="flex items-center gap-2 lg:gap-4 shrink-0">
+        <header className="flex items-center justify-center lg:justify-start gap-2 lg:gap-4 shrink-0 w-full">
           <div className="w-7 h-7 sm:w-9 sm:h-9 lg:w-12 lg:h-12 rounded-full overflow-hidden border-2 border-primary glow-gold">
             <img src={magoAvatar} alt="Mago das Promoções" className="w-full h-full object-cover" width={36} height={36} fetchPriority="high" />
           </div>
@@ -29,8 +29,8 @@ const Index = () => {
         </header>
 
         {/* 2. Headline */}
-        <section className="w-full max-w-[1300px] mx-auto text-center lg:text-left">
-          <h2 className="text-[15px] sm:text-xl lg:text-6xl font-black text-foreground leading-tight max-w-4xl lg:max-w-[900px]">
+        <section className="w-full max-w-[1100px] mx-auto text-center">
+          <h2 className="text-[15px] sm:text-xl lg:text-6xl font-black text-foreground leading-tight max-w-4xl lg:max-w-[900px] mx-auto">
             Você está <span className="text-primary">pagando caro</span> sem saber disso…
           </h2>
           <p className="text-[9px] sm:text-xs lg:text-xl text-muted-foreground font-medium leading-snug mt-1">
@@ -127,7 +127,7 @@ const Index = () => {
        
          {/* 4. Reforço de decisão + Urgência + CTA */}
       <div className="w-full shrink-0 mt-0">
-        <p className="text-center text-[9px] sm:text-[11px] text-primary font-bold mb-1">
+        <p className="mx-auto text-center text-sm text-muted-foreground">
           ⚠️ Mais de 1.000 pessoas já estão economizando — não fique de fora
         </p>
 
@@ -140,7 +140,7 @@ const Index = () => {
         <div className="fixed bottom-0 left-0 w-full px-3 pb-3 z-50 bg-background/80 backdrop-blur-sm lg:static lg:bg-transparent lg:backdrop-blur-0 lg:px-0 lg:pb-0 lg:mt-2">
           <button
             onClick={handleCTA}
-            className="animate-button-pulse w-full lg:max-w-[600px] mx-auto text-center font-extrabold text-sm sm:text-lg lg:text-xl py-3.5 lg:py-4 rounded-2xl bg-green-500 text-white shadow-lg shadow-green-500/30 transition-all"
+            className="animate-button-pulse w-full max-w-[600px] mx-auto block text-center font-extrabold text-sm sm:text-lg lg:text-xl py-3.5 lg:py-4 rounded-2xl bg-green-500 text-white shadow-lg shadow-green-500/30 transition-all"
           >
             🔥 ENTRAR NO GRUPO AGORA
           </button>
