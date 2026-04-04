@@ -140,9 +140,8 @@ const Index = () => {
         <div className="fixed bottom-0 left-0 w-full px-3 pb-3 z-50 bg-background/80 backdrop-blur-sm lg:static lg:bg-transparent lg:backdrop-blur-0 lg:px-0 lg:pb-0 lg:mt-2">
           <button
             onClick={handleCTA}
-            className="animate-button-pulse w-full max-w-[600px] mx-auto block text-center font-extrabold text-sm sm:text-lg lg:text-xl py-3.5 lg:py-4 rounded-2xl bg-green-500 text-white shadow-lg shadow-green-500/30 transition-all"
-          >
-            🔥 ENTRAR NO GRUPO AGORA
+            className="animate-button-pulse w-full max-w-[600px] mx-auto block text-center font-extrabold text-sm sm:text-lg lg:text-xl py-3.5 lg:py-4 rounded-2xl bg-green-500 text-white border border-green-300/40 shadow-[0_0_20px_rgba(34,197,94,0.35),0_0_40px_rgba(34,197,94,0.18)] hover:scale-[1.03] hover:shadow-[0_0_28px_rgba(34,197,94,0.45),0_0_55px_rgba(34,197,94,0.22)] active:scale-[0.98] transition-all duration-300"
+            🔥 QUERO RECEBER AS PROMOÇÕES
           </button>
         </div>
 
