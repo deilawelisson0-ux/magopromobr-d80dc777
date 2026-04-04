@@ -53,19 +53,21 @@ useEffect(() => {
         </section>
 
         {/* 3. Bloco Principal — imagem + lado direito */}
-       <div className="w-full flex flex-col lg:flex-row lg:items-center lg:justify-center gap-3 lg:gap-8">
-        {/* Imagem dominante */}
-        <div className="w-full lg:w-[80%]">
-          <img
-            src={magoBanner}
-            alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
-            className="w-full mx-auto h-full object-cover relative z-10 rounded-2xl glow-gold-border"
-            loading="eager"
-          />
+       <div className="w-full relative">
+        {/* Container centralizado da imagem */}
+        <div className="w-full lg:flex lg:justify-center">
+          <div className="w-full lg:w-[70%]">
+            <img
+              src={magoBanner}
+              alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
+              className="w-full mx-auto h-full object-cover relative z-10 rounded-2xl glow-gold-border"
+              loading="eager"
+            />
+          </div>
         </div>
 
-        {/* Lado direito — prova social + benefícios */}
-        <div className="w-full lg:w-[22%] flex flex-col gap-2 lg:gap-3 justify-center">
+        {/* Lado direito — prova social + benefícios (posicionado absoluto no desktop) */}
+        <div className="w-full lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:w-[220px] xl:w-[260px] flex flex-col gap-2 lg:gap-3 justify-center mt-3 lg:mt-0">
           {/* Prova social */}
           <div className="bg-card/60 border border-border rounded-lg px-3 py-2 lg:px-4 lg:py-3 text-center space-y-1">
             <div className="flex justify-center gap-0.5">
