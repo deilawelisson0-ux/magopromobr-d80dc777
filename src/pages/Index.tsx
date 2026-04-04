@@ -55,7 +55,7 @@ useEffect(() => {
         {/* 3. Bloco Principal — imagem + lado direito */}
        <div className="w-full flex flex-col lg:flex-row lg:items-center lg:justify-center gap-3 lg:gap-8 mt-2 lg:mt-6">
         {/* Imagem dominante */}
-        <div className="w-full lg:w-[70%]">
+        <div className="w-full lg:w-[77%]">
           <img
             src={magoBanner}
             alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
