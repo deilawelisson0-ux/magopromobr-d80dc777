@@ -132,7 +132,9 @@ const Index = () => {
 
         {/* 4. Prova visual - carrossel */}
         <ProofCarousel />
-
+<p className="text-[11px] text-yellow-400 font-semibold animate-pulse">
+⚡ Essas ofertas mudam TODOS OS DIAS
+</p>
         {/* 5. Urgência + CTA Final */}
         <div className="w-full shrink-0 mt-0">
           <div className="flex items-center justify-center gap-2 mb-1 text-[7px] sm:text-[9px] text-foreground/60 font-semibold">
