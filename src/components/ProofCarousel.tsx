@@ -64,7 +64,7 @@ const ProofCarousel = () => {
           <div
             key={i}
             className={`relative flex-shrink-0 rounded-lg overflow-hidden border border-border text-center transition-all duration-500 min-w-[110px] sm:min-w-[120px] lg:min-w-[130px] min-h-[90px] sm:min-h-[100px] lg:min-h-[110px] ${
-              i === active ? "border-primary/70 scale-110 shadow-lg" : "opacity-70"
+              i === active ? "border-primary/70 scale-110 shadow-[0_0_15px_rgba(34,197,94,0.6)] shadow-lg" : "opacity-70"
             }`}
             style={{
               backgroundImage: `url(${item.image})`,
@@ -74,7 +74,7 @@ const ProofCarousel = () => {
           >
             <div className="absolute inset-0 bg-black/55"></div>
           {/* 🔥 ETIQUETA DE DESCONTO */}
-  <div className="absolute top-1 right-1 bg-red-500 text-white text-[10px] px-1.5 py-0.5 rounded">
+  <div className="absolute top-1 right-1 bg-red-500 text-white text-[12px] font-bold px-2 py-1 shadow-lg rounded">
     -70%
   </div>
 
