@@ -44,7 +44,7 @@ const ProofCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % proofItems.length);
-    }, 3000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
@@ -59,8 +59,8 @@ const ProofCarousel = () => {
         {proofItems.map((item, i) => (
           <div
             key={i}
-            className={`relative flex-shrink-0 rounded-lg overflow-hidden border border-border text-center transition-all duration-500 min-w-[92px] sm:min-w-[110px] lg:min-w-[120px] min-h-[90px] sm:min-h-[100px] lg:min-h-[110px] ${
-              i === active ? "border-primary/70 scale-105" : "opacity-70"
+            className={`relative flex-shrink-0 rounded-lg overflow-hidden border border-border text-center transition-all duration-500 min-w-[110px] sm:min-w-[110px] lg:min-w-[120px] min-h-[90px] sm:min-h-[100px] lg:min-h-[110px] ${
+              i === active ? "border-primary/70 scale-110 shadow-lg" : "opacity-70"
             }`}
             style={{
               backgroundImage: `url(${item.image})`,
