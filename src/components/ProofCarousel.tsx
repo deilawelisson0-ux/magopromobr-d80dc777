@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import tenisNikeImg from "@/assets/CAMISA DARK.jpeg";
 import foneBluetoothImg from "@/assets/FONE.jpeg";
 import perfumeImportadoImg from "@/assets/PERFUME.jpeg";
 import smartwatchImg from "@/assets/RELOGIO.jpeg";
@@ -7,12 +6,12 @@ import camisetaDryfitImg from "@/assets/CAMISA DARK.jpeg";
 
 const proofItems = [
     {
-    product: "Tênis Nike",
-    before: "R$457",
-    after: "R$99",
-    emoji: "👟",
-    image: tenisNikeImg,
-  },
+  product: "Tênis Nike",
+  before: "R$457",
+  after: "R$99",
+  emoji: "👟",
+  image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80"
+},
   {
     product: "Fone Bluetooth",
     before: "R$189",
