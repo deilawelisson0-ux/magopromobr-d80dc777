@@ -79,7 +79,7 @@ const ProofCarousel = () => {
                 {item.before}
               </div>
 
-              <div className="text-[13px] sm:text-sm lg:text-base font-extrabold text-yellow-400">
+              <div className="text-[13px] sm:text-sm lg:text-base font-extrabold text-green-400 text-lg">
                 {item.after}
               </div>
             </div>
