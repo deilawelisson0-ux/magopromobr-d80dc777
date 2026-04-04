@@ -1,10 +1,21 @@
 import magoAvatar from "@/assets/mago-avatar.webp";
 import magoBanner from "@/assets/mago-banner.webp";
+import { useState, useEffect } from "react";
 import { Star, Users, ShieldCheck, TrendingDown, CheckCircle2, Lock, Clock, MessageCircle } from "lucide-react";
 
 const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
 
 const Index = () => {
+  const [peopleCount, setPeopleCount] = useState(3);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    const random = Math.floor(Math.random() * 5) + 2;
+    setPeopleCount(random);
+  }, 4000);
+
+  return () => clearInterval(interval);
+}, []);
   const handleCTA = () => {
     if (typeof window !== "undefined" && (window as any).fbq) {
       (window as any).fbq("track", "Lead");
@@ -131,15 +142,24 @@ const Index = () => {
           ⚠️ Mais de 1.000 pessoas já estão economizando — não fique de fora
         </p>
 
-       <div className="flex items-center justify-center gap-2 mb-0 text-[7px] sm:text-[9px] text-foreground/60 font-semibold">
+       <div className="flex items-center justify-center gap-2 mb-2 text-[7px] sm:text-[9px] text-foreground/60 font-semibold">
   <span>Promoções somem em minutos</span>
   <span className="text-muted-foreground">•</span>
   <span>Quem entra primeiro pega os melhores preços</span>
 </div>
+<div className="text-center mb-3 animate-pulse">
+  <p className="text-[13px] sm:text-[15px] font-bold text-green-400 tracking-wide drop-shadow-[0_0_12px_rgba(34,197,94,1)]">
+    🔥 {peopleCount} pessoas acabaram de entrar AGORA
+  </p>
+</div>
 
-        <button
+<p className="text-[11px] text-muted-foreground mt-2 mb-3 text-center">
+  ⚠️ Vagas podem fechar a qualquer momento
+</p>
+
+<button
   onClick={handleCTA}
-  className="animate-button-pulse w-full max-w-[600px] mx-auto block text-center font-extrabold text-sm sm:text-lg lg:text-xl py-3.5 lg:py-4 rounded-2xl bg-green-500 text-white border border-green-300/40 shadow-[0_0_20px_rgba(34,197,94,0.35),0_0_40px_rgba(34,197,94,0.18)] hover:scale-[1.03] hover:shadow-[0_0_28px_rgba(34,197,94,0.45),0_0_55px_rgba(34,197,94,0.22)] active:scale-[0.98] transition-all duration-300"
+  className="animate-button-pulse w-full max-w-[600px] mx-auto block text-center font-extrabold text-sm sm:text-lg lg:text-xl py-3.5 lg:py-4 rounded-2xl bg-green-500 text-white border border-green-300/40 shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:scale-[1.03] hover:shadow-[0_0_28px_rgba(34,197,94,0.6)] transition-all"
 >
   🔥 QUERO ECONOMIZAR AGORA
 </button>
