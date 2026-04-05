@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 
-import foneBluetoothImg from "@/assets/FONE.jpeg";
-import perfumeImportadoImg from "@/assets/PERFUME.jpeg";
-import smartwatchImg from "@/assets/RELOGIO.jpeg";
-import camisetaDryFitImg from "@/assets/CAMISA DARK.jpeg";
+import tenisImg from "@/assets/TENIS.webp";
+import foneBluetoothImg from "@/assets/FONE.webp";
+import perfumeImportadoImg from "@/assets/PERFUME.webp";
+import smartwatchImg from "@/assets/RELOGIO.webp";
+import camisetaDryFitImg from "@/assets/CAMISA DARK.webp";
 
 const proofItems = [
   {
@@ -11,7 +12,7 @@ const proofItems = [
     before: "R$457",
     after: "R$99",
     emoji: "👟",
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
+    image: tenisImg
   },
   {
     product: "Fone Bluetooth",
