@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
-import foneBluetoothImg from "@/assets/FONE.jpeg";
-import perfumeImportadoImg from "@/assets/PERFUME.jpeg";
-import smartwatchImg from "@/assets/RELOGIO.jpeg";
-import camisetaDryFitImg from "@/assets/CAMISA DARK.jpeg";
+import foneBluetoothImg from "@/assets/FONE.webp";
+import perfumeImportadoImg from "@/assets/PERFUME.webp";
+import smartwatchImg from "@/assets/RELOGIO.webp";
+import camisetaDryFitImg from "@/assets/CAMISA DARK.webp";
 
 const proofItems = [
   {
