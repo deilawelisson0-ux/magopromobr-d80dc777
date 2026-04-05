@@ -114,20 +114,11 @@
 
   @keyframes pulse-glow {
     0%, 100% { box-shadow: 0 0 20px hsl(145 70% 45% / 0.4); }
-    50% { box-shadow: 0 0 35px hsl(145 70% 45% / 0.7), 0 0 70px hsl(145 70% 45% / 0.2); }
+    50% { box-shadow: 0 0 30px hsl(145 70% 45% / 0.6); }
   }
 
   .animate-pulse-glow {
     animation: pulse-glow 2s ease-in-out infinite;
-  }
-
-  @keyframes sparkle {
-    0%, 100% { opacity: 0.3; transform: scale(0.8); }
-    50% { opacity: 1; transform: scale(1.2); }
-  }
-
-  .animate-sparkle {
-    animation: sparkle 2s ease-in-out infinite;
   }
 
   .glow-gold-border {
