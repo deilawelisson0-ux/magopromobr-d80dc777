@@ -1,8 +1,9 @@
 import magoAvatar from "@/assets/mago-avatar.webp";
 import magoBanner from "@/assets/mago-banner.webp";
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { Star, Users, ShieldCheck, TrendingDown, CheckCircle2, Lock, Clock, MessageCircle, Instagram, ShieldOff } from "lucide-react";
-import ProofCarousel from "@/components/ProofCarousel";
+
+const ProofCarousel = lazy(() => import("@/components/ProofCarousel"));
 
 const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
 
@@ -32,7 +33,7 @@ const Index = () => {
         {/* 1. Logo + Nome + Escassez */}
         <header className="flex items-center justify-center gap-2 lg:gap-4 shrink-0 w-full">
           <div className="w-7 h-7 sm:w-9 sm:h-9 lg:w-12 lg:h-12 rounded-full overflow-hidden border-2 border-primary glow-gold">
-            <img src={magoAvatar} alt="Mago das Promoções" className="w-full h-full object-cover" width={36} height={36} fetchPriority="high" />
+            <img src={magoAvatar} alt="Mago das Promoções" className="w-full h-full object-cover" width={96} height={96} fetchPriority="high" />
           </div>
           <h1 className="text-[11px] sm:text-sm lg:text-xl font-black gold-text tracking-tight">MAGO DAS PROMOÇÕES</h1>
           <span className="flex items-center gap-1 text-[7px] sm:text-[9px] text-primary font-bold border border-primary/40 rounded-full px-2 py-0.5 bg-primary/10 animate-pulse">
@@ -69,6 +70,10 @@ const Index = () => {
                 alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
                 className="w-full mx-auto h-full object-cover relative z-10 rounded-2xl glow-gold-border"
                 loading="eager"
+                fetchPriority="high"
+                width={800}
+                height={533}
+                decoding="async"
               />
             </div>
           </div>
@@ -131,7 +136,9 @@ const Index = () => {
         </div>
 
         {/* 4. Prova visual - carrossel */}
-        <ProofCarousel />
+        <Suspense fallback={<div className="w-full max-w-[600px] mx-auto h-[120px]" />}>
+          <ProofCarousel />
+        </Suspense>
         {/* 5. Urgência + CTA Final */}
         <div className="w-full shrink-0 mt-0">
           <div className="flex items-center justify-center gap-2 mb-1 text-[7px] sm:text-[9px] text-foreground/60 font-semibold">
