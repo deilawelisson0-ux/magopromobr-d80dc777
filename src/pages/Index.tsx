@@ -29,7 +29,7 @@ const Index = () => {
     <div className="bg-background flex flex-col overflow-hidden lg:h-screen lg:max-h-screen lg:overflow-hidden">
       <div className="flex items-center gap-2 lg:gap-4 shrink-0">
 
-      <div className="flex-1 flex flex-col items-center lg:items-center w-full max-w-[1900px] mx-auto px-3 lg:px-12 xl:px-20 py-0 pb-16 lg:pb-4 overflow-hidden lg:justify-center lg:gap-1">
+      <div className="flex-1 flex flex-col items-center w-full mx-auto px-3 lg:px-8 xl:px-10 lg:max-w-[1280px] xl:max-w-[1320px] py-0 pb-16 lg:pb-4 overflow-hidden lg:justify-center lg:gap-1">
         {/* 1. Logo + Nome + Escassez */}
         <header className="flex items-center justify-center gap-2 lg:gap-4 shrink-0 w-full">
           <div className="w-7 h-7 sm:w-9 sm:h-9 lg:w-12 lg:h-12 rounded-full overflow-hidden border-2 border-primary glow-gold">
@@ -62,8 +62,8 @@ const Index = () => {
         </div>
 
         {/* 3. Bloco Principal — imagem + lado direito */}
-        <div className="w-full lg:max-w-[1100px] lg:mx-auto lg:flex lg:items-start lg:gap-4">
-          <div className="w-full lg:flex-1">
+        <div className="w-full lg:grid lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-5 lg:items-center">
+          <div className="w-full">
               <img
                 src={magoBanner}
                 alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
@@ -77,7 +77,7 @@ const Index = () => {
           </div>
 
           {/* Lado direito — prova social + benefícios */}
-          <div className="w-full lg:w-[220px] xl:w-[260px] lg:shrink-0 flex flex-col gap-2 lg:gap-3 justify-center mt-3 lg:mt-0">
+          <div className="w-full flex flex-col gap-2 lg:gap-3 justify-center mt-3 lg:mt-0">
             {/* Prova social */}
             <div className="bg-card/60 border border-border rounded-lg px-3 py-2 lg:px-4 lg:py-3 text-center space-y-1">
               <div className="flex justify-center gap-0.5">
