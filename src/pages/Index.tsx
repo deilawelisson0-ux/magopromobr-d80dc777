@@ -62,9 +62,9 @@ const Index = () => {
         </div>
 
         {/* 3. Bloco Principal — imagem + lado direito */}
-        <div className="w-full relative">
+        <div className="w-full relative lg:max-w-[1100px] lg:mx-auto">
           <div className="w-full lg:flex lg:justify-center">
-            <div className="w-full lg:w-[70%]">
+            <div className="w-full lg:w-[75%]">
               <img
                 src={magoBanner}
                 alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
