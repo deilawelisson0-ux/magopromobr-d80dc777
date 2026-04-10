@@ -62,9 +62,8 @@ const Index = () => {
         </div>
 
         {/* 3. Bloco Principal — imagem + lado direito */}
-        <div className="w-full relative lg:max-w-[1100px] lg:mx-auto">
-          <div className="w-full lg:flex lg:justify-center">
-            <div className="w-full lg:w-[75%]">
+        <div className="w-full lg:max-w-[1100px] lg:mx-auto lg:flex lg:items-start lg:gap-4">
+          <div className="w-full lg:flex-1">
               <img
                 src={magoBanner}
                 alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
@@ -75,11 +74,10 @@ const Index = () => {
                 height={533}
                 decoding="async"
               />
-            </div>
           </div>
 
           {/* Lado direito — prova social + benefícios */}
-          <div className="w-full lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:w-[220px] xl:w-[260px] flex flex-col gap-2 lg:gap-3 justify-center mt-3 lg:mt-0">
+          <div className="w-full lg:w-[220px] xl:w-[260px] lg:shrink-0 flex flex-col gap-2 lg:gap-3 justify-center mt-3 lg:mt-0">
             {/* Prova social */}
             <div className="bg-card/60 border border-border rounded-lg px-3 py-2 lg:px-4 lg:py-3 text-center space-y-1">
               <div className="flex justify-center gap-0.5">
