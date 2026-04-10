@@ -165,9 +165,14 @@ body {
 }
 
 img {
-  max-height: 42vh;
   height: auto;
   object-fit: contain;
+}
+
+@media (min-width: 1024px) {
+  img {
+    max-height: none;
+  }
 }
 
 /* reduzir espaçamentos gerais */
