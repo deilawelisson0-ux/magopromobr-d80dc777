@@ -26,7 +26,7 @@ const Index = () => {
   };
 
   return (
-    <div className="bg-background flex flex-col overflow-hidden lg:h-screen lg:max-h-screen lg:overflow-hidden">
+    <div className="bg-background flex flex-col">
       <div className="flex items-center gap-2 lg:gap-4 shrink-0">
 
       <div className="flex-1 flex flex-col items-center w-full mx-auto px-3 lg:px-8 xl:px-10 lg:max-w-[1280px] xl:max-w-[1320px] py-0 pb-16 lg:pb-4 overflow-hidden lg:justify-center lg:gap-1">
