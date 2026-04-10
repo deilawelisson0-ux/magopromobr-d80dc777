@@ -29,7 +29,7 @@ const Index = () => {
     <div className="bg-background flex flex-col overflow-hidden lg:h-screen lg:max-h-screen lg:overflow-hidden">
       <div className="flex items-center gap-2 lg:gap-4 shrink-0">
 
-      <div className="flex-1 flex flex-col items-center lg:items-center w-full max-w-[1900px] mx-auto px-3 lg:px-8 py-0 pb-16 lg:pb-4 overflow-hidden lg:justify-center lg:gap-1">
+      <div className="flex-1 flex flex-col items-center lg:items-center w-full max-w-[1900px] mx-auto px-3 lg:px-12 xl:px-20 py-0 pb-16 lg:pb-4 overflow-hidden lg:justify-center lg:gap-1">
         {/* 1. Logo + Nome + Escassez */}
         <header className="flex items-center justify-center gap-2 lg:gap-4 shrink-0 w-full">
           <div className="w-7 h-7 sm:w-9 sm:h-9 lg:w-12 lg:h-12 rounded-full overflow-hidden border-2 border-primary glow-gold">
