@@ -67,7 +67,7 @@ const Index = () => {
               <img
                 src={magoBanner}
                 alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
-                className="w-full mx-auto h-full object-cover relative z-10 rounded-2xl glow-gold-border"
+                className="w-full mx-auto h-full object-cover lg:object-contain lg:h-auto relative z-10 rounded-2xl glow-gold-border"
                 loading="eager"
                 fetchPriority="high"
                 width={800}
