@@ -31,88 +31,87 @@ const Index = () => {
   ];
 
   return (
-    <main className="relative min-h-[100dvh] w-full overflow-hidden bg-transparent text-foreground">
+    <main className="relative h-screen w-full overflow-hidden text-foreground">
 
-      {/* BACKGROUND */}
-      <div className="absolute inset-0 z-10 overflow-hidden">
-        <img
-          src={magoBg}
-          alt=""
-          className="w-full h-full object-cover"
-        />
+  {/* BACKGROUND */}
+  <div className="absolute inset-0 -z-10">
+    <img
+      src={magoBg}
+      alt=""
+      className="
+        w-full h-full
+        object-cover
+        object-center
+        sm:object-center
+        lg:object-right
+      "
+    />
 
-        {/* overlays */}
-        <div className="absolute inset-0 bg-black/20 lg:hidden"></div>
-        <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+    {/* overlay forte mobile */}
+    <div className="absolute inset-0 bg-black/50 lg:bg-black/30"></div>
 
-        {/* glow */}
-        <div className="absolute top-1/2 right-[-10%] -translate-y-1/2 w-[50%] h-[70%] bg-primary/10 blur-[140px] rounded-full animate-pulse"></div>
+    {/* glow leve */}
+    <div className="hidden lg:block absolute top-1/2 right-[-10%] -translate-y-1/2 w-[50%] h-[70%] bg-primary/10 blur-[140px] rounded-full"></div>
+  </div>
+
+  {/* CONTEÚDO */}
+  <div className="
+    relative z-10
+    flex flex-col justify-center
+    h-full
+    px-5
+    max-w-[640px]
+    mx-auto
+    gap-5
+  ">
+
+    {/* LOGO */}
+    <div className="flex justify-center">
+      <div className="flex items-center gap-2 bg-black/40 backdrop-blur border border-primary/20 rounded-full px-4 py-1.5">
+        <img src={magoAvatar} className="w-7 h-7 rounded-full" />
+        <span className="text-[12px] font-bold">
+          Mago<span className="text-primary"> das Promoções</span>
+        </span>
       </div>
+    </div>
 
-      {/* HEADER */}
-      <header className="absolute top-5 left-0 right-0 z-30 flex justify-center px-5">
-        <div className="flex items-center gap-2.5 bg-background/40 backdrop-blur-md border border-primary/20 rounded-full px-4 py-1.5">
-          <div className="w-8 h-8 rounded-full overflow-hidden ring-1 ring-primary/40">
-            <img src={magoAvatar} alt="Mago das Promoções" className="w-full h-full object-cover" />
-          </div>
-          <span className="text-[13px] font-bold tracking-tight">
-            Mago<span className="text-primary"> das Promoções</span>
-          </span>
+    {/* HEADLINE */}
+    <h1 className="text-[28px] leading-tight font-black text-center sm:text-[36px]">
+      Você ainda paga <span className="text-primary">caro</span><br />
+      enquanto outros pagam até <span className="text-primary">70% menos</span>
+    </h1>
+
+    {/* SUB */}
+    <p className="text-[13px] text-center text-foreground/80">
+      Eu monitoro as maiores lojas e envio os melhores achados direto no WhatsApp.
+    </p>
+
+    {/* BULLETS */}
+    <div className="grid grid-cols-2 gap-2 text-[12px]">
+      {bullets.map((text) => (
+        <div key={text} className="flex items-center gap-2">
+          <Check className="w-4 h-4 text-primary" />
+          {text}
         </div>
-      </header>
+      ))}
+    </div>
 
-      {/* CONTEÚDO */}
-      <div className="relative z-20 w-full max-w-[1200px] mx-auto px-5 pt-24 pb-10 flex flex-col lg:justify-center min-h-screen">
+    {/* CTA */}
+    <button
+      onClick={handleCTA}
+      className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-primary text-black font-bold text-[14px]"
+    >
+      <MessageCircle className="w-5 h-5" />
+      QUERO ENTRAR AGORA
+    </button>
 
-        <div className="flex flex-col gap-6 max-w-[640px]">
+    {/* FOOT */}
+    <p className="text-[11px] text-center text-foreground/60">
+      Gratuito • Sem spam • Saia quando quiser
+    </p>
 
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 text-[11px] font-semibold border border-primary/40 rounded-full px-3 py-1.5 bg-background/50 backdrop-blur">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
-            +1.000 pessoas economizando agora
-          </div>
-
-          {/* Headline */}
-          <h1 className="font-black leading-[0.95] text-[40px] sm:text-6xl lg:text-[72px] drop-shadow">
-            Você ainda paga <span className="text-primary">caro</span>
-            <br />
-            enquanto outros pagam até <span className="text-primary">70% menos</span>
-          </h1>
-
-          {/* Subheadline */}
-          <p className="text-sm sm:text-base text-foreground/80 max-w-[560px]">
-            Eu monitoro as maiores lojas do Brasil (Nike, Amazon, Mercado Livre...)
-            e envio os melhores achados direto no WhatsApp.
-          </p>
-
-          {/* Bullets */}
-          <ul className="grid grid-cols-2 gap-3 max-w-[480px]">
-            {bullets.map((text) => (
-              <li key={text} className="flex items-center gap-2 text-sm">
-                <span className="w-4 h-4 flex items-center justify-center rounded-full bg-primary text-black">
-                  <Check className="w-3 h-3" />
-                </span>
-                {text}
-              </li>
-            ))}
-          </ul>
-
-          {/* CTA */}
-          <div className="flex flex-col gap-2 mt-2">
-            <button
-              onClick={handleCTA}
-              className="w-full sm:max-w-[420px] flex items-center justify-center gap-3 font-bold text-base lg:text-lg py-4 px-6 rounded-xl bg-primary text-black hover:scale-[1.02] transition"
-            >
-              <MessageCircle className="w-5 h-5" />
-              QUERO ENTRAR NO GRUPO AGORA
-            </button>
-
-            <p className="text-xs text-foreground/70">
-              Gratuito • Sem spam • Saia quando quiser
-            </p>
-          </div>
-
+  </div>
+</main>
           {/* Social proof */}
           <div className="flex items-center gap-4 mt-4">
             <div className="flex -space-x-2">
