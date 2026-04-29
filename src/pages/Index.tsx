@@ -1,4 +1,4 @@
-import magoBg from "../assets/banner-desktop.jpg"; // desktop
+import magoBg from "../assets/banner-desktop1.jpg"; // desktop
 import mobileBg from "../assets/mobile.png"; // mobile (NÃO MEXER)
 import magoAvatar from "../assets/mago-avatar.webp";
 import { useEffect, useState } from "react";
@@ -35,7 +35,7 @@ const Index = () => {
       <div className="absolute inset-0 z-0 md:hidden">
         <img
           src={mobileBg}
-          className="w-full h-full object-cover object-[center_top] brightness-110 contrast-110"
+          className="w-full h-full object-cover object-center brightness-110 contrast-110"
         />
       </div>
 
