@@ -1,4 +1,4 @@
-import magoBg from "@/assets/mago-bg.webp";
+import magoBg from "../assets/mago-bg.webp";
 import magoAvatar from "@/assets/mago-avatar.webp";
 import { useEffect, useState } from "react";
 import { Check, MessageCircle } from "lucide-react";
