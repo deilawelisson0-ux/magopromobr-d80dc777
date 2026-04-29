@@ -17,7 +17,7 @@ const Index = () => {
   }, []);
 
   const handleCTA = () => {
-    window.open(WHATSAPP_LINK, "_blank");
+    window.open(https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s);
   };
 
   return (
