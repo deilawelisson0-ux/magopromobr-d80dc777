@@ -22,7 +22,7 @@ const Index = () => {
           src={magoBg}
           alt="bg"
           className="w-full h-full object-cover object-center hidden md:block
-          scale-95 contrast-110 brightness-110"
+          scale-90 contrast-110 brightness-110"
         />
 
         {/* MOBILE */}
@@ -34,7 +34,7 @@ const Index = () => {
         />
 
         {/* OVERLAY MAIS LEVE (quase imperceptível) */}
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-black/5"></div>
       </div>
 
       {/* CONTEÚDO */}
