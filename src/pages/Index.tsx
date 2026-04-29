@@ -4,7 +4,7 @@ import magoAvatar from "../assets/mago-avatar.webp";
 import { useEffect, useState } from "react";
 import { MessageCircle } from "lucide-react";
 
-const WHATSAPP_LINK = "https://chat.whatsapp.com/SEULINKAQUI";
+const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
 
 const Index = () => {
   const [peopleCount, setPeopleCount] = useState(4);
@@ -17,9 +17,9 @@ const Index = () => {
   }, []);
 
   const handleCTA = () => {
-    window.open(https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s);
-  };
-
+  const link = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
+  window.open(link, "_blank", "noopener,noreferrer");
+};
   return (
     <main className="relative h-screen w-full overflow-hidden text-white">
 
