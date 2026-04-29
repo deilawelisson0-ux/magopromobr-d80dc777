@@ -1,4 +1,5 @@
-import magoBg from "../assets/mago-bg.webp";
+import magoBg from "../assets/mago-bg.webp"; // desktop
+import mobileBg from "../assets/mobile.png"; // mobile (SUA ARTE COMPLETA)
 import magoAvatar from "../assets/mago-avatar.webp";
 import { useEffect, useState } from "react";
 import { MessageCircle } from "lucide-react";
@@ -22,34 +23,44 @@ const Index = () => {
   return (
     <main className="relative h-screen w-full overflow-hidden text-white">
 
-      {/* 🔥 BACKGROUND AJUSTADO (SEM BORDA, FULL SCREEN) */}
-      <div className="absolute inset-0 z-0">
+      {/* 🔥 DESKTOP */}
+      <div className="absolute inset-0 z-0 hidden md:block">
         <img
           src={magoBg}
           className="w-full h-full object-cover object-center brightness-110 contrast-110"
         />
       </div>
 
-      {/* 🔥 OVERLAY MAIS LEVE (ANTES estava escuro) */}
-      <div className="absolute inset-0 bg-black/30"></div>
+      {/* 🔥 MOBILE (AQUI ESTÁ O SEGREDO) */}
+      <div className="absolute inset-0 z-0 md:hidden">
+        <img
+          src={mobileBg}
+          className="
+            w-full h-full
+            object-cover
+            object-[center_top]
+            brightness-110 contrast-110
+          "
+        />
+      </div>
+
+      {/* 🔥 OVERLAY MAIS LEVE */}
+      <div className="absolute inset-0 bg-black/25"></div>
 
       {/* 🔥 CONTEÚDO */}
       <div className="relative z-10 flex flex-col items-center justify-between h-full px-4 py-6">
 
-        {/* 🔥 LOGO MAIS ALTA E CENTRALIZADA */}
-        <div className="mt-4">
+        {/* 🔥 LOGO */}
+        <div className="mt-2">
           <div className="flex items-center gap-2 bg-black/70 px-4 py-2 rounded-full border border-yellow-400/30 backdrop-blur-md">
-            <img
-              src={magoAvatar}
-              className="w-8 h-8 rounded-full"
-            />
+            <img src={magoAvatar} className="w-8 h-8 rounded-full" />
             <span className="font-bold text-sm">
               Mago <span className="text-yellow-400">das Promoções</span>
             </span>
           </div>
         </div>
 
-        {/* 🔥 BOTÃO PRINCIPAL */}
+        {/* 🔥 BOTÃO */}
         <div className="w-full max-w-[420px] mb-4">
           <button
             onClick={handleCTA}
@@ -65,12 +76,10 @@ const Index = () => {
             ENTRAR NO GRUPO
           </button>
 
-          {/* TEXTO ABAIXO */}
           <p className="text-center text-white/80 text-sm mt-3">
             Gratuito • Sem spam • Saia quando quiser
           </p>
 
-          {/* URGÊNCIA */}
           <p className="text-center text-white/60 text-xs mt-1">
             {peopleCount} pessoas entrando agora
           </p>
