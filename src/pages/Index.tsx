@@ -35,7 +35,7 @@ const Index = () => {
       <div className="absolute inset-0 z-0 md:hidden">
         <img
           src={mobileBg}
-          className="w-full h-full object-cover object-center brightness-110 contrast-110"
+          className="w-full h-full object-cover object-[center_65%] brightness-110 contrast-110"
         />
       </div>
 
