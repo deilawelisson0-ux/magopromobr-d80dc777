@@ -16,7 +16,6 @@ const Index = () => {
 
       {/* BACKGROUND */}
       <div className="absolute inset-0 z-0">
-
         {/* DESKTOP */}
         <img
           src={magoBg}
@@ -30,11 +29,11 @@ const Index = () => {
           src={mobileBg}
           alt="bg mobile"
           className="w-full h-full object-cover object-center md:hidden
-          scale-100 contrast-110 brightness-110"
+          scale-[0.75] contrast-110 brightness-110"
         />
 
         {/* OVERLAY MAIS LEVE (quase imperceptível) */}
-        <div className="absolute inset-0 bg-black/5"></div>
+        <div className="absolute inset-0 bg-black/0"></div>
       </div>
 
       {/* CONTEÚDO */}
