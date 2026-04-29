@@ -22,7 +22,7 @@ const Index = () => {
           src={magoBg}
           alt="bg"
           className="w-full h-full object-cover object-center hidden md:block
-          scale-100 contrast-110 brightness-110"
+          scale-95 contrast-110 brightness-110"
         />
 
         {/* MOBILE */}
