@@ -1,4 +1,4 @@
-import magoBg from "../assets/mago-bg.webp"; // desktop
+import magoBg from "../assets/banner-desktop.jpg"; // desktop
 import mobileBg from "../assets/mobile.png"; // mobile (SUA ARTE COMPLETA)
 import magoAvatar from "../assets/mago-avatar.webp";
 import { useEffect, useState } from "react";
