@@ -1,10 +1,10 @@
 import magoBg from "../assets/banner-desktop.jpg"; // desktop
-import mobileBg from "../assets/mobile.png"; // mobile (SUA ARTE COMPLETA)
+import mobileBg from "../assets/mobile.png"; // mobile (NÃO MEXER)
 import magoAvatar from "../assets/mago-avatar.webp";
 import { useEffect, useState } from "react";
 import { MessageCircle } from "lucide-react";
 
-const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
+const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiYyscD3t0Le34nv8bu1s";
 
 const Index = () => {
   const [peopleCount, setPeopleCount] = useState(4);
@@ -17,41 +17,36 @@ const Index = () => {
   }, []);
 
   const handleCTA = () => {
-  const link = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
-  window.location.href = link;
-};
+    window.location.href = WHATSAPP_LINK;
+  };
+
   return (
     <main className="relative h-screen w-full overflow-hidden text-white">
 
-      {/* 🔥 DESKTOP */}
-      <div className="absolute inset-0 z-0 hidden md:block">
+      {/* 🔥 DESKTOP (IMAGEM INTEIRA SEM CORTE) */}
+      <div className="absolute inset-0 z-0 hidden md:flex items-center justify-center bg-black">
         <img
           src={magoBg}
-          className="w-full h-full object-cover object-contain brightness-110 contrast-110"
+          className="max-w-full max-h-full object-contain"
         />
       </div>
 
-      {/* 🔥 MOBILE (AQUI ESTÁ O SEGREDO) */}
+      {/* 📱 MOBILE (NÃO ALTERADO) */}
       <div className="absolute inset-0 z-0 md:hidden">
         <img
           src={mobileBg}
-          className="
-            w-full h-full
-            object-cover
-            object-[center_top]
-            brightness-110 contrast-110
-          "
+          className="w-full h-full object-cover object-[center_top] brightness-110 contrast-110"
         />
       </div>
 
-      {/* 🔥 OVERLAY MAIS LEVE */}
-      <div className="absolute inset-0 bg-black/25"></div>
+      {/* OVERLAY */}
+      <div className="absolute inset-0 bg-black/30"></div>
 
-      {/* 🔥 CONTEÚDO */}
+      {/* CONTEÚDO */}
       <div className="relative z-10 flex flex-col items-center justify-between h-full px-4 py-6">
 
-        {/* 🔥 LOGO */}
-        <div className="mt-0 -translate-y-6">
+        {/* LOGO */}
+        <div className="mt-6">
           <div className="flex items-center gap-2 bg-black/70 px-4 py-2 rounded-full border border-yellow-400/30 backdrop-blur-md">
             <img src={magoAvatar} className="w-8 h-8 rounded-full" />
             <span className="font-bold text-sm">
@@ -60,8 +55,8 @@ const Index = () => {
           </div>
         </div>
 
-        {/* 🔥 BOTÃO */}
-        <div className="w-full max-w-[420px] mb-4">
+        {/* CTA */}
+        <div className="w-full max-w-[420px] mb-8">
           <button
             onClick={handleCTA}
             className="
@@ -84,6 +79,7 @@ const Index = () => {
             {peopleCount} pessoas entrando agora
           </p>
         </div>
+
       </div>
     </main>
   );
