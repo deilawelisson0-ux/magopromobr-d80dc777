@@ -39,7 +39,7 @@ const Index = () => {
           src={mobileBg}
           className="
             w-full h-full 
-            object-contain 
+            object-cover 
             scale-[0.88]       /* 🔥 MENOS ZOOM */
             translate-y-[-30px] /* 🔥 SOBE A IMAGEM */
           "
