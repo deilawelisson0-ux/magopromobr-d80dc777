@@ -1,23 +1,11 @@
-import magoAvatar from "@/assets/mago-avatar.webp";
 import magoBanner from "@/assets/mago-banner.webp";
-import { useState, useEffect, lazy, Suspense } from "react";
-import { Star, Users, ShieldCheck, TrendingDown, CheckCircle2, Lock, Clock, MessageCircle, Instagram, ShieldOff } from "lucide-react";
-
-const ProofCarousel = lazy(() => import("@/components/ProofCarousel"));
+import magoAvatar from "@/assets/mago-avatar.webp";
+import { useEffect } from "react";
+import { Check, Sparkles, ShieldCheck, Zap, Tag } from "lucide-react";
 
 const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
 
 const Index = () => {
-  const [peopleCount, setPeopleCount] = useState(3);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const random = Math.floor(Math.random() * 5) + 2;
-      setPeopleCount(random);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
-
   const handleCTA = () => {
     if (typeof window !== "undefined" && (window as any).fbq) {
       (window as any).fbq("track", "Lead");
@@ -25,177 +13,154 @@ const Index = () => {
     window.open(WHATSAPP_LINK, "_blank", "noopener,noreferrer");
   };
 
-  return (
-    <div className="bg-background flex flex-col">
-      <div className="flex items-center gap-2 lg:gap-4 shrink-0">
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = "smooth";
+  }, []);
 
-      <div className="flex-1 flex flex-col items-center w-full mx-auto px-3 lg:px-8 xl:px-10 lg:max-w-[1280px] xl:max-w-[1320px] py-0 pb-16 lg:pb-4 overflow-hidden lg:justify-center lg:gap-1">
-        {/* 1. Logo + Nome + Escassez */}
-        <header className="flex items-center justify-center gap-2 lg:gap-4 shrink-0 w-full">
-          <div className="w-7 h-7 sm:w-9 sm:h-9 lg:w-12 lg:h-12 rounded-full overflow-hidden border-2 border-primary glow-gold">
-            <img src={magoAvatar} alt="Mago das Promoções" className="w-full h-full object-cover" width={96} height={96} fetchPriority="high" />
+  const bullets = [
+    { icon: Tag, text: "Descontos reais de até 70%" },
+    { icon: Zap, text: "Promoções novas todos os dias" },
+    { icon: ShieldCheck, text: "Links verificados" },
+    { icon: Check, text: "Sem spam, sem enrolação" },
+  ];
+
+  const testimonials = [
+    { name: "Ana", msg: "Economizei R$200 essa semana 💃" },
+    { name: "Pedro", msg: "Melhor grupo que já entrei 🔥" },
+    { name: "Juliana", msg: "Todo dia tem oferta absurda 🚀" },
+  ];
+
+  return (
+    <main className="relative min-h-[100dvh] lg:h-[100dvh] w-full overflow-hidden bg-background text-foreground">
+      {/* Background ambient glow */}
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute -top-40 -left-40 w-[480px] h-[480px] rounded-full bg-primary/10 blur-[120px]" />
+        <div className="absolute -bottom-40 -right-40 w-[520px] h-[520px] rounded-full bg-accent/10 blur-[140px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,hsl(var(--background))_85%)]" />
+      </div>
+
+      <div className="mx-auto h-full w-full max-w-[1280px] px-5 sm:px-8 lg:px-12 py-5 lg:py-0 flex flex-col lg:justify-center">
+        {/* TOP BAR */}
+        <header className="flex items-center justify-between mb-5 lg:mb-8 lg:absolute lg:top-6 lg:left-12 lg:right-12">
+          <div className="flex items-center gap-2.5">
+            <div className="w-9 h-9 rounded-full overflow-hidden border border-primary/40 ring-2 ring-primary/20">
+              <img src={magoAvatar} alt="Mago das Promoções" className="w-full h-full object-cover" width={48} height={48} />
+            </div>
+            <span className="text-sm font-extrabold tracking-tight gold-text">MAGO DAS PROMOÇÕES</span>
           </div>
-          <h1 className="text-[11px] sm:text-sm lg:text-xl font-black gold-text tracking-tight">MAGO DAS PROMOÇÕES</h1>
-          <span className="flex items-center gap-1 text-[7px] sm:text-[9px] text-primary font-bold border border-primary/40 rounded-full px-2 py-0.5 bg-primary/10 animate-pulse">
-            <Lock className="w-2.5 h-2.5" /> Grupo VIP • vagas limitadas
-          </span>
+          <div className="hidden sm:flex items-center gap-1.5 text-[10px] font-semibold text-primary/90 border border-primary/30 rounded-full px-3 py-1 bg-primary/5">
+            <Sparkles className="w-3 h-3" />
+            Grupo VIP • vagas limitadas
+          </div>
         </header>
 
-        {/* 2. Headline */}
-        <section className="w-full max-w-[1100px] mx-auto text-center">
-          <h2 className="text-[15px] sm:text-xl lg:text-5xl font-black text-foreground leading-tight max-w-4xl lg:max-w-[900px] mx-auto">
-            🚨 Você ainda está <span className="text-primary">pagando caro</span>… enquanto outras pessoas pagam até <span className="text-primary">70% MENOS</span>
-          </h2>
-          <p className="text-[9px] sm:text-xs lg:text-xl text-muted-foreground font-medium leading-snug mt-1">
-            🔥 Mais de <strong className="text-primary">1.000 pessoas</strong> já estão economizando TODOS OS DIAS com <strong className="text-primary">promoções reais</strong>
-          </p>
-        </section>
+        {/* GRID 2 COLS */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-8 lg:gap-14 items-center flex-1 lg:flex-none">
+          {/* LEFT — COPY */}
+          <div className="flex flex-col gap-4 lg:gap-5 order-1">
+            <div className="inline-flex items-center gap-1.5 self-start text-[10px] sm:text-[11px] font-semibold text-primary border border-primary/30 rounded-full px-3 py-1 bg-primary/5">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+              +1.000 pessoas economizando agora
+            </div>
 
-        {/* 2.5 CTA no topo */}
-        <div className="w-full flex justify-center mt-1 lg:mt-2">
-          <button
-            onClick={handleCTA}
-            className="animate-button-pulse w-full max-w-[600px] text-center font-extrabold text-xs sm:text-base lg:text-lg py-2.5 lg:py-3 rounded-2xl bg-green-500 text-white border border-green-300/40 shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:scale-[1.03] hover:shadow-[0_0_28px_rgba(34,197,94,0.6)] transition-all"
-          >
-            🔥 QUERO ENTRAR NO GRUPO AGORA
-          </button>
-        </div>
+            <h1 className="text-[26px] sm:text-4xl lg:text-[52px] font-black leading-[1.05] tracking-tight">
+              Você ainda está pagando caro enquanto outros pagam até{" "}
+              <span className="gold-text">70% mais barato</span>
+            </h1>
 
-        {/* 3. Bloco Principal — imagem + lado direito */}
-        <div className="w-full lg:grid lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-5 lg:items-center">
-          <div className="w-full">
+            <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-snug max-w-[520px]">
+              Entre no grupo onde mais de <strong className="text-foreground">1.000 pessoas</strong> recebem promoções <strong className="text-foreground">reais</strong> todos os dias.
+            </p>
+
+            {/* Bullets */}
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-2 max-w-[520px]">
+              {bullets.map(({ icon: Icon, text }) => (
+                <li key={text} className="flex items-center gap-2 text-[12px] sm:text-sm text-foreground/90">
+                  <span className="flex items-center justify-center w-5 h-5 rounded-full bg-primary/15 text-primary shrink-0">
+                    <Icon className="w-3 h-3" strokeWidth={3} />
+                  </span>
+                  {text}
+                </li>
+              ))}
+            </ul>
+
+            {/* CTA */}
+            <div className="flex flex-col gap-2 mt-1 max-w-[520px]">
+              <button
+                onClick={handleCTA}
+                className="animate-button-pulse w-full text-center font-extrabold text-sm sm:text-base lg:text-lg py-4 lg:py-[18px] rounded-2xl bg-[hsl(var(--cta-green))] text-[hsl(var(--cta-green-foreground))] shadow-[0_10px_30px_-10px_hsl(var(--cta-green)/0.6)] hover:scale-[1.02] hover:shadow-[0_14px_40px_-10px_hsl(var(--cta-green)/0.8)] transition-all"
+              >
+                🔥 QUERO ENTRAR NO GRUPO AGORA
+              </button>
+              <p className="text-[11px] text-muted-foreground text-center font-medium">
+                100% gratuito • Sem spam • Saia quando quiser
+              </p>
+            </div>
+
+            {/* Social proof / testimonials */}
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 max-w-[520px] pt-1">
+              <div className="flex items-center gap-2">
+                <div className="flex -space-x-2">
+                  {["A", "M", "J", "P"].map((l, i) => (
+                    <div key={l} className="w-7 h-7 rounded-full border-2 border-background flex items-center justify-center text-[10px] font-bold"
+                      style={{ background: `hsl(${40 + i * 20} 70% ${45 + i * 5}%)`, color: "white" }}>
+                      {l}
+                    </div>
+                  ))}
+                </div>
+                <div className="flex flex-col leading-tight">
+                  <span className="text-[11px] font-bold text-foreground">+1.000 membros</span>
+                  <span className="text-[10px] text-muted-foreground">avaliação ★★★★★</span>
+                </div>
+              </div>
+              <div className="hidden sm:block w-px h-8 bg-border/60" />
+              <div className="flex flex-col gap-0.5">
+                {testimonials.slice(0, 2).map((t) => (
+                  <p key={t.name} className="text-[11px] text-muted-foreground leading-tight">
+                    <strong className="text-foreground/90">{t.name}:</strong> {t.msg}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT — VISUAL */}
+          <div className="relative order-2 flex items-center justify-center">
+            {/* Soft gold glow behind */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-[80%] h-[80%] rounded-full bg-primary/15 blur-[80px]" />
+            </div>
+
+            {/* Sparkles */}
+            <Sparkles className="absolute top-4 right-6 w-5 h-5 text-primary/70 animate-pulse" />
+            <Sparkles className="absolute bottom-8 left-4 w-4 h-4 text-primary/50 animate-pulse" style={{ animationDelay: "0.6s" }} />
+            <Sparkles className="absolute top-1/2 right-2 w-3 h-3 text-primary/40 animate-pulse" style={{ animationDelay: "1.2s" }} />
+
+            <div className="relative w-full max-w-[420px] lg:max-w-[460px]">
               <img
                 src={magoBanner}
-                alt="Ofertas reais do grupo — Tênis de R$457 por R$99"
-                className="w-full mx-auto h-full object-cover lg:object-contain lg:h-auto relative z-10 rounded-2xl glow-gold-border"
+                alt="Grupo de WhatsApp do Mago das Promoções com ofertas reais"
+                className="relative z-10 w-full h-auto object-contain rounded-[28px]"
+                width={800}
+                height={800}
                 loading="eager"
                 fetchPriority="high"
-                width={800}
-                height={533}
                 decoding="async"
               />
-          </div>
 
-          {/* Lado direito — prova social + benefícios */}
-          <div className="w-full flex flex-col gap-2 lg:gap-3 justify-center mt-3 lg:mt-0">
-            {/* Prova social */}
-            <div className="bg-card/60 border border-border rounded-lg px-3 py-2 lg:px-4 lg:py-3 text-center space-y-1">
-              <div className="flex justify-center gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-primary text-primary" />
-                ))}
+              {/* Floating discount badge */}
+              <div className="absolute -top-2 -left-2 lg:-top-3 lg:-left-3 z-20 bg-[hsl(var(--cta-green))] text-white text-[11px] lg:text-xs font-black px-3 py-1.5 rounded-full shadow-lg rotate-[-8deg] animate-float">
+                -70% OFF
               </div>
-              <div className="flex items-center justify-center gap-1">
-                <Users className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-primary" />
-                <span className="text-[8px] sm:text-[11px] lg:text-lg font-bold text-primary">
-                  +1.000 economizando
-                </span>
-              </div>
-              <div className="flex justify-center -space-x-1.5">
-                {["A", "M", "J", "P", "R"].map((l) => (
-                  <div key={l} className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-muted border border-background flex items-center justify-center text-[6px] sm:text-[7px] font-bold text-muted-foreground">
-                    {l}
-                  </div>
-                ))}
+              <div className="absolute -bottom-2 -right-2 lg:-bottom-3 lg:-right-3 z-20 bg-card/90 backdrop-blur border border-primary/30 text-foreground text-[10px] lg:text-[11px] font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1">
+                <span className="w-1.5 h-1.5 rounded-full bg-[hsl(var(--cta-green))] animate-pulse" />
+                Online agora
               </div>
             </div>
-
-            {/* Mini depoimentos */}
-            <div className="space-y-1">
-              {[
-                { name: "Ana", msg: "Economizei R$200 essa semana! 💃😍" },
-                { name: "Pedro", msg: "Melhor grupo que já entrei 🔥" },
-                { name: "Juliana", msg: "Todo dia tem promoção absurda 🚀" },
-              ].map((d, i) => (
-                <div key={i} className="flex items-start gap-1 bg-card/40 border border-border/50 rounded-md px-1.5 py-0.5 lg:px-3 lg:py-2">
-                  <MessageCircle className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-primary shrink-0 mt-0.5" />
-                  <p className="text-[7px] sm:text-[9px] lg:text-sm text-foreground/80 leading-tight">
-                    <strong className="text-foreground">{d.name}:</strong> {d.msg}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            {/* Benefícios */}
-            <div className="space-y-1">
-              {[
-                { icon: <TrendingDown className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "✅ Descontos reais de até 70%" },
-                { icon: <Clock className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "✅ Promoções novas todos os dias" },
-                { icon: <ShieldCheck className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "✅ Links confiáveis e verificados" },
-                { icon: <ShieldOff className="w-2.5 h-2.5 sm:w-3 sm:h-3" />, text: "✅ Grupo gratuito e sem spam" },
-              ].map((b) => (
-                <div key={b.text} className="flex items-center gap-1 bg-card/60 border border-border rounded-md px-1.5 py-0.5 lg:px-3 lg:py-2">
-                  <span className="text-primary shrink-0">{b.icon}</span>
-                  <span className="text-[8px] sm:text-[11px] lg:text-sm font-semibold text-foreground">{b.text}</span>
-                </div>
-              ))}
-            </div>
           </div>
-        </div>
-
-        {/* 4. Prova visual - carrossel */}
-        <Suspense fallback={<div className="w-full max-w-[600px] mx-auto h-[120px]" />}>
-          <ProofCarousel />
-        </Suspense>
-        {/* 5. Urgência + CTA Final */}
-        <div className="w-full shrink-0 mt-0">
-          <div className="flex items-center justify-center gap-2 mb-1 text-[7px] sm:text-[9px] text-foreground/60 font-semibold">
-            <span>🔥 Pessoas estão entrando agora mesmo</span>
-            <span className="text-muted-foreground">•</span>
-            <span>⚡ Promoções somem em minutos</span>
-          </div>
-
-          <div className="text-center mb-2 animate-pulse">
-            <p className="text-[12px] sm:text-[14px] font-bold text-green-400 tracking-wide drop-shadow-[0_0_12px_rgba(34,197,94,1)]">
-              🔥 {peopleCount} pessoas acabaram de entrar AGORA
-            </p>
-          </div>
-
-          <p className="text-[11px] text-muted-foreground mb-2 text-center font-semibold">
-            ⚠️ Vagas podem fechar a qualquer momento
-          </p>
-
-          <button
-            onClick={handleCTA}
-            className="animate-button-pulse w-full max-w-[600px] mx-auto block text-center font-extrabold text-sm sm:text-lg lg:text-xl py-3.5 lg:py-4 rounded-2xl bg-green-500 text-white border border-green-300/40 shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:scale-[1.03] hover:shadow-[0_0_28px_rgba(34,197,94,0.6)] transition-all"
-          >
-            🔥 QUERO ENTRAR NO GRUPO AGORA
-          </button>
-
-          <p className="text-[8px] sm:text-[10px] text-muted-foreground text-center mt-1.5 font-medium">
-            Entrada gratuita • Sem spam • Saia quando quiser
-          </p>
-
-          <a
-            href="https://www.instagram.com/magopromobr"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full max-w-[600px] mx-auto flex items-center justify-center gap-2 font-extrabold text-xs sm:text-base lg:text-lg py-3 lg:py-3.5 rounded-2xl text-white border border-white/20 hover:scale-[1.03] hover:shadow-[0_0_28px_rgba(131,58,180,0.5)] transition-all mt-2"
-            style={{ background: "linear-gradient(135deg, #833AB4, #E1306C, #F77737)" }}
-          >
-            <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
-            SEGUIR NO INSTAGRAM
-          </a>
-
-          {/* Selos de confiança */}
-          <footer className="flex flex-wrap justify-center gap-x-3 sm:gap-x-4 text-[7px] sm:text-[9px] text-muted-foreground font-medium mt-2">
-            <span className="flex items-center gap-0.5">
-              <CheckCircle2 className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-cta-green" />
-              Acesso imediato
-            </span>
-            <span className="flex items-center gap-0.5">
-              <CheckCircle2 className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-cta-green" />
-              Promoções todos os dias
-            </span>
-            <span className="flex items-center gap-0.5">
-              <CheckCircle2 className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-cta-green" />
-              Saia quando quiser
-            </span>
-          </footer>
         </div>
       </div>
-    </div>
-  </div>
+    </main>
   );
 };
 
