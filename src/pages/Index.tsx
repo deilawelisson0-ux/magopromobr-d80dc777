@@ -34,78 +34,50 @@ const Index = () => {
   ];
 
   return (
-    <main className="relative h-screen w-full overflow-hidden text-white">
+  <main className="relative h-screen w-full overflow-hidden text-white">
 
-      {/* BACKGROUND */}
-      <div className="absolute inset-0 -z-10">
-        
-        {/* DESKTOP */}
-        <img
-          src={magoBg}
-          className="hidden sm:block w-full h-full object-cover"
-        />
+    {/* BACKGROUND */}
+    <div className="absolute inset-0 -z-10">
+      
+      {/* DESKTOP */}
+      <img
+        src={magoBg}
+        className="hidden sm:block w-full h-full object-cover"
+      />
 
-        {/* MOBILE */}
-        <img
-          src={mobileBg}
-          className="block sm:hidden w-full h-full object-cover"
-        />
+      {/* MOBILE */}
+      <img
+        src={mobileBg}
+        className="block sm:hidden w-full h-full object-cover"
+      />
 
-        {/* overlay escuro */}
-        <div className="absolute inset-0 bg-black/60 lg:bg-black/40"></div>
+      {/* overlay leve (bem mais claro agora) */}
+      <div className="absolute inset-0 bg-black/20"></div>
+    </div>
+
+    {/* LOGO (MAIS EM CIMA) */}
+    <div className="absolute top-10 left-1/2 -translate-x-1/2 z-10">
+      <div className="flex items-center gap-2 bg-black/40 backdrop-blur border border-yellow-500/20 rounded-full px-4 py-2">
+        <img src={magoAvatar} className="w-8 h-8 rounded-full" />
+        <span className="text-[14px] font-bold">
+          Mago<span className="text-yellow-400"> das Promoções</span>
+        </span>
       </div>
+    </div>
 
-      {/* CONTEÚDO */}
-      <div className="relative z-10 h-full flex flex-col justify-center px-5 max-w-[520px] mx-auto gap-5">
+    {/* BOTÃO FIXO EMBAIXO */}
+    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-[90%] max-w-[400px] z-10">
+      <button
+        onClick={handleCTA}
+        className="w-full flex items-center justify-center gap-2 py-4 rounded-2xl bg-yellow-400 text-black font-bold text-[16px] shadow-xl"
+      >
+        <MessageCircle className="w-5 h-5" />
+        ENTRAR NO GRUPO
+      </button>
+    </div>
 
-        {/* LOGO */}
-        <div className="flex justify-center">
-          <div className="flex items-center gap-2 bg-black/40 backdrop-blur border border-yellow-500/20 rounded-full px-4 py-1.5">
-            <img src={magoAvatar} className="w-7 h-7 rounded-full" />
-            <span className="text-[12px] font-bold">
-              Mago<span className="text-yellow-400"> das Promoções</span>
-            </span>
-          </div>
-        </div>
-
-        {/* PROVA SOCIAL */}
-        <div className="flex justify-center">
-          <div className="text-[11px] border border-yellow-500/20 rounded-full px-3 py-1 bg-black/40 backdrop-blur">
-            +1.000 pessoas economizando agora
-          </div>
-        </div>
-
-        {/* HEADLINE */}
-        <h1 className="text-[28px] leading-tight font-black text-center sm:text-[36px]">
-          Você ainda paga <span className="text-yellow-400">caro?</span>
-          <br />
-          enquanto outros pagam até{" "}
-          <span className="text-yellow-400">70% menos</span>
-        </h1>
-
-        {/* SUB */}
-        <p className="text-[13px] text-center text-white/80">
-          Eu monitoro as maiores lojas do Brasil e envio os melhores achados direto no WhatsApp.
-        </p>
-
-        {/* BULLETS */}
-        <div className="grid grid-cols-2 gap-2 text-[12px]">
-          {bullets.map((text) => (
-            <div key={text} className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-yellow-400" />
-              {text}
-            </div>
-          ))}
-        </div>
-
-        {/* BOTÃO */}
-        <button
-          onClick={handleCTA}
-          className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-yellow-400 text-black font-bold text-[14px] shadow-lg hover:scale-[1.02] transition"
-        >
-          <MessageCircle className="w-5 h-5" />
-          QUERO ENTRAR NO GRUPO
-        </button>
+  </main>
+);
 
         {/* FOOT */}
         <p className="text-[11px] text-center text-white/60">
