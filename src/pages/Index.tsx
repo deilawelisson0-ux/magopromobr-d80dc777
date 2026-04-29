@@ -1,4 +1,4 @@
-import magoBanner from "@/assets/mago-banner.webp";
+import magoBg from "@/assets/mago-bg.webp";
 import magoAvatar from "@/assets/mago-avatar.webp";
 import { useEffect, useState } from "react";
 import { Check, MessageCircle } from "lucide-react";
@@ -31,23 +31,27 @@ const Index = () => {
 
   return (
     <main className="relative min-h-[100dvh] lg:h-[100dvh] w-full overflow-hidden bg-background text-foreground">
-      {/* BACKGROUND — banner como fundo full-screen */}
-      <div className="absolute inset-0 -z-10">
+      {/* BACKGROUND — fundo full-screen com overlay para legibilidade */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
         <img
-          src={magoBanner}
-          alt="Mago das Promoções"
+          src={magoBg}
+          alt=""
+          aria-hidden="true"
           className="w-full h-full object-cover object-center lg:object-right"
-          width={1600}
-          height={900}
+          width={1712}
+          height={960}
           loading="eager"
           fetchPriority="high"
           decoding="async"
         />
-        {/* Overlay escuro p/ contraste — mais forte à esquerda */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/30 lg:from-background lg:via-background/70 lg:to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40" />
-        {/* Glow dourado ambiente */}
-        <div className="absolute top-1/3 right-0 w-[55%] h-[80%] bg-primary/[0.10] blur-[140px] rounded-full" />
+        {/* Mobile: overlay escuro forte para leitura perfeita */}
+        <div className="absolute inset-0 bg-background/80 lg:hidden" />
+        {/* Desktop: gradiente — esquerda escura (texto), direita revelando a magia */}
+        <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/20" />
+        {/* Vinheta superior/inferior sutil */}
+        <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-background/30" />
+        {/* Glow dourado animado — bem leve */}
+        <div className="absolute top-1/2 right-[10%] -translate-y-1/2 w-[50%] h-[70%] bg-primary/[0.10] blur-[140px] rounded-full animate-pulse-glow" />
       </div>
 
       {/* TOP BAR — logo centralizada */}
