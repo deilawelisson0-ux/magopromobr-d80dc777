@@ -18,7 +18,7 @@ const Index = () => {
 
   const handleCTA = () => {
   const link = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
-  window.open(link, "_blank", "noopener,noreferrer");
+  window.location.href = link;
 };
   return (
     <main className="relative h-screen w-full overflow-hidden text-white">
