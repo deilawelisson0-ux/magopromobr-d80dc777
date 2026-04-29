@@ -1,5 +1,4 @@
 import magoBg from "../assets/mago-bg.webp";
-import mobileBg from "../assets/mobile.png";
 import magoAvatar from "../assets/mago-avatar.webp";
 import { useEffect, useState } from "react";
 import { MessageCircle } from "lucide-react";
@@ -13,7 +12,6 @@ const Index = () => {
     const id = setInterval(() => {
       setPeopleCount(Math.floor(Math.random() * 5) + 2);
     }, 4000);
-
     return () => clearInterval(id);
   }, []);
 
@@ -24,35 +22,23 @@ const Index = () => {
   return (
     <main className="relative h-screen w-full overflow-hidden text-white">
 
-      {/* BACKGROUND DESKTOP */}
-      <div className="absolute inset-0 -z-10 hidden md:block">
+      {/* 🔥 BACKGROUND AJUSTADO (SEM BORDA, FULL SCREEN) */}
+      <div className="absolute inset-0 z-0">
         <img
           src={magoBg}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center brightness-110 contrast-110"
         />
-        <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
-      {/* BACKGROUND MOBILE (AJUSTADO) */}
-      <div className="absolute inset-0 -z-10 md:hidden">
-        <img
-          src={mobileBg}
-          className="
-            w-full h-full 
-            object-cover 
-            scale-[0.88]       /* 🔥 MENOS ZOOM */
-            translate-y-[-30px] /* 🔥 SOBE A IMAGEM */
-          "
-        />
-        <div className="absolute inset-0 bg-black/15"></div> {/* 🔥 MAIS CLARO */}
-      </div>
+      {/* 🔥 OVERLAY MAIS LEVE (ANTES estava escuro) */}
+      <div className="absolute inset-0 bg-black/30"></div>
 
-      {/* CONTEÚDO */}
+      {/* 🔥 CONTEÚDO */}
       <div className="relative z-10 flex flex-col items-center justify-between h-full px-4 py-6">
 
-        {/* LOGO TOPO */}
-        <div className="mt-2">
-          <div className="flex items-center gap-2 bg-black/60 px-4 py-2 rounded-full border border-yellow-400/30 backdrop-blur">
+        {/* 🔥 LOGO MAIS ALTA E CENTRALIZADA */}
+        <div className="mt-4">
+          <div className="flex items-center gap-2 bg-black/70 px-4 py-2 rounded-full border border-yellow-400/30 backdrop-blur-md">
             <img
               src={magoAvatar}
               className="w-8 h-8 rounded-full"
@@ -63,15 +49,15 @@ const Index = () => {
           </div>
         </div>
 
-        {/* BOTÃO */}
-        <div className="w-full max-w-[420px] mb-6">
+        {/* 🔥 BOTÃO PRINCIPAL */}
+        <div className="w-full max-w-[420px] mb-4">
           <button
             onClick={handleCTA}
             className="
               w-full flex items-center justify-center gap-3
               py-5 rounded-2xl
               bg-yellow-400 text-black font-bold text-lg
-              shadow-xl
+              shadow-2xl
               hover:scale-105 active:scale-95 transition
             "
           >
@@ -89,7 +75,6 @@ const Index = () => {
             {peopleCount} pessoas entrando agora
           </p>
         </div>
-
       </div>
     </main>
   );
