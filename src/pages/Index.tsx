@@ -1,11 +1,21 @@
 import magoBg from "../assets/mago-bg.webp";
 import mobileBg from "../assets/mobile.png";
 import magoAvatar from "../assets/mago-avatar.webp";
+import { useEffect, useState } from "react";
 import { MessageCircle } from "lucide-react";
 
-const WHATSAPP_LINK = "https://chat.whatsapp.com/SEU_LINK_AQUI";
+const WHATSAPP_LINK = "https://chat.whatsapp.com/SEULINKAQUI";
 
 const Index = () => {
+  const [peopleCount, setPeopleCount] = useState(4);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setPeopleCount(Math.floor(Math.random() * 5) + 2);
+    }, 4000);
+
+    return () => clearInterval(id);
+  }, []);
 
   const handleCTA = () => {
     window.open(WHATSAPP_LINK, "_blank");
@@ -14,37 +24,37 @@ const Index = () => {
   return (
     <main className="relative h-screen w-full overflow-hidden text-white">
 
-      {/* BACKGROUND */}
-      <div className="absolute inset-0 z-0">
-        {/* DESKTOP */}
+      {/* BACKGROUND DESKTOP */}
+      <div className="absolute inset-0 -z-10 hidden md:block">
         <img
           src={magoBg}
-          alt="bg"
-          className="w-full h-full object-cover object-center hidden md:block
-          scale-90 contrast-110 brightness-110"
+          className="w-full h-full object-cover"
         />
+        <div className="absolute inset-0 bg-black/40"></div>
+      </div>
 
-        {/* MOBILE */}
+      {/* BACKGROUND MOBILE (AJUSTADO) */}
+      <div className="absolute inset-0 -z-10 md:hidden">
         <img
           src={mobileBg}
-          alt="bg mobile"
-          className="w-full h-full object-cover object-center md:hidden
-          scale-[0.75] contrast-110 brightness-110"
+          className="
+            w-full h-full 
+            object-contain 
+            scale-[0.88]       /* 🔥 MENOS ZOOM */
+            translate-y-[-30px] /* 🔥 SOBE A IMAGEM */
+          "
         />
-
-        {/* OVERLAY MAIS LEVE (quase imperceptível) */}
-        <div className="absolute inset-0 bg-black/0"></div>
+        <div className="absolute inset-0 bg-black/15"></div> {/* 🔥 MAIS CLARO */}
       </div>
 
       {/* CONTEÚDO */}
-      <div className="relative z-10 h-full flex flex-col justify-between px-6 py-6 max-w-[500px] mx-auto">
+      <div className="relative z-10 flex flex-col items-center justify-between h-full px-4 py-6">
 
-        {/* LOGO MAIS ALTA */}
-        <div className="flex justify-center mt-[-15px]">
-          <div className="flex items-center gap-2 bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full border border-yellow-400/30 shadow-lg">
+        {/* LOGO TOPO */}
+        <div className="mt-2">
+          <div className="flex items-center gap-2 bg-black/60 px-4 py-2 rounded-full border border-yellow-400/30 backdrop-blur">
             <img
               src={magoAvatar}
-              alt="logo"
               className="w-8 h-8 rounded-full"
             />
             <span className="font-bold text-sm">
@@ -53,24 +63,30 @@ const Index = () => {
           </div>
         </div>
 
-        {/* espaço vazio */}
-        <div></div>
-
         {/* BOTÃO */}
-        <div className="mb-6">
+        <div className="w-full max-w-[420px] mb-6">
           <button
             onClick={handleCTA}
-            className="w-full flex items-center justify-center gap-3 py-5 rounded-2xl 
-            bg-yellow-400 text-black font-extrabold text-[16px]
-            shadow-[0_0_25px_rgba(255,215,0,0.5)]
-            active:scale-95 transition"
+            className="
+              w-full flex items-center justify-center gap-3
+              py-5 rounded-2xl
+              bg-yellow-400 text-black font-bold text-lg
+              shadow-xl
+              hover:scale-105 active:scale-95 transition
+            "
           >
             <MessageCircle className="w-6 h-6" />
             ENTRAR NO GRUPO
           </button>
 
-          <p className="text-center text-[11px] text-white/80 mt-2">
+          {/* TEXTO ABAIXO */}
+          <p className="text-center text-white/80 text-sm mt-3">
             Gratuito • Sem spam • Saia quando quiser
+          </p>
+
+          {/* URGÊNCIA */}
+          <p className="text-center text-white/60 text-xs mt-1">
+            {peopleCount} pessoas entrando agora
           </p>
         </div>
 
