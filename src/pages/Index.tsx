@@ -30,24 +30,23 @@ const Index = () => {
   ];
 
   return (
-    <main className="relative min-h-[100dvh] lg:h-[100dvh] w-full overflow-hidden bg-background text-foreground">
+    <main className="relative min-h-[100dvh] lg:h-[100dvh] w-full overflow-hidden bg-transparent text-foreground">
       {/* BACKGROUND — fundo full-screen com overlay para legibilidade */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <img
           src={magoBg}
           alt=""
           aria-hidden="true"
-          className="w-full h-full object-cover object-center lg:object-right"
-          width={1712}
-          height={960}
+          className="w-full h-full object-cover"
+      
           loading="eager"
           fetchPriority="high"
           decoding="async"
         />
         {/* Mobile: overlay escuro forte para leitura perfeita */}
-        <div className="absolute inset-0 bg-background/80 lg:hidden" />
+        <div className="absolute inset-0 bg-black/20 lg:hidden" />
         {/* Desktop: gradiente — esquerda escura (texto), direita revelando a magia */}
-        <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/20" />
+        <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent />
         {/* Vinheta superior/inferior sutil */}
         <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-background/30" />
         {/* Glow dourado animado — bem leve */}
