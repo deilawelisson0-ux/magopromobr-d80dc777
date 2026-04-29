@@ -1,9 +1,11 @@
 import magoBg from "../assets/mago-bg.webp";
+import mobileBg from "../assets/mobile.png";
 import magoAvatar from "../assets/mago-avatar.webp";
+
 import { useEffect, useState } from "react";
 import { Check, MessageCircle } from "lucide-react";
 
-const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3t0Le34nv8Bu1s";
+const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiYscD3t0eL34nv88u15";
 
 const Index = () => {
   const [peopleCount, setPeopleCount] = useState(4);
@@ -20,7 +22,8 @@ const Index = () => {
     if (typeof window !== "undefined" && (window as any).fbq) {
       (window as any).fbq("track", "Lead");
     }
-    window.open(WHATSAPP_LINK, "_blank", "noopener,noreferrer");
+
+    window.open(WHATSAPP_LINK, "_blank");
   };
 
   const bullets = [
@@ -35,13 +38,20 @@ const Index = () => {
 
       {/* BACKGROUND */}
       <div className="absolute inset-0 -z-10">
+        
+        {/* DESKTOP */}
         <img
           src={magoBg}
-          alt=""
-          className="w-full h-full object-cover object-[center_top] lg:object-right"
+          className="hidden sm:block w-full h-full object-cover"
         />
 
-        {/* overlay */}
+        {/* MOBILE */}
+        <img
+          src={mobileBg}
+          className="block sm:hidden w-full h-full object-cover"
+        />
+
+        {/* overlay escuro */}
         <div className="absolute inset-0 bg-black/60 lg:bg-black/40"></div>
       </div>
 
@@ -51,11 +61,7 @@ const Index = () => {
         {/* LOGO */}
         <div className="flex justify-center">
           <div className="flex items-center gap-2 bg-black/40 backdrop-blur border border-yellow-500/20 rounded-full px-4 py-1.5">
-            <img
-              src={magoAvatar}
-              alt="Mago"
-              className="w-7 h-7 rounded-full"
-            />
+            <img src={magoAvatar} className="w-7 h-7 rounded-full" />
             <span className="text-[12px] font-bold">
               Mago<span className="text-yellow-400"> das Promoções</span>
             </span>
@@ -71,7 +77,7 @@ const Index = () => {
 
         {/* HEADLINE */}
         <h1 className="text-[28px] leading-tight font-black text-center sm:text-[36px]">
-          Você ainda paga <span className="text-yellow-400">caro</span>
+          Você ainda paga <span className="text-yellow-400">caro?</span>
           <br />
           enquanto outros pagam até{" "}
           <span className="text-yellow-400">70% menos</span>
@@ -92,10 +98,10 @@ const Index = () => {
           ))}
         </div>
 
-        {/* CTA */}
+        {/* BOTÃO */}
         <button
           onClick={handleCTA}
-          className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-yellow-400 text-black font-bold text-[14px]"
+          className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-yellow-400 text-black font-bold text-[14px] shadow-lg hover:scale-[1.02] transition"
         >
           <MessageCircle className="w-5 h-5" />
           QUERO ENTRAR NO GRUPO
