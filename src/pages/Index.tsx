@@ -65,7 +65,9 @@ const Index = () => {
             rel="noopener noreferrer"
             className="w-full flex items-center justify-center gap-3 py-5 rounded-2xl bg-yellow-400 text-black font-bold text-lg shadow-2xl hover:scale-105 active:scale-95 transition"
           >
-            <MessageCircle className="w-6 h-6" />
+            <div className="bg-white rounded-full p-1">
+  <Phone className="w-5 h-5 text-green-600" />
+</div>
             ENTRAR NO GRUPO
           </a>
 
