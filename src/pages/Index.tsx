@@ -1,4 +1,4 @@
-import magoBg from "../assets/banner-desktop.jpg"; // desktop
+import magoBg from "../assets/banner-desktop1.jpg"; // desktop
 import mobileBg from "../assets/mobile.png"; // mobile (NÃO MEXER)
 import magoAvatar from "../assets/mago-avatar.webp";
 
@@ -25,12 +25,12 @@ const Index = () => {
   return (
     <main className="relative h-screen w-full overflow-hidden text-white bg-black">
 
-      {/* DESKTOP (ENQUADRADO PERFEITO SEM BORDA VISÍVEL) */}
+      {/* DESKTOP (imagem inteira, sem corte e sem bordas) */}
       <div className="absolute inset-0 z-0 hidden md:block bg-black overflow-hidden">
         <img
           src={magoBg}
           alt=""
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          className="absolute inset-0 h-full w-full object-fill"
         />
       </div>
 
