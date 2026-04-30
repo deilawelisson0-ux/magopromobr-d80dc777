@@ -46,7 +46,7 @@ const Index = () => {
       <div className="absolute inset-0 bg-black/40 z-10"></div>
 
       {/* CONTEÚDO */}
-      <div className="relative z-20 flex flex-col items-center justify-between h-full px-4 py-6">
+      <div className="relative z-20 flex flex-col items-center md:items-start justify-between h-full px-4 py-6">
 
         {/* LOGO */}
         <div className="-mt-4">
