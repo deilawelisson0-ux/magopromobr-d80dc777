@@ -26,10 +26,11 @@ const Index = () => {
     <main className="relative h-screen w-full overflow-hidden text-white bg-black">
 
       {/* DESKTOP (ENQUADRADO PERFEITO SEM BORDA VISÍVEL) */}
-      <div className="absolute inset-0 z-0 hidden md:flex items-center justify-center bg-black overflow-hidden">
+      <div className="absolute inset-0 z-0 hidden md:block bg-black overflow-hidden">
         <img
           src={magoBg}
-          className="w-full h-full object-cover scale-110"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
       </div>
 
