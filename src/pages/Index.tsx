@@ -1,5 +1,5 @@
 import magoBg from "../assets/banner-desktop.jpg";
-import mobileBg from "../assets/mobile.jpg";
+import mobileBg from "../assets/mobile1.jpg";
 import magoAvatar from "../assets/mago-avatar.webp";
 
 import { useEffect, useState } from "react";
