@@ -22,14 +22,13 @@ const Index = () => {
     <main className="relative h-screen w-full overflow-hidden text-white bg-black">
 
       {/* DESKTOP */}
-      <div className="absolute inset-0 z-0 hidden md:block">
-        <img
-          src={magoBg}
-          alt=""
-          className="absolute inset-0 h-full w-full object-fill"
-        />
-      </div>
-
+<div className="absolute inset-0 z-0 hidden md:block bg-black overflow-hidden">
+  <img
+    src={magoBg}
+    alt=""
+    className="absolute inset-0 h-full w-full object-cover"
+  />
+</div>
       {/* MOBILE */}
       <div className="absolute inset-0 z-0 md:hidden">
         <img
