@@ -3,7 +3,7 @@ import mobileBg from "../assets/mobile1.jpg";
 import magoAvatar from "../assets/mago-avatar.webp";
 
 import { useEffect, useState } from "react";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Phone } from "lucide-react";
 
 // 🔥 SEU LINK (mantém esse)
 const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
