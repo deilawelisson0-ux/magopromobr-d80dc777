@@ -1,10 +1,11 @@
-import magoBg from "../assets/banner-desktop1.jpg"; // desktop
+import magoBg from "../assets/banner-desktop1.jpg"; // desktop (1920x1080)
 import mobileBg from "../assets/mobile.png"; // mobile (NÃO MEXER)
 import magoAvatar from "../assets/mago-avatar.webp";
+
 import { useEffect, useState } from "react";
 import { MessageCircle } from "lucide-react";
 
-const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiYyscD3t0Le34nv8bu1s";
+const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3t0Le34nv8bu1s";
 
 const Index = () => {
   const [peopleCount, setPeopleCount] = useState(4);
@@ -23,11 +24,11 @@ const Index = () => {
   return (
     <main className="relative h-screen w-full overflow-hidden text-white">
 
-      {/* 🔥 DESKTOP (IMAGEM INTEIRA SEM CORTE) */}
-      <div className="absolute inset-0 z-0 hidden md:flex items-center justify-center bg-black">
+      {/* 🔥 DESKTOP (SEM BORDA / TELA CHEIA) */}
+      <div className="absolute inset-0 z-0 hidden md:block">
         <img
           src={magoBg}
-          className="max-w-full max-h-full object-contain"
+          className="w-full h-full object-cover object-center"
         />
       </div>
 
@@ -35,7 +36,7 @@ const Index = () => {
       <div className="absolute inset-0 z-0 md:hidden">
         <img
           src={mobileBg}
-          className="w-full h-full object-cover bg-black brightness-110 contrast-110"
+          className="w-full h-full object-cover"
         />
       </div>
 
@@ -55,7 +56,7 @@ const Index = () => {
           </div>
         </div>
 
-        {/* CTA */}
+        {/* BOTÃO */}
         <div className="w-full max-w-[420px] mb-8">
           <button
             onClick={handleCTA}
