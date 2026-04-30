@@ -1,11 +1,11 @@
-import magoBg from "../assets/banner-desktop1.jpg"; // desktop (1920x1080)
+import magoBg from "../assets/banner-desktop.jpg"; // desktop
 import mobileBg from "../assets/mobile.png"; // mobile (NÃO MEXER)
 import magoAvatar from "../assets/mago-avatar.webp";
 
 import { useEffect, useState } from "react";
 import { MessageCircle } from "lucide-react";
 
-const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3t0Le34nv8bu1s";
+const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiYyscD3t0Le34nv8bu1s";
 
 const Index = () => {
   const [peopleCount, setPeopleCount] = useState(4);
@@ -14,6 +14,7 @@ const Index = () => {
     const id = setInterval(() => {
       setPeopleCount(Math.floor(Math.random() * 5) + 2);
     }, 4000);
+
     return () => clearInterval(id);
   }, []);
 
@@ -22,29 +23,29 @@ const Index = () => {
   };
 
   return (
-    <main className="relative h-screen w-full overflow-hidden text-white">
+    <main className="relative h-screen w-full overflow-hidden text-white bg-black">
 
-      {/* 🔥 DESKTOP (SEM BORDA / TELA CHEIA) */}
-      <div className="absolute inset-0 z-0 hidden md:block">
+      {/* DESKTOP (IMAGEM COMPLETA SEM CORTE) */}
+      <div className="absolute inset-0 z-0 hidden md:flex items-center justify-center bg-black">
         <img
           src={magoBg}
-          className="w-full h-full object-cover object-[center_30%] scale-105"
+          className="w-full h-full object-contain"
         />
       </div>
 
-      {/* 📱 MOBILE (NÃO ALTERADO) */}
+      {/* MOBILE (NÃO ALTERADO) */}
       <div className="absolute inset-0 z-0 md:hidden">
         <img
           src={mobileBg}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover bg-black brightness-110 contrast-110"
         />
       </div>
 
-      {/* OVERLAY */}
-      <div className="absolute inset-0 bg-black/30"></div>
+      {/* OVERLAY ESCURO SUAVE */}
+      <div className="absolute inset-0 bg-black/40 z-10"></div>
 
       {/* CONTEÚDO */}
-      <div className="relative z-10 flex flex-col items-center justify-between h-full px-4 py-6">
+      <div className="relative z-20 flex flex-col items-center justify-between h-full px-4 py-6">
 
         {/* LOGO */}
         <div className="mt-6">
@@ -80,7 +81,6 @@ const Index = () => {
             {peopleCount} pessoas entrando agora
           </p>
         </div>
-
       </div>
     </main>
   );
