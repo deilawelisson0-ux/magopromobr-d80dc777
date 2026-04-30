@@ -1,11 +1,10 @@
 import magoBg from "../assets/banner-desktop.jpg";
 import mobileBg from "../assets/mobile1.jpg";
-import magoAvatar from "../assets/mago-avatar.webp";
 
 import { useEffect, useState } from "react";
 
-// 🔗 SEU LINK
-const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3t0Le34nv8bu1s";
+// 🔥 LINK DO WHATSAPP
+const WHATSAPP_LINK = "https://chat.whatsapp.com/SEU_LINK_AQUI";
 
 const Index = () => {
   const [peopleCount, setPeopleCount] = useState(4);
@@ -21,65 +20,58 @@ const Index = () => {
   return (
     <main className="relative h-screen w-full overflow-hidden text-white bg-black">
 
-      {/* DESKTOP (igual antes) */}
+      {/* DESKTOP */}
       <div className="absolute inset-0 z-0 hidden md:block">
         <img
           src={magoBg}
           alt=""
-          className="absolute inset-0 h-full w-full object-fill brightness-110"
+          className="w-full h-full object-cover"
         />
       </div>
 
-      {/* MOBILE (igual antes) */}
-      <div className="absolute inset-0 md:hidden flex items-start justify-center bg-black">
+      {/* MOBILE */}
+      <div className="absolute inset-0 z-0 md:hidden">
         <img
           src={mobileBg}
           alt=""
-          className="h-full w-full object-cover"
+          className="w-full h-full object-cover"
         />
       </div>
 
-      {/* CONTEÚDO CENTRAL (igual antes) */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4">
+      {/* CONTEÚDO */}
+      <div className="relative z-10 flex flex-col items-center justify-end h-full pb-10 px-4">
 
-        {/* HEADER */}
-        <div className="flex items-center gap-2 bg-black/70 px-4 py-2 rounded-full border border-yellow-400/30 backdrop-blur-md mb-6">
-          <img src={magoAvatar} className="w-8 h-8 rounded-full" />
-          <span className="font-bold text-sm">
-            Mago <span className="text-yellow-400">das Promoções</span>
-          </span>
-        </div>
-
-        {/* BOTÃO (ÚNICA MUDANÇA FOI AQUI 👇) */}
-        <div className="w-full max-w-[420px] mt-6">
+        {/* BOTÃO */}
+        <div className="w-full max-w-[420px] mb-4">
           <a
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full flex items-center justify-center gap-3 py-5 rounded-2xl bg-yellow-400 text-black font-bold text-lg shadow-2xl active:scale-95 transition"
+            className="w-full flex items-center justify-center gap-3 py-5 rounded-2xl bg-yellow-400 text-black font-bold text-lg shadow-2xl hover:scale-105 active:scale-95 transition"
           >
-
-            {/* ÍCONE WHATSAPP CORRETO */}
+            {/* ÍCONE WHATSAPP PRETO (SVG CORRETO) */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
+              viewBox="0 0 32 32"
+              width="22"
+              height="22"
               fill="black"
-              className="w-5 h-5"
             >
-              <path d="M20.52 3.48A11.8 11.8 0 0 0 12.05 0C5.5 0 .17 5.33.17 11.88c0 2.1.55 4.15 1.6 5.96L0 24l6.33-1.66a11.86 11.86 0 0 0 5.72 1.46h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.23-6.15-3.42-8.44ZM12.06 21.3a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.76.99 1-3.66-.22-.37a9.37 9.37 0 0 1-1.45-5c0-5.2 4.23-9.43 9.43-9.43 2.52 0 4.88.98 6.65 2.75a9.36 9.36 0 0 1 2.77 6.68c0 5.2-4.23 9.43-9.43 9.43Zm5.17-7.03c-.28-.14-1.64-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.74.9-.90 1.08-.17.19-.33.21-.61.07-.28-.14-1.2-.44-2.28-1.4-.84-.75-1.4-1.67-1.57-1.95-.17-.28-.02-.43.12-.57.13-.13.28-.33.42-.5.14-.17.19-.28.28-.47.1-.19.05-.36-.02-.50-.07-.14-.64-1.54-.88-2.12-.23-.55-.47-.47-.64-.48l-.55-.01c-.19 0-.50.07-.76.36-.26.28-1 1-1 2.44s1.02 2.83 1.16 3.03c.14.19 2 3.05 4.84 4.28.68.29 1.20.46 1.61.59.68.22 1.30.19 1.80.11.55-.08 1.64-.67 1.87-1.32.23-.64.23-1.20.16-1.32-.06-.12-.25-.19-.53-.33Z"/>
+              <path d="M16 .4C7.5.4.6 7.3.6 15.8c0 2.8.7 5.4 2.1 7.7L.4 31.6l8.3-2.2c2.2 1.2 4.8 1.9 7.4 1.9 8.5 0 15.4-6.9 15.4-15.4S24.5.4 16 .4zm0 28c-2.4 0-4.8-.7-6.8-2l-.5-.3-4.9 1.3 1.3-4.8-.3-.5c-1.3-2.1-2-4.4-2-6.9C2.8 8.6 8.6 2.8 16 2.8s13.2 5.8 13.2 13.2S23.4 28.4 16 28.4zm7.2-9.7c-.4-.2-2.4-1.2-2.7-1.3-.4-.1-.6-.2-.9.2-.2.4-1 1.3-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-2-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.1-.8.1-.1.4-.4.6-.6.2-.2.2-.4.3-.6.1-.2 0-.5-.1-.7-.1-.2-.9-2.2-1.2-3-.3-.8-.6-.7-.9-.7h-.8c-.3 0-.7.1-1 .5-.3.4-1.3 1.2-1.3 3 0 1.8 1.3 3.5 1.5 3.7.2.2 2.6 4 6.3 5.6.9.4 1.6.6 2.1.8.9.3 1.7.2 2.4.1.7-.1 2.4-1 2.7-2 .3-1 .3-1.9.2-2-.1-.1-.4-.2-.8-.4z"/>
             </svg>
 
-            <span>ENTRAR NO GRUPO</span>
+            ENTRAR NO GRUPO
           </a>
-
-          <p className="text-center text-white/80 text-sm mt-3">
-            Gratuito • Sem spam • Saia quando quiser
-          </p>
-
-          <p className="text-center text-white/60 text-xs mt-1">
-            {peopleCount} pessoas entrando agora
-          </p>
         </div>
+
+        {/* TEXTO */}
+        <p className="text-center text-white/80 text-sm">
+          Gratuito • Sem spam • Saia quando quiser
+        </p>
+
+        <p className="text-center text-white/60 text-xs mt-1">
+          {peopleCount} pessoas entrando agora
+        </p>
 
       </div>
     </main>
