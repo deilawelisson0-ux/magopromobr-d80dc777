@@ -19,8 +19,8 @@ const Index = () => {
   }, []);
 
   const handleCTA = () => {
-    window.location.href = WHATSAPP_LINK;
-  };
+  window.open(WHATSAPP_LINK, "_blank");
+};
 
   return (
     <main className="relative h-screen w-full overflow-hidden text-white bg-black">
