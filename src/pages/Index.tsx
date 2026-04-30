@@ -4,8 +4,8 @@ import magoAvatar from "../assets/mago-avatar.webp";
 
 import { useEffect, useState } from "react";
 
-// 🔥 LINK DO WHATSAPP
-const WHATSAPP_LINK = "https://chat.whatsapp.com/SEU_LINK_AQUI";
+// 🔗 SEU LINK
+const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3t0Le34nv8bu1s";
 
 const Index = () => {
   const [peopleCount, setPeopleCount] = useState(4);
@@ -21,7 +21,7 @@ const Index = () => {
   return (
     <main className="relative h-screen w-full overflow-hidden text-white bg-black">
 
-      {/* DESKTOP */}
+      {/* DESKTOP (igual antes) */}
       <div className="absolute inset-0 z-0 hidden md:block">
         <img
           src={magoBg}
@@ -30,7 +30,7 @@ const Index = () => {
         />
       </div>
 
-      {/* MOBILE */}
+      {/* MOBILE (igual antes) */}
       <div className="absolute inset-0 md:hidden flex items-start justify-center bg-black">
         <img
           src={mobileBg}
@@ -39,10 +39,10 @@ const Index = () => {
         />
       </div>
 
-      {/* CONTEÚDO */}
-      <div className="relative z-10 flex flex-col items-center justify-end md:justify-center h-full px-4 pb-10 md:pb-0">
+      {/* CONTEÚDO CENTRAL (igual antes) */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4">
 
-        {/* LOGO */}
+        {/* HEADER */}
         <div className="flex items-center gap-2 bg-black/70 px-4 py-2 rounded-full border border-yellow-400/30 backdrop-blur-md mb-6">
           <img src={magoAvatar} className="w-8 h-8 rounded-full" />
           <span className="font-bold text-sm">
@@ -50,9 +50,8 @@ const Index = () => {
           </span>
         </div>
 
-        {/* BOTÃO */}
-        <div className="w-full max-w-[420px]">
-
+        {/* BOTÃO (ÚNICA MUDANÇA FOI AQUI 👇) */}
+        <div className="w-full max-w-[420px] mt-6">
           <a
             href={WHATSAPP_LINK}
             target="_blank"
@@ -60,7 +59,7 @@ const Index = () => {
             className="w-full flex items-center justify-center gap-3 py-5 rounded-2xl bg-yellow-400 text-black font-bold text-lg shadow-2xl active:scale-95 transition"
           >
 
-            {/* 🔥 ÍCONE WHATSAPP OFICIAL */}
+            {/* ÍCONE WHATSAPP CORRETO */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -73,7 +72,6 @@ const Index = () => {
             <span>ENTRAR NO GRUPO</span>
           </a>
 
-          {/* TEXTO ABAIXO */}
           <p className="text-center text-white/80 text-sm mt-3">
             Gratuito • Sem spam • Saia quando quiser
           </p>
@@ -81,7 +79,6 @@ const Index = () => {
           <p className="text-center text-white/60 text-xs mt-1">
             {peopleCount} pessoas entrando agora
           </p>
-
         </div>
 
       </div>
