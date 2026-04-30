@@ -60,15 +60,14 @@ const Index = () => {
 
           {/* 🔥 BOTÃO CORRIGIDO */}
           <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full flex items-center justify-center gap-3 py-5 rounded-2xl bg-yellow-400 text-black font-bold text-lg shadow-2xl hover:scale-105 active:scale-95 transition"
-          >
-            <div className="flex items-center justify-center gap-2">
+  href={WHATSAPP_LINK}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="w-full flex items-center justify-center gap-2 py-5 rounded-2xl bg-yellow-400 text-black font-bold text-lg shadow-2xl hover:scale-105 active:scale-95 transition"
+>
   <MessageCircle className="text-black" size={20} />
-  <span>ENTRAR NO GRUPO</span>
-</div>
+  ENTRAR NO GRUPO
+</a>
 
           <p className="text-center text-white/80 text-sm mt-3">
             Gratuito • Sem spam • Saia quando quiser
