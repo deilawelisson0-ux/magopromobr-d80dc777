@@ -28,7 +28,7 @@ const Index = () => {
       <div className="absolute inset-0 z-0 hidden md:block">
         <img
           src={magoBg}
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-[center_30%] scale-105"
         />
       </div>
 
