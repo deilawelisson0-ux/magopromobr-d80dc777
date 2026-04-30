@@ -36,7 +36,7 @@ const Index = () => {
         <img
           src={mobileBg}
           alt=""
-          className="w-full h-full object-cover object-top brightness-110 contrast-110"
+          className="w-full h-full object-cover object-[center_10%] brightness-110 contrast-110"
         />
       </div>
 
