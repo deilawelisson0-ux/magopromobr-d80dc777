@@ -32,13 +32,12 @@ const Index = () => {
       </div>
 
       {/* MOBILE */}
-      <div className="absolute inset-0 z-0 md:hidden">
-        <img
-          src={mobileBg}
-          alt=""
-          className="w-full h-full object-cover scale-65 brightness-110 contrast-110"
-        />
-      </div>
+      <div className="absolute inset-0 md:hidden flex items-start justify-center bg-black">
+  <img
+    src={mobileBg}
+    className="w-full h-auto max-h-screen object-contain"
+  />
+</div>
 
       {/* OVERLAY */}
       <div className="absolute inset-0 bg-black/20 z-10"></div>
