@@ -25,16 +25,13 @@ const Index = () => {
   return (
     <main className="relative h-screen w-full overflow-hidden text-white bg-black">
 
-      {/* DESKTOP (SEM BORDAS) */}
-      <div
-        className="absolute inset-0 z-0 hidden md:block bg-black"
-        style={{
-          backgroundImage: `url(${magoBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center center",
-          backgroundRepeat: "no-repeat",
-        }}
-      />
+      {/* DESKTOP (ENQUADRADO PERFEITO SEM BORDA VISÍVEL) */}
+      <div className="absolute inset-0 z-0 hidden md:flex items-center justify-center bg-black overflow-hidden">
+        <img
+          src={magoBg}
+          className="w-full h-full object-contain scale-110"
+        />
+      </div>
 
       {/* MOBILE (NÃO ALTERADO) */}
       <div className="absolute inset-0 z-0 md:hidden">
@@ -44,7 +41,7 @@ const Index = () => {
         />
       </div>
 
-      {/* OVERLAY ESCURO */}
+      {/* OVERLAY */}
       <div className="absolute inset-0 bg-black/40 z-10"></div>
 
       {/* CONTEÚDO */}
