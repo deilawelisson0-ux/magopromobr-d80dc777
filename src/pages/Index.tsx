@@ -46,7 +46,7 @@ const Index = () => {
       <div className="relative z-20 flex flex-col items-center justify-between h-full px-4 py-6">
 
         {/* LOGO */}
-        <div className="mt-6 md:self-start">
+        <div className="relative -top-6 md:top-0 md:mt-1 md:self-start">
           <div className="flex items-center gap-2 bg-black/70 px-4 py-2 rounded-full border border-yellow-400/30 backdrop-blur-md">
             <img src={magoAvatar} className="w-8 h-8 rounded-full" />
             <span className="font-bold text-sm">
