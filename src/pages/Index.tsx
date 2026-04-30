@@ -43,7 +43,7 @@ const Index = () => {
       </div>
 
       {/* OVERLAY */}
-      <div className="absolute inset-0 bg-black/40 z-10"></div>
+      <div className="absolute inset-0 bg-black/10 z-10"></div>
 
       {/* CONTEÚDO */}
       <div className="relative z-20 flex flex-col items-center justify-between h-full px-4 py-6">
