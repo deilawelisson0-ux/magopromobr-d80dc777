@@ -66,7 +66,7 @@ const Index = () => {
   onClick={(e) => {
     e.preventDefault();
     if (window.fbq) {
-      window.fbq('track', 'Lead');
+      window.fbq('track', 'Lead', {}, {eventID: 'lead_test'});
       window.fbq('trackCustom', 'WhatsAppClick');
     }
     setTimeout(() => {
