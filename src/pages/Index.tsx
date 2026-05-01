@@ -60,11 +60,21 @@ const Index = () => {
 
           {/* 🔥 BOTÃO CORRIGIDO */}
           <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full flex items-center justify-center gap-3 py-5 rounded-2xl bg-yellow-400 text-black font-bold text-lg shadow-2xl hover:scale-105 active:scale-95 transition"
-          >
+  href={WHATSAPP_LINK}
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={(e) => {
+    e.preventDefault();
+    if (window.fbq) {
+      window.fbq('track', 'Lead');
+      window.fbq('trackCustom', 'WhatsAppClick');
+    }
+    setTimeout(() => {
+      window.open(WHATSAPP_LINK, "_blank");
+    }, 300);
+  }}
+  className="w-full flex items-center justify-center gap-3 py-5 rounded-2xl bg-yellow-400 text-black font-bold text-lg shadow-2xl hover:scale-105 active:scale-95 transition"
+>
             <MessageCircle className="w-6 h-6" />
             ENTRAR NO GRUPO
           </a>
