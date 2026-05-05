@@ -4,6 +4,12 @@ import magoAvatar from "../assets/mago-avatar.webp";
 
 import { useEffect, useState } from "react";
 
+declare global {
+  interface Window {
+    fbq?: (...args: any[]) => void;
+  }
+}
+
 // 🔥 SEU LINK (mantém esse)
 const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
 
