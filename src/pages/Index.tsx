@@ -1,8 +1,7 @@
+import { memo } from "react";
 import magoBg from "../assets/banner-desktop1.webp";
 import mobileBg from "../assets/mobile1.webp";
 import magoAvatar from "../assets/mago-avatar.webp";
-
-import { useEffect, useState } from "react";
 
 declare global {
   interface Window {
@@ -14,16 +13,6 @@ declare global {
 const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
 
 const Index = () => {
-  const [peopleCount, setPeopleCount] = useState(4);
-
-  useEffect(() => {
-    const id = setInterval(() => {
-      setPeopleCount(Math.floor(Math.random() * 5) + 2);
-    }, 4000);
-
-    return () => clearInterval(id);
-  }, []);
-
   return (
     <main className="relative h-screen w-full overflow-hidden text-white bg-black">
 
@@ -123,4 +112,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default memo(Index);
