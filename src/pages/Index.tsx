@@ -1,11 +1,14 @@
 import { memo } from "react";
-import magoBg from "../assets/banner-desktop1.webp";
-import mobileBg from "../assets/mobile1.webp";
+import magoBgWebp from "../assets/banner-desktop1.webp";
+import magoBgAvif from "../assets/banner-desktop1.avif";
+import mobileBgWebp from "../assets/mobile1.webp";
+import mobileBgAvif from "../assets/mobile1.avif";
 import magoAvatar from "../assets/mago-avatar.webp";
 
 declare global {
   interface Window {
     fbq?: (...args: any[]) => void;
+    __fbqLoaded?: boolean;
   }
 }
 
@@ -18,28 +21,36 @@ const Index = () => {
 
       {/* DESKTOP */}
       <div className="absolute inset-0 z-0 hidden md:block">
-        <img
-          src={magoBg}
-          alt=""
-          width={1920}
-          height={1080}
-          fetchPriority="high"
-          decoding="async"
-          className="absolute inset-0 h-full w-full object-fill brightness-110"
-        />
+        <picture>
+          <source srcSet={magoBgAvif} type="image/avif" />
+          <source srcSet={magoBgWebp} type="image/webp" />
+          <img
+            src={magoBgWebp}
+            alt=""
+            width={1600}
+            height={900}
+            fetchPriority="high"
+            decoding="async"
+            className="absolute inset-0 h-full w-full object-fill brightness-110"
+          />
+        </picture>
       </div>
 
       {/* MOBILE */}
       <div className="absolute inset-0 md:hidden flex items-start justify-center bg-black">
-        <img
-          src={mobileBg}
-          alt=""
-          width={1080}
-          height={1920}
-          fetchPriority="high"
-          decoding="async"
-          className="w-full h-auto max-h-screen object-contain"
-        />
+        <picture>
+          <source srcSet={mobileBgAvif} type="image/avif" />
+          <source srcSet={mobileBgWebp} type="image/webp" />
+          <img
+            src={mobileBgWebp}
+            alt=""
+            width={750}
+            height={1333}
+            fetchPriority="high"
+            decoding="async"
+            className="w-full h-auto max-h-screen object-contain"
+          />
+        </picture>
       </div>
 
       {/* OVERLAY */}
@@ -75,6 +86,11 @@ const Index = () => {
   rel="noopener noreferrer"
   onClick={(e) => {
     e.preventDefault();
+
+    // Ensure pixel is loaded for tracking
+    if (!window.fbq && typeof (window as any).__loadFbq === 'function') {
+      (window as any).__loadFbq();
+    }
 
     if (window.fbq) {
       window.fbq('trackCustom', 'Lead');
