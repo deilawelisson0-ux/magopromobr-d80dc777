@@ -70,13 +70,15 @@ const Index = () => {
   rel="noopener noreferrer"
   onClick={(e) => {
     e.preventDefault();
+
     if (window.fbq) {
       window.fbq('track', 'Lead');
-window.fbq('trackCustom', 'WhatsAppClick');
+      window.fbq('trackCustom', 'WhatsAppClick');
+    }
 
-setTimeout(() => {
-  window.open(WHATSAPP_LINK, "_blank");
-}, 1500);
+    setTimeout(() => {
+      window.open(WHATSAPP_LINK, "_blank");
+    }, 1500);
   }}
   className="w-full flex items-center justify-center gap-3 py-5 rounded-2xl bg-yellow-400 text-black font-bold text-lg shadow-2xl hover:scale-105 active:scale-95 transition"
 >
