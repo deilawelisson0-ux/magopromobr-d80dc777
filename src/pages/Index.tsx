@@ -72,7 +72,7 @@ const Index = () => {
     e.preventDefault();
 
     if (window.fbq) {
-      window.fbq('track', 'Lead');
+      window.fbq('trackCustom', 'Lead');
       window.fbq('trackCustom', 'WhatsAppClick');
     }
 
