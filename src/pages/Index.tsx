@@ -76,7 +76,7 @@ const Index = () => {
     }
     setTimeout(() => {
       window.open(WHATSAPP_LINK, "_blank");
-    }, 300);
+    }, 1000);
   }}
   className="w-full flex items-center justify-center gap-3 py-5 rounded-2xl bg-yellow-400 text-black font-bold text-lg shadow-2xl hover:scale-105 active:scale-95 transition"
 >
