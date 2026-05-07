@@ -19,4 +19,19 @@ export default defineConfig(({ mode }) => ({
     },
   },
   dedupe: ["react", "react-dom", "react/jsx-runtime", "react/jsx-dev-runtime"],
+  build: {
+    target: "es2020",
+    cssCodeSplit: true,
+    minify: "esbuild",
+    sourcemap: false,
+    reportCompressedSize: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ["react", "react-dom", "react/jsx-runtime"],
+          router: ["react-router-dom"],
+        },
+      },
+    },
+  },
 }));

@@ -1,8 +1,7 @@
-import magoBg from "../assets/banner-desktop1.jpg";
-import mobileBg from "../assets/mobile1.jpg";
+import { memo } from "react";
+import magoBg from "../assets/banner-desktop1.webp";
+import mobileBg from "../assets/mobile1.webp";
 import magoAvatar from "../assets/mago-avatar.webp";
-
-import { useEffect, useState } from "react";
 
 declare global {
   interface Window {
@@ -14,16 +13,6 @@ declare global {
 const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
 
 const Index = () => {
-  const [peopleCount, setPeopleCount] = useState(4);
-
-  useEffect(() => {
-    const id = setInterval(() => {
-      setPeopleCount(Math.floor(Math.random() * 5) + 2);
-    }, 4000);
-
-    return () => clearInterval(id);
-  }, []);
-
   return (
     <main className="relative h-screen w-full overflow-hidden text-white bg-black">
 
@@ -32,17 +21,26 @@ const Index = () => {
         <img
           src={magoBg}
           alt=""
+          width={1920}
+          height={1080}
+          fetchPriority="high"
+          decoding="async"
           className="absolute inset-0 h-full w-full object-fill brightness-110"
         />
       </div>
 
       {/* MOBILE */}
       <div className="absolute inset-0 md:hidden flex items-start justify-center bg-black">
-  <img
-    src={mobileBg}
-    className="w-full h-auto max-h-screen object-contain"
-  />
-</div>
+        <img
+          src={mobileBg}
+          alt=""
+          width={1080}
+          height={1920}
+          fetchPriority="high"
+          decoding="async"
+          className="w-full h-auto max-h-screen object-contain"
+        />
+      </div>
 
       {/* OVERLAY */}
       <div className="absolute inset-0 bg-black/20 z-10"></div>
@@ -53,7 +51,14 @@ const Index = () => {
         {/* LOGO */}
         <div className="relative -top-5 md:top-0 md:mt-1 md:self-start">
           <div className="flex items-center gap-2 bg-black/70 px-4 py-2 rounded-full border border-yellow-400/30 backdrop-blur-md">
-            <img src={magoAvatar} className="w-8 h-8 rounded-full" />
+            <img
+              src={magoAvatar}
+              alt="Mago das Promoções"
+              width={32}
+              height={32}
+              decoding="async"
+              className="w-8 h-8 rounded-full"
+            />
             <span className="font-bold text-sm">
               Mago <span className="text-yellow-400">das Promoções</span>
             </span>
@@ -107,4 +112,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default memo(Index);
