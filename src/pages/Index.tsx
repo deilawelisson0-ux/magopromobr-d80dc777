@@ -8,6 +8,7 @@ import magoAvatar from "../assets/mago-avatar.webp";
 declare global {
   interface Window {
     fbq?: (...args: any[]) => void;
+    __fbqLoaded?: boolean;
   }
 }
 
@@ -85,6 +86,11 @@ const Index = () => {
   rel="noopener noreferrer"
   onClick={(e) => {
     e.preventDefault();
+
+    // Ensure pixel is loaded for tracking
+    if (!window.fbq && typeof (window as any).__loadFbq === 'function') {
+      (window as any).__loadFbq();
+    }
 
     if (window.fbq) {
       window.fbq('trackCustom', 'Lead');
