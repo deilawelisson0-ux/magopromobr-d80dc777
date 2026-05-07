@@ -29,7 +29,7 @@
     <script type="module" src="/src/main.tsx"></script>
     <!-- Meta Pixel Code (deferred) -->
     <script>
-    function __loadFbq(){
+    window.__loadFbq = function(){
       if(window.__fbqLoaded)return;window.__fbqLoaded=true;
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -41,16 +41,16 @@
       'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '916915367784182');
       fbq('track', 'PageView');
-    }
+    };
     window.addEventListener('load', function(){
       if('requestIdleCallback' in window){
-        requestIdleCallback(__loadFbq, { timeout: 3500 });
+        requestIdleCallback(window.__loadFbq, { timeout: 3500 });
       } else {
-        setTimeout(__loadFbq, 2500);
+        setTimeout(window.__loadFbq, 2500);
       }
     });
     ['pointerdown','keydown','touchstart'].forEach(function(ev){
-      window.addEventListener(ev, __loadFbq, { once: true, passive: true });
+      window.addEventListener(ev, window.__loadFbq, { once: true, passive: true });
     });
     </script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=916915367784182&ev=PageView&noscript=1"/></noscript>
