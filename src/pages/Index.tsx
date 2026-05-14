@@ -1,9 +1,12 @@
 import { memo } from "react";
-import magoBgWebp from "../assets/banner-desktop1.webp";
-import magoBgAvif from "../assets/banner-desktop1.avif";
-import mobileBgWebp from "../assets/mobile1.webp";
-import mobileBgAvif from "../assets/mobile1.avif";
-import magoAvatar from "../assets/mago-avatar.webp";
+
+// LCP images served from /public so they can be preloaded from index.html
+// in parallel with the JS bundle (no wait for React hydration).
+const magoBgWebp = "/img/banner-desktop1.webp";
+const magoBgAvif = "/img/banner-desktop1.avif";
+const mobileBgWebp = "/img/mobile1.webp";
+const mobileBgAvif = "/img/mobile1.avif";
+const magoAvatar = "/img/mago-avatar.webp";
 
 declare global {
   interface Window {
