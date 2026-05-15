@@ -23,14 +23,54 @@ const handleClick = (e: React.MouseEvent) => {
 
 const Index = () => {
   return (
-    <main className="relative min-h-screen w-full overflow-hidden bg-[#0a0a0f] text-white">
-      {/* Ambient glow */}
+    <main className="relative min-h-screen w-full overflow-hidden text-white">
+      {/* Premium dark base */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(120% 80% at 50% 0%, #0b1224 0%, #07090f 55%, #05060a 100%)",
+        }}
+      />
+      {/* Side ambient gradients */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 z-0"
         style={{
           background:
-            "radial-gradient(60% 50% at 50% 0%, rgba(255,193,7,0.18), transparent 60%), radial-gradient(50% 40% at 50% 100%, rgba(255,193,7,0.10), transparent 60%)",
+            "radial-gradient(40% 60% at 0% 50%, rgba(30,58,138,0.10), transparent 70%), radial-gradient(40% 60% at 100% 50%, rgba(30,58,138,0.10), transparent 70%)",
+        }}
+      />
+      {/* Soft gold glow centered behind logo */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[520px] w-[520px] -translate-x-1/2 -translate-y-[55%] rounded-full"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(212,175,55,0.18) 0%, rgba(212,175,55,0.08) 35%, transparent 70%)",
+          filter: "blur(20px)",
+        }}
+      />
+      {/* Subtle gold particles */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 z-0 opacity-60">
+        <span className="absolute left-[12%] top-[18%] h-[3px] w-[3px] rounded-full bg-yellow-300/40 blur-[1px]" />
+        <span className="absolute left-[82%] top-[24%] h-[2px] w-[2px] rounded-full bg-yellow-200/40 blur-[1px]" />
+        <span className="absolute left-[20%] top-[72%] h-[2px] w-[2px] rounded-full bg-yellow-300/30 blur-[1px]" />
+        <span className="absolute left-[78%] top-[68%] h-[3px] w-[3px] rounded-full bg-yellow-200/30 blur-[1px]" />
+        <span className="absolute left-[50%] top-[8%] h-[2px] w-[2px] rounded-full bg-yellow-300/40 blur-[1px]" />
+        <span className="absolute left-[35%] top-[88%] h-[2px] w-[2px] rounded-full bg-yellow-200/30 blur-[1px]" />
+        <span className="absolute left-[65%] top-[14%] h-[2px] w-[2px] rounded-full bg-yellow-300/30 blur-[1px]" />
+        <span className="absolute left-[8%] top-[48%] h-[2px] w-[2px] rounded-full bg-yellow-200/25 blur-[1px]" />
+        <span className="absolute left-[92%] top-[44%] h-[2px] w-[2px] rounded-full bg-yellow-300/25 blur-[1px]" />
+      </div>
+      {/* Vignette for depth */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-0"
+        style={{
+          background:
+            "radial-gradient(120% 90% at 50% 50%, transparent 55%, rgba(0,0,0,0.55) 100%)",
         }}
       />
 
