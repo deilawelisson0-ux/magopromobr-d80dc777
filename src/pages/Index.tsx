@@ -1,7 +1,7 @@
 import { memo } from "react";
 
 const LOGO = "/img/mago-logo.webp";
-const WHATSAPP_LINK = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
+const WHATSAPP_LINK = "/grupo";
 
 declare global {
   interface Window {
@@ -18,7 +18,7 @@ const handleClick = (e: React.MouseEvent) => {
     window.fbq("trackCustom", "Lead");
     window.fbq("trackCustom", "WhatsAppClick");
   }
-  setTimeout(() => window.open(WHATSAPP_LINK, "_blank"), 800);
+  setTimeout(() => { window.location.href = WHATSAPP_LINK; }, 300);
 };
 
 const Index = () => {
