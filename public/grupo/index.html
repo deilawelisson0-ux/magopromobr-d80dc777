@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="robots" content="noindex,nofollow" />
 <title>Redirecionando para o grupo... | Mago das Promoções</title>
-<meta http-equiv="refresh" content="1;url=https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s" />
+<meta http-equiv="refresh" content="3;url=https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s" />
 <link rel="preconnect" href="https://chat.whatsapp.com" />
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
@@ -52,9 +52,28 @@
   </main>
   <script>
     (function(){
-      var url = "https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s";
+      var code = "EkiyYscD3tOLe34nv8bu1s";
+      var appUrl = "whatsapp://chat?code=" + code;
+      var webUrl = "https://chat.whatsapp.com/" + code;
       try { if (window.fbq) { window.fbq("trackCustom","Lead"); window.fbq("trackCustom","WhatsAppClick"); } } catch(e){}
-      setTimeout(function(){ window.location.replace(url); }, 1000);
+
+      var cta = document.getElementById("cta");
+      if (cta) cta.setAttribute("href", appUrl);
+
+      var hidden = false;
+      function onHide(){ hidden = true; }
+      document.addEventListener("visibilitychange", function(){ if (document.hidden) hidden = true; });
+      window.addEventListener("pagehide", onHide);
+      window.addEventListener("blur", onHide);
+
+      // Try to open the WhatsApp app immediately
+      try { window.location.href = appUrl; } catch(e){}
+
+      // Fallback to web link if app didn't open within ~2s
+      setTimeout(function(){
+        if (hidden || document.hidden) return;
+        window.location.replace(webUrl);
+      }, 2000);
     })();
   </script>
 </body>
