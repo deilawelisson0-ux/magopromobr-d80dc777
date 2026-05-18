@@ -87,6 +87,33 @@ const Index = () => {
             className="absolute inset-0 -z-10 rounded-full blur-2xl"
             style={{ background: "radial-gradient(circle, rgba(255,193,7,0.55), transparent 70%)" }}
           />
+          {/* Premium rotating halo */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[112%] w-[112%] -translate-x-1/2 -translate-y-1/2 rounded-full animate-spin-slow"
+            style={{
+              background:
+                "conic-gradient(from 0deg, transparent 0deg, rgba(255,215,0,0.95) 60deg, rgba(255,236,140,0.2) 120deg, transparent 180deg, rgba(255,193,7,0.85) 260deg, transparent 360deg)",
+              filter: "blur(6px)",
+              WebkitMask:
+                "radial-gradient(circle, transparent 47%, #000 49%, #000 50%, transparent 53%)",
+              mask:
+                "radial-gradient(circle, transparent 47%, #000 49%, #000 50%, transparent 53%)",
+            }}
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[120%] w-[120%] -translate-x-1/2 -translate-y-1/2 rounded-full animate-spin-reverse opacity-60"
+            style={{
+              background:
+                "conic-gradient(from 180deg, transparent 0deg, rgba(255,236,140,0.6) 40deg, transparent 120deg, transparent 240deg, rgba(255,215,0,0.5) 300deg, transparent 360deg)",
+              filter: "blur(10px)",
+              WebkitMask:
+                "radial-gradient(circle, transparent 48%, #000 50%, #000 52%, transparent 56%)",
+              mask:
+                "radial-gradient(circle, transparent 48%, #000 50%, #000 52%, transparent 56%)",
+            }}
+          />
           <img
             src={LOGO}
             alt="Mago das Promoções"
