@@ -1,6 +1,7 @@
 import { memo } from "react";
 
-const LOGO = "/img/mago-logo.webp";
+const LOGO_AVIF = "/img/mago-logo.avif";
+const LOGO_WEBP = "/img/mago-logo.webp";
 const WHATSAPP_LINK = "/grupo";
 
 declare global {
@@ -114,15 +115,19 @@ const Index = () => {
                 "radial-gradient(circle, transparent 48%, #000 50%, #000 52%, transparent 56%)",
             }}
           />
-          <img
-            src={LOGO}
-            alt="Mago das Promoções"
-            width={200}
-            height={200}
-            fetchPriority="high"
-            decoding="async"
-            className="h-[160px] w-[160px] rounded-full object-cover ring-2 ring-yellow-400/60 shadow-[0_0_60px_rgba(255,193,7,0.35)] sm:h-[200px] sm:w-[200px]"
-          />
+          <picture>
+            <source srcSet={LOGO_AVIF} type="image/avif" />
+            <source srcSet={LOGO_WEBP} type="image/webp" />
+            <img
+              src={LOGO_WEBP}
+              alt="Mago das Promoções"
+              width={200}
+              height={200}
+              fetchPriority="high"
+              decoding="async"
+              className="h-[160px] w-[160px] rounded-full object-cover ring-2 ring-yellow-400/60 shadow-[0_0_60px_rgba(255,193,7,0.35)] sm:h-[200px] sm:w-[200px]"
+            />
+          </picture>
         </div>
 
         {/* Access pill */}
