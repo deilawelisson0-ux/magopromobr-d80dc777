@@ -108,44 +108,26 @@ const Index = () => {
         </div>
 
         {/* Headline */}
-        <h1 className="mt-3 text-center text-[26px] font-black leading-[1.05] tracking-tight sm:text-[34px]">
+        <h1 className="mt-5 text-center text-[32px] font-black leading-[1.0] tracking-tight sm:text-[42px]">
           AS MELHORES{" "}
+          <span className="text-yellow-400">PROMOÇÕES</span>{" "}
+          DA INTERNET{" "}
           <span className="relative inline-block">
-            <span className="relative z-10 text-yellow-400">PROMOÇÕES</span>
             <span
               aria-hidden
-              className="absolute inset-x-0 bottom-1 z-0 h-2 rounded-full bg-yellow-400/40"
+              className="absolute inset-x-[-6px] inset-y-[2px] -z-0 rounded-md bg-yellow-400"
             />
-          </span>{" "}
-          DA INTERNET ESTÃO AQUI
+            <span className="relative z-10 text-black">ESTÃO AQUI!</span>
+          </span>
         </h1>
 
         {/* Subheadline */}
-        <p className="mt-2 max-w-[420px] text-center text-[13px] leading-snug text-white/70">
-          A gente monitora <span className="font-semibold text-white">Amazon, Shopee e Mercado Livre</span> 24h por dia pra te mandar só as <span className="font-semibold text-white">melhores promoções</span> — direto no seu WhatsApp.
-        </p>
-
-        {/* Trust bullets */}
-        <ul className="mt-3 grid w-full max-w-[420px] grid-cols-1 gap-1.5 text-[12px]">
-          {[
-            "Até 70% OFF em produtos selecionados a dedo",
-            "Cupons exclusivos que ninguém divulga",
-            "Sem spam — só promoção que vale a pena",
-          ].map((t) => (
-            <li key={t} className="flex items-start gap-2 rounded-lg border border-white/5 bg-white/[0.03] px-3 py-1.5">
-              <span className="mt-0.5 text-yellow-400">✓</span>
-              <span className="text-white/85">{t}</span>
-            </li>
-          ))}
-        </ul>
-
-        {/* Urgency */}
-        <p className="mt-3 text-center text-[11px] font-semibold uppercase tracking-[0.2em] text-yellow-400/90">
-          🔥 Vagas limitadas • Entrada gratuita
+        <p className="mt-4 max-w-[380px] text-center text-[14px] leading-snug text-white/75">
+          A gente monitora <span className="font-semibold text-white">Amazon, Shopee e Mercado Livre</span> 24h por dia pra te mandar só as <span className="font-semibold text-white">melhores promoções</span>.
         </p>
 
         {/* CTA Button (kept as-is, with pulse) */}
-        <div className="mt-2 w-full max-w-[420px]">
+        <div className="mt-6 w-full max-w-[420px]">
           <a
             href={WHATSAPP_LINK}
             target="_blank"
