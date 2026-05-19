@@ -13,13 +13,16 @@ declare global {
 }
 
 const handleClick = (e: React.MouseEvent) => {
-  e.preventDefault();
-  if (!window.fbq && typeof window.__loadFbq === "function") window.__loadFbq();
-  if (window.fbq) {
-    window.fbq("trackCustom", "Lead");
-    window.fbq("trackCustom", "WhatsAppClick");
-  }
-  setTimeout(() => { window.location.href = WHATSAPP_LINK; }, 300);
+  // Fire pixel asynchronously — do NOT block navigation
+  try {
+    if (!window.fbq && typeof window.__loadFbq === "function") window.__loadFbq();
+    if (window.fbq) {
+      window.fbq("track", "Lead");
+      window.fbq("trackCustom", "WhatsAppClick");
+    }
+  } catch {}
+  // Let the browser handle the navigation natively (fastest path)
+  // No preventDefault, no setTimeout — instant redirect
 };
 
 const Index = () => {
