@@ -5,8 +5,23 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="robots" content="noindex,nofollow" />
 <title>Redirecionando para o grupo... | Mago das Promoções</title>
-<meta http-equiv="refresh" content="3;url=https://chat.whatsapp.com/EkiyYscD3tOLe34nv8bu1s" />
 <link rel="preconnect" href="https://chat.whatsapp.com" />
+<link rel="preconnect" href="https://connect.facebook.net" />
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','916915367784182');
+fbq('track','PageView');
+fbq('track','Lead');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=916915367784182&ev=Lead&noscript=1"/></noscript>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{height:100%}
@@ -55,7 +70,7 @@
       var code = "EkiyYscD3tOLe34nv8bu1s";
       var appUrl = "whatsapp://chat?code=" + code;
       var webUrl = "https://chat.whatsapp.com/" + code;
-      try { if (window.fbq) { window.fbq("trackCustom","Lead"); window.fbq("trackCustom","WhatsAppClick"); } } catch(e){}
+      try { if (window.fbq) { window.fbq("track","Lead"); window.fbq("trackCustom","WhatsAppClick"); } } catch(e){}
 
       var cta = document.getElementById("cta");
       if (cta) cta.setAttribute("href", appUrl);
@@ -66,14 +81,15 @@
       window.addEventListener("pagehide", onHide);
       window.addEventListener("blur", onHide);
 
-      // Try to open the WhatsApp app immediately
-      try { window.location.href = appUrl; } catch(e){}
-
-      // Fallback to web link if app didn't open within ~2s
+      // Wait ~1.5s so the Pixel event is sent before redirecting
       setTimeout(function(){
-        if (hidden || document.hidden) return;
-        window.location.replace(webUrl);
-      }, 2000);
+        try { window.location.href = appUrl; } catch(e){}
+        // Fallback to web link if app didn't open
+        setTimeout(function(){
+          if (hidden || document.hidden) return;
+          window.location.replace(webUrl);
+        }, 2000);
+      }, 1500);
     })();
   </script>
 </body>
