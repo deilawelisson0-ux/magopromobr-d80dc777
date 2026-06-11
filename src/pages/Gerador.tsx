@@ -116,6 +116,7 @@ function saveHistory(list: HistoryItem[]) {
 }
 
 export default function Gerador() {
+  const [tab, setTab] = useState<"scrape" | "mirror">("scrape");
   const [link, setLink] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -230,6 +231,24 @@ export default function Gerador() {
           <p style={styles.sub}>Cole um link de afiliado (Mercado Livre, Shopee, Amazon...) e gere a oferta pronta para o WhatsApp.</p>
         </header>
 
+        <div style={styles.tabs}>
+          <button
+            style={{ ...styles.tabBtn, ...(tab === "scrape" ? styles.tabBtnActive : {}) }}
+            onClick={() => setTab("scrape")}
+          >
+            🔗 Link do Produto
+          </button>
+          <button
+            style={{ ...styles.tabBtn, ...(tab === "mirror" ? styles.tabBtnActive : {}) }}
+            onClick={() => setTab("mirror")}
+          >
+            🔄 Espelhar Promoção
+          </button>
+        </div>
+
+        {tab === "mirror" && <EspelharTab />}
+
+        {tab === "scrape" && (<>
         <section style={styles.card}>
           <label style={styles.label}>Link do produto</label>
           <div style={styles.row}>
@@ -341,6 +360,7 @@ export default function Gerador() {
             </ul>
           )}
         </section>
+        </>)}
       </div>
     </div>
   );
