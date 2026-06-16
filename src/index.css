@@ -108,3 +108,13 @@
   }
   .animate-spin-reverse { animation: spinReverse 14s linear infinite; will-change: transform; }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-button-pulse,
+  .animate-pulse-glow,
+  .animate-spin-slow,
+  .animate-spin-reverse {
+    animation: none !important;
+  }
+}

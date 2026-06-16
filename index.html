@@ -14,8 +14,9 @@
       html,body{background:#05060a;color:#fff7e0;margin:0;font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
     </style>
     <link rel="dns-prefetch" href="https://connect.facebook.net" />
-    <link rel="prefetch" href="/grupo/" as="document" />
     <link rel="dns-prefetch" href="https://chat.whatsapp.com" />
+    <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
+    <link rel="preconnect" href="https://chat.whatsapp.com" />
     <!-- Preload LCP image (logo) in parallel with JS bundle -->
     <link rel="preload" as="image" href="/img/mago-logo.avif" type="image/avif" fetchpriority="high" />
     
@@ -49,10 +50,16 @@
       fbq('track', 'PageView');
     };
     window.addEventListener('load', function(){
+      // Prefetch the /grupo redirect target after load (won't compete with LCP)
+      try {
+        var l = document.createElement('link');
+        l.rel = 'prefetch'; l.href = '/grupo/'; l.as = 'document';
+        document.head.appendChild(l);
+      } catch(e) {}
       if('requestIdleCallback' in window){
-        requestIdleCallback(window.__loadFbq, { timeout: 3500 });
+        requestIdleCallback(window.__loadFbq, { timeout: 6000 });
       } else {
-        setTimeout(window.__loadFbq, 2500);
+        setTimeout(window.__loadFbq, 5000);
       }
     });
     ['pointerdown','keydown','touchstart'].forEach(function(ev){
