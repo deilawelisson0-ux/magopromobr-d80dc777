@@ -108,22 +108,22 @@
   }
 
   @keyframes spinSlow {
+    from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
   }
   .animate-spin-slow {
     animation: spinSlow 12s linear infinite;
     will-change: transform;
-    transform: translateZ(0);
     backface-visibility: hidden;
   }
 
   @keyframes spinReverse {
+    from { transform: rotate(0deg); }
     to { transform: rotate(-360deg); }
   }
   .animate-spin-reverse {
     animation: spinReverse 18s linear infinite;
     will-change: transform;
-    transform: translateZ(0);
     backface-visibility: hidden;
   }
 }
