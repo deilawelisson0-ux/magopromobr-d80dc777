@@ -150,6 +150,17 @@
     backface-visibility: hidden;
   }
 
+  @keyframes sunRaysFine {
+    from { transform: rotate(0deg); opacity: 0.45; }
+    50%  { opacity: 0.8; }
+    to   { transform: rotate(360deg); opacity: 0.45; }
+  }
+  .animate-sun-rays-fine {
+    animation: sunRaysFine 110s linear infinite;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+  }
+
   @keyframes sunBreath {
     0%, 100% { transform: scale(1); opacity: 0.75; }
     50%      { transform: scale(1.09); opacity: 1; }
