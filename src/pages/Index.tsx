@@ -85,7 +85,7 @@ const Index = () => {
         </h2>
 
         {/* Logo */}
-        <div className="relative mt-2">
+        <div className="relative mt-2 block h-[160px] w-[160px] leading-none sm:h-[200px] sm:w-[200px]">
           {/* SUN — light rays */}
           <div
             aria-hidden
@@ -100,6 +100,20 @@ const Index = () => {
               filter: "blur(4px)",
             }}
           />
+          {/* SUN — fine short rays (higher frequency, soft) */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[210%] w-[210%] -translate-x-1/2 -translate-y-1/2 rounded-full animate-sun-rays-fine"
+            style={{
+              background:
+                "repeating-conic-gradient(from 7deg, rgba(255,240,180,0.30) 0deg 1.2deg, transparent 1.2deg 9deg, rgba(255,206,90,0.22) 9deg 10deg, transparent 10deg 18deg)",
+              WebkitMaskImage:
+                "radial-gradient(circle, #000 22%, rgba(0,0,0,0.45) 36%, transparent 58%)",
+              maskImage:
+                "radial-gradient(circle, #000 22%, rgba(0,0,0,0.45) 36%, transparent 58%)",
+              filter: "blur(5px)",
+            }}
+          />
           {/* SUN — secondary slower ray layer */}
           <div
             aria-hidden
@@ -112,6 +126,17 @@ const Index = () => {
               maskImage:
                 "radial-gradient(circle, #000 20%, rgba(0,0,0,0.5) 34%, transparent 55%)",
               filter: "blur(7px)",
+            }}
+          />
+          {/* SUN — warm orange falloff at the edges */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[300%] w-[300%] -translate-x-1/2 -translate-y-1/2 rounded-full animate-sun-breath-slow"
+            style={{
+              background:
+                "radial-gradient(circle, transparent 30%, rgba(255,149,45,0.14) 46%, rgba(255,120,20,0.07) 62%, transparent 80%)",
+              filter: "blur(26px)",
+              animationDelay: "3s",
             }}
           />
           {/* SUN — outer irradiation */}
@@ -167,7 +192,7 @@ const Index = () => {
               />
             ))}
           </div>
-          <picture>
+          <picture className="relative z-10 block h-full w-full">
             <source srcSet={LOGO_AVIF} type="image/avif" />
             <source srcSet={LOGO_WEBP} type="image/webp" />
             <img
@@ -177,7 +202,7 @@ const Index = () => {
               height={200}
               fetchPriority="high"
               decoding="async"
-              className="h-[160px] w-[160px] rounded-full object-cover ring-2 ring-yellow-400/60 shadow-[0_0_60px_rgba(255,193,7,0.35)] sm:h-[200px] sm:w-[200px]"
+              className="block h-full w-full rounded-full object-cover ring-2 ring-yellow-400/60 shadow-[0_0_60px_rgba(255,193,7,0.35)]"
             />
           </picture>
         </div>
