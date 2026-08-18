@@ -86,38 +86,87 @@ const Index = () => {
 
         {/* Logo */}
         <div className="relative mt-2">
+          {/* SUN — light rays */}
           <div
             aria-hidden
-            className="absolute inset-0 -z-10 rounded-full blur-2xl"
-            style={{ background: "radial-gradient(circle, rgba(255,193,7,0.55), transparent 70%)" }}
-          />
-          {/* Premium rotating halo */}
-          <div
-            aria-hidden
-            className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[112%] w-[112%] -translate-x-1/2 -translate-y-1/2 rounded-full animate-spin-slow"
+            className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[300%] w-[300%] -translate-x-1/2 -translate-y-1/2 rounded-full animate-sun-rays"
             style={{
               background:
-                "conic-gradient(from 0deg, transparent 0deg, rgba(255,215,0,0.95) 60deg, rgba(255,236,140,0.2) 120deg, transparent 180deg, rgba(255,193,7,0.85) 260deg, transparent 360deg)",
-              filter: "blur(6px)",
-              WebkitMask:
-                "radial-gradient(circle, transparent 47%, #000 49%, #000 50%, transparent 53%)",
-              mask:
-                "radial-gradient(circle, transparent 47%, #000 49%, #000 50%, transparent 53%)",
+                "conic-gradient(from 0deg, rgba(255,214,92,0.55) 0deg, transparent 3deg, transparent 12deg, rgba(255,236,150,0.35) 15deg, transparent 18deg, transparent 30deg, rgba(255,205,60,0.5) 32deg, transparent 35deg, transparent 48deg, rgba(255,236,150,0.28) 50deg, transparent 53deg, transparent 68deg, rgba(255,214,92,0.45) 70deg, transparent 73deg, transparent 90deg, rgba(255,236,150,0.3) 92deg, transparent 95deg, transparent 112deg, rgba(255,205,60,0.5) 114deg, transparent 117deg, transparent 135deg, rgba(255,236,150,0.3) 137deg, transparent 140deg, transparent 158deg, rgba(255,214,92,0.45) 160deg, transparent 163deg, transparent 180deg, rgba(255,236,150,0.35) 182deg, transparent 185deg, transparent 200deg, rgba(255,205,60,0.5) 202deg, transparent 205deg, transparent 222deg, rgba(255,236,150,0.28) 224deg, transparent 227deg, transparent 245deg, rgba(255,214,92,0.45) 247deg, transparent 250deg, transparent 268deg, rgba(255,236,150,0.3) 270deg, transparent 273deg, transparent 290deg, rgba(255,205,60,0.5) 292deg, transparent 295deg, transparent 312deg, rgba(255,236,150,0.3) 314deg, transparent 317deg, transparent 334deg, rgba(255,214,92,0.45) 336deg, transparent 339deg, transparent 357deg, rgba(255,214,92,0.55) 360deg)",
+              WebkitMaskImage:
+                "radial-gradient(circle, #000 16%, rgba(0,0,0,0.55) 30%, transparent 52%)",
+              maskImage:
+                "radial-gradient(circle, #000 16%, rgba(0,0,0,0.55) 30%, transparent 52%)",
+              filter: "blur(4px)",
             }}
+          />
+          {/* SUN — secondary slower ray layer */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[230%] w-[230%] -translate-x-1/2 -translate-y-1/2 rounded-full animate-sun-rays-alt"
+            style={{
+              background:
+                "conic-gradient(from 18deg, rgba(255,236,160,0.4) 0deg, transparent 4deg, transparent 22deg, rgba(255,214,92,0.3) 26deg, transparent 30deg, transparent 52deg, rgba(255,236,160,0.35) 56deg, transparent 60deg, transparent 84deg, rgba(255,205,60,0.3) 88deg, transparent 92deg, transparent 118deg, rgba(255,236,160,0.35) 122deg, transparent 126deg, transparent 152deg, rgba(255,214,92,0.3) 156deg, transparent 160deg, transparent 188deg, rgba(255,236,160,0.32) 192deg, transparent 196deg, transparent 224deg, rgba(255,205,60,0.3) 228deg, transparent 232deg, transparent 262deg, rgba(255,236,160,0.35) 266deg, transparent 270deg, transparent 300deg, rgba(255,214,92,0.3) 304deg, transparent 308deg, transparent 338deg, rgba(255,236,160,0.3) 342deg, transparent 346deg, transparent 360deg)",
+              WebkitMaskImage:
+                "radial-gradient(circle, #000 20%, rgba(0,0,0,0.5) 34%, transparent 55%)",
+              maskImage:
+                "radial-gradient(circle, #000 20%, rgba(0,0,0,0.5) 34%, transparent 55%)",
+              filter: "blur(7px)",
+            }}
+          />
+          {/* SUN — outer irradiation */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[260%] w-[260%] -translate-x-1/2 -translate-y-1/2 rounded-full animate-sun-breath-slow"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(255,193,7,0.28) 0%, rgba(255,193,7,0.14) 30%, rgba(255,193,7,0.05) 50%, transparent 72%)",
+              filter: "blur(18px)",
+            }}
+          />
+          {/* SUN — core glow */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[150%] w-[150%] -translate-x-1/2 -translate-y-1/2 rounded-full animate-sun-breath"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(255,224,130,0.75) 0%, rgba(255,193,7,0.45) 32%, rgba(255,193,7,0.16) 55%, transparent 75%)",
+              filter: "blur(16px)",
+            }}
+          />
+          {/* SUN — energy waves */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[190%] w-[190%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-yellow-300/40 animate-sun-wave"
+            style={{ filter: "blur(2px)" }}
           />
           <div
             aria-hidden
-            className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[120%] w-[120%] -translate-x-1/2 -translate-y-1/2 rounded-full animate-spin-reverse opacity-60"
-            style={{
-              background:
-                "conic-gradient(from 180deg, transparent 0deg, rgba(255,236,140,0.6) 40deg, transparent 120deg, transparent 240deg, rgba(255,215,0,0.5) 300deg, transparent 360deg)",
-              filter: "blur(10px)",
-              WebkitMask:
-                "radial-gradient(circle, transparent 48%, #000 50%, #000 52%, transparent 56%)",
-              mask:
-                "radial-gradient(circle, transparent 48%, #000 50%, #000 52%, transparent 56%)",
-            }}
+            className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[190%] w-[190%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-yellow-200/30 animate-sun-wave"
+            style={{ filter: "blur(3px)", animationDelay: "4.5s" }}
           />
+          {/* SUN — irradiated particles */}
+          <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-0 w-0">
+            {[
+              { px: "62px", py: "-54px", d: "0s" },
+              { px: "-70px", py: "-38px", d: "2.4s" },
+              { px: "48px", py: "66px", d: "4.8s" },
+              { px: "-54px", py: "58px", d: "6.6s" },
+              { px: "80px", py: "10px", d: "8.2s" },
+            ].map((p) => (
+              <span
+                key={p.d}
+                className="absolute h-[3px] w-[3px] rounded-full bg-yellow-200/80 blur-[1px] animate-sun-particle"
+                style={
+                  {
+                    ["--px" as any]: p.px,
+                    ["--py" as any]: p.py,
+                    animationDelay: p.d,
+                  } as React.CSSProperties
+                }
+              />
+            ))}
+          </div>
           <picture>
             <source srcSet={LOGO_AVIF} type="image/avif" />
             <source srcSet={LOGO_WEBP} type="image/webp" />
