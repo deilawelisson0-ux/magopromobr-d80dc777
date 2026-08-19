@@ -127,76 +127,25 @@
     backface-visibility: hidden;
   }
 
-  /* ---- SUN EFFECT ---- */
-  @keyframes sunRays {
-    from { transform: rotate(0deg) scale(1); opacity: 0.55; }
-    50%  { opacity: 0.8; }
-    to   { transform: rotate(360deg) scale(1); opacity: 0.55; }
+  /* ---- PREMIUM GOLD RING ---- */
+  @keyframes goldSweep {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
   }
-  .animate-sun-rays {
-    animation: sunRays 90s linear infinite;
-    will-change: transform, opacity;
+  .animate-gold-sweep {
+    animation: goldSweep 14s linear infinite;
+    will-change: transform;
     backface-visibility: hidden;
   }
 
-  @keyframes sunRaysAlt {
-    from { transform: rotate(0deg); opacity: 0.35; }
-    50%  { opacity: 0.6; }
-    to   { transform: rotate(-360deg); opacity: 0.35; }
+  @keyframes goldBreath {
+    0%, 100% { opacity: 0.82; }
+    50%      { opacity: 1; }
   }
-  .animate-sun-rays-alt {
-    animation: sunRaysAlt 140s linear infinite;
-    will-change: transform, opacity;
-    backface-visibility: hidden;
-  }
-
-  @keyframes sunRaysFine {
-    from { transform: rotate(0deg); opacity: 0.45; }
-    50%  { opacity: 0.8; }
-    to   { transform: rotate(360deg); opacity: 0.45; }
-  }
-  .animate-sun-rays-fine {
-    animation: sunRaysFine 110s linear infinite;
-    will-change: transform, opacity;
-    backface-visibility: hidden;
-  }
-
-  @keyframes sunBreath {
-    0%, 100% { transform: scale(1); opacity: 0.75; }
-    50%      { transform: scale(1.09); opacity: 1; }
-  }
-  .animate-sun-breath {
-    animation: sunBreath 7s ease-in-out infinite;
-    will-change: transform, opacity;
-  }
-
-  @keyframes sunBreathSlow {
-    0%, 100% { transform: scale(1.04); opacity: 0.45; }
-    50%      { transform: scale(0.96); opacity: 0.7; }
-  }
-  .animate-sun-breath-slow {
-    animation: sunBreathSlow 11s ease-in-out infinite;
-    will-change: transform, opacity;
-  }
-
-  @keyframes sunWave {
-    0%   { transform: scale(0.62); opacity: 0; }
-    12%  { opacity: 0.5; }
-    100% { transform: scale(1.85); opacity: 0; }
-  }
-  .animate-sun-wave {
-    animation: sunWave 9s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
-    will-change: transform, opacity;
-  }
-
-  @keyframes sunParticle {
-    0%   { transform: translate(0, 0) scale(0.6); opacity: 0; }
-    15%  { opacity: 0.9; }
-    100% { transform: translate(var(--px, 40px), var(--py, -40px)) scale(1); opacity: 0; }
-  }
-  .animate-sun-particle {
-    animation: sunParticle 10s ease-out infinite;
-    will-change: transform, opacity;
+  .animate-gold-breath {
+    animation: goldBreath 6s ease-in-out infinite;
+    will-change: opacity;
+    transform: translateZ(0);
   }
 }
 
@@ -206,13 +155,8 @@
   .animate-pulse-glow,
   .animate-spin-slow,
   .animate-spin-reverse,
-  .animate-sun-rays,
-  .animate-sun-rays-alt,
-  .animate-sun-rays-fine,
-  .animate-sun-breath,
-  .animate-sun-breath-slow,
-  .animate-sun-wave,
-  .animate-sun-particle {
+  .animate-gold-sweep,
+  .animate-gold-breath {
     animation: none !important;
   }
 }
