@@ -121,6 +121,33 @@ const Index = () => {
               filter: "drop-shadow(0 0 8px rgba(255,200,90,0.5))",
             }}
           />
+          {/* ENERGY PULSE — soft ring expanding every ~3.6s */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -inset-[10%] -z-10 rounded-full animate-energy-pulse"
+            style={{
+              boxShadow:
+                "0 0 0 1px rgba(255,214,130,0.55), 0 0 26px 6px rgba(255,190,70,0.28)",
+            }}
+          />
+          {/* ORBITING MAGIC PARTICLES */}
+          <div aria-hidden className="pointer-events-none absolute -inset-[16%] -z-10 animate-magic-orbit">
+            <span className="absolute left-1/2 top-0 h-[5px] w-[5px] -translate-x-1/2 rounded-full bg-yellow-200 shadow-[0_0_10px_3px_rgba(255,205,90,0.75)]" />
+            <span className="absolute left-[92%] top-[70%] h-[3px] w-[3px] rounded-full bg-amber-200 shadow-[0_0_8px_2px_rgba(255,190,70,0.6)]" />
+            <span className="absolute left-[8%] top-[62%] h-[2px] w-[2px] rounded-full bg-yellow-100 shadow-[0_0_6px_2px_rgba(255,215,130,0.5)]" />
+          </div>
+          <div aria-hidden className="pointer-events-none absolute -inset-[26%] -z-10 animate-magic-orbit-rev">
+            <span className="absolute left-[86%] top-[18%] h-[3px] w-[3px] rounded-full bg-yellow-200 shadow-[0_0_9px_3px_rgba(255,200,80,0.55)]" />
+            <span className="absolute left-[16%] top-[24%] h-[2px] w-[2px] rounded-full bg-amber-100 shadow-[0_0_6px_2px_rgba(255,220,150,0.45)]" />
+            <span className="absolute left-1/2 top-[98%] h-[2px] w-[2px] -translate-x-1/2 rounded-full bg-yellow-200 shadow-[0_0_7px_2px_rgba(255,200,90,0.5)]" />
+          </div>
+          {/* SPARKLES — quick random flashes */}
+          <div aria-hidden className="pointer-events-none absolute -inset-[22%] -z-10">
+            <span className="animate-sparkle absolute left-[10%] top-[30%] h-[3px] w-[3px] rounded-full bg-yellow-100 shadow-[0_0_8px_3px_rgba(255,225,160,0.8)]" />
+            <span className="animate-sparkle absolute left-[78%] top-[12%] h-[2px] w-[2px] rounded-full bg-yellow-50 shadow-[0_0_7px_2px_rgba(255,235,190,0.7)]" style={{ animationDelay: "1.7s" }} />
+            <span className="animate-sparkle absolute left-[88%] top-[80%] h-[3px] w-[3px] rounded-full bg-yellow-100 shadow-[0_0_8px_3px_rgba(255,225,160,0.7)]" style={{ animationDelay: "3.1s" }} />
+            <span className="animate-sparkle absolute left-[24%] top-[88%] h-[2px] w-[2px] rounded-full bg-amber-100 shadow-[0_0_6px_2px_rgba(255,215,140,0.65)]" style={{ animationDelay: "4.3s" }} />
+          </div>
           <picture className="relative z-10 block h-full w-full">
             <source srcSet={LOGO_AVIF} type="image/avif" />
             <source srcSet={LOGO_WEBP} type="image/webp" />
