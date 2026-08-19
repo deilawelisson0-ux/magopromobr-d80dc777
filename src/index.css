@@ -147,6 +147,43 @@
     will-change: opacity;
     transform: translateZ(0);
   }
+
+  /* ---- MAGIC ENERGY (logo only) ---- */
+  @keyframes magicOrbit {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+  .animate-magic-orbit {
+    animation: magicOrbit 16s linear infinite;
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+  .animate-magic-orbit-rev {
+    animation: magicOrbit 24s linear infinite reverse;
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+
+  @keyframes energyPulse {
+    0%   { transform: scale(0.92); opacity: 0; }
+    18%  { opacity: 0.55; }
+    70%  { opacity: 0.12; }
+    100% { transform: scale(1.12); opacity: 0; }
+  }
+  .animate-energy-pulse {
+    animation: energyPulse 3.6s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+    will-change: transform, opacity;
+  }
+
+  @keyframes sparkleTwinkle {
+    0%, 82%, 100% { opacity: 0; transform: scale(0.4); }
+    88%           { opacity: 1; transform: scale(1); }
+    94%           { opacity: 0; transform: scale(0.5); }
+  }
+  .animate-sparkle {
+    animation: sparkleTwinkle 5.5s ease-in-out infinite;
+    will-change: opacity, transform;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -156,7 +193,11 @@
   .animate-spin-slow,
   .animate-spin-reverse,
   .animate-gold-sweep,
-  .animate-gold-breath {
+  .animate-gold-breath,
+  .animate-magic-orbit,
+  .animate-magic-orbit-rev,
+  .animate-energy-pulse,
+  .animate-sparkle {
     animation: none !important;
   }
 }
