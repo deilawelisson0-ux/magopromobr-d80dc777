@@ -5,7 +5,7 @@ export default {
   content: [
     "./index.html",
     "./src/main.tsx",
-    "./src/App.tsx",
+    "./src/RouterApp.tsx",
     "./src/pages/**/*.{ts,tsx}",
     "./src/components/NavLink.tsx",
   ],
