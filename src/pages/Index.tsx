@@ -118,7 +118,14 @@ const Index = () => {
                 "radial-gradient(circle, transparent 0 68%, #000 73% 80%, transparent 86%)",
               maskImage:
                 "radial-gradient(circle, transparent 0 68%, #000 73% 80%, transparent 86%)",
-              filter: "drop-shadow(0 0 8px rgba(255,200,90,0.5))",
+            }}
+          />
+          {/* Static soft glow that used to be a per-frame drop-shadow on the ring */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -inset-[5%] -z-10 rounded-full"
+            style={{
+              boxShadow: "0 0 14px 2px rgba(255,200,90,0.28)",
             }}
           />
           {/* ENERGY PULSE — soft ring expanding every ~3.6s */}
