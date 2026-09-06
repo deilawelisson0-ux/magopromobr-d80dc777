@@ -1,10 +1,13 @@
 import { createRoot } from "react-dom/client";
-import { HashRouter } from "react-router-dom";
-import App from "./App.tsx";
+import Index from "./pages/Index.tsx";
 import "./index.css";
 
-createRoot(document.getElementById("root")!).render(
-  <HashRouter>
-    <App />
-  </HashRouter>
-);
+const root = createRoot(document.getElementById("root")!);
+const hash = window.location.hash;
+
+if (hash && hash !== "#" && hash !== "#/") {
+  // Only load the router (and secondary pages) when a sub-route is requested.
+  import("./RouterApp.tsx").then(({ default: RouterApp }) => root.render(<RouterApp />));
+} else {
+  root.render(<Index />);
+}
